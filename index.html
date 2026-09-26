@@ -1,0 +1,3298 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="2026国庆大理、腾冲、芒市9天8晚家庭自驾路书，含逐日时间、路线、景点、餐饮、住宿与预算。">
+  <meta property="og:title" content="滇西自然自驾路书｜2026.09.30–10.08">
+  <meta property="og:description" content="大理、腾冲、芒市9天8晚家庭自驾路线与逐日执行细节。">
+  <meta property="og:type" content="website">
+  <title>滇西自然自驾路书｜2026.09.30–10.08</title>
+  <style>
+    :root {
+      --ink: #172521;
+      --muted: #5c6b66;
+      --paper: #f5f7f4;
+      --surface: #ffffff;
+      --line: #d8dfda;
+      --forest: #174b3d;
+      --forest-2: #236b55;
+      --blue: #315f8e;
+      --river: #83b7ca;
+      --orange: #e5683d;
+      --gold: #d6a438;
+      --danger: #a53e31;
+      --soft-green: #e6efe9;
+      --soft-blue: #e9f0f6;
+      --soft-orange: #f8ece6;
+      --shadow: 0 14px 40px rgba(23, 37, 33, 0.08);
+      --radius: 8px;
+      --page: min(1180px, calc(100% - 40px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+      line-height: 1.65;
+    }
+
+    button,
+    input {
+      font: inherit;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(23, 75, 61, 0.35);
+      text-underline-offset: 3px;
+    }
+
+    .skip-link {
+      position: fixed;
+      z-index: 100;
+      top: 12px;
+      left: 12px;
+      padding: 9px 12px;
+      color: #fff;
+      background: var(--ink);
+      transform: translateY(-160%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 560px;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(112deg, rgba(15, 48, 40, 0.98), rgba(23, 75, 61, 0.94) 58%, rgba(28, 79, 96, 0.9));
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      content: "";
+      opacity: 0.2;
+      background-image:
+        repeating-radial-gradient(ellipse at 18% 70%, transparent 0 22px, rgba(255,255,255,.22) 23px 24px, transparent 25px 43px),
+        repeating-radial-gradient(ellipse at 84% 18%, transparent 0 31px, rgba(255,255,255,.14) 32px 33px, transparent 34px 58px);
+      background-size: 470px 310px, 560px 390px;
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -7vw;
+      bottom: -145px;
+      width: 56vw;
+      min-width: 640px;
+      height: 360px;
+      content: "";
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      transform: rotate(-8deg);
+      box-shadow:
+        0 0 0 46px rgba(255,255,255,.04),
+        0 0 0 92px rgba(255,255,255,.025);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: var(--page);
+      margin: 0 auto;
+      padding: 44px 0 54px;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 68px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .edition {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-transform: uppercase;
+    }
+
+    .edition::before {
+      width: 28px;
+      height: 3px;
+      content: "";
+      background: var(--gold);
+    }
+
+    .print-button {
+      min-height: 44px;
+      padding: 0 16px;
+      color: #fff;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .print-button:hover,
+    .print-button:focus-visible {
+      background: rgba(255,255,255,.12);
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(310px, .65fr);
+      gap: 64px;
+      align-items: end;
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: #cce1d8;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: clamp(46px, 7vw, 88px);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .hero-lead {
+      max-width: 670px;
+      margin: 24px 0 0;
+      color: rgba(255,255,255,.82);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,.2);
+      border: 1px solid rgba(255,255,255,.22);
+    }
+
+    .hero-fact {
+      min-height: 96px;
+      padding: 18px;
+      background: rgba(10, 38, 31, .52);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-fact strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #fff;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 27px;
+      line-height: 1.2;
+    }
+
+    .hero-fact span {
+      color: rgba(255,255,255,.7);
+      font-size: 12px;
+    }
+
+    .decision-band {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .decision-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
+      width: var(--page);
+      margin: 0 auto;
+      padding: 26px 0;
+    }
+
+    .decision-copy {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .decision-mark {
+      display: grid;
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      color: #fff;
+      background: var(--forest);
+      border-radius: 50%;
+      place-items: center;
+      font-weight: 800;
+    }
+
+    .decision-copy strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 18px;
+    }
+
+    .decision-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .segmented {
+      display: inline-grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+      gap: 4px;
+      padding: 4px;
+      background: #e8ede9;
+      border-radius: 6px;
+    }
+
+    .segmented button {
+      min-height: 40px;
+      padding: 0 15px;
+      color: var(--muted);
+      background: transparent;
+      border: 0;
+      border-radius: 4px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .segmented button[aria-pressed="true"] {
+      color: #fff;
+      background: var(--forest);
+      box-shadow: 0 4px 12px rgba(23,75,61,.18);
+    }
+
+    .segmented button:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 2px;
+    }
+
+    .page-nav {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      overflow-x: auto;
+      background: rgba(245,247,244,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+      scrollbar-width: none;
+    }
+
+    .page-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .page-nav-inner {
+      display: flex;
+      width: var(--page);
+      min-width: max-content;
+      margin: 0 auto;
+      gap: 28px;
+    }
+
+    .page-nav a {
+      padding: 15px 0 12px;
+      color: var(--muted);
+      border-bottom: 3px solid transparent;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .page-nav a:hover,
+    .page-nav a:focus-visible {
+      color: var(--forest);
+      border-color: var(--orange);
+      outline: none;
+    }
+
+    main section {
+      scroll-margin-top: 60px;
+    }
+
+    .section {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 78px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    .section-index {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    .section-summary {
+      max-width: 760px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .route-band {
+      color: #fff;
+      background: #172d29;
+    }
+
+    .route-band .section {
+      padding-bottom: 84px;
+    }
+
+    .route-band .section-summary {
+      color: rgba(255,255,255,.68);
+    }
+
+    .route-band .section-index {
+      color: #f0b75a;
+    }
+
+    .route-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .route-band .segmented {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .route-band .segmented button {
+      color: rgba(255,255,255,.7);
+    }
+
+    .route-band .segmented button[aria-pressed="true"] {
+      color: var(--ink);
+      background: #fff;
+    }
+
+    .route-status {
+      align-self: center;
+      color: rgba(255,255,255,.65);
+      font-size: 13px;
+    }
+
+    .route-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .map-shell {
+      position: relative;
+      min-height: 620px;
+      overflow: hidden;
+      background: #203a34;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius);
+    }
+
+    .map-shell svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+    }
+
+    .route-map-mobile {
+      display: none;
+    }
+
+    .map-note {
+      position: absolute;
+      right: 16px;
+      bottom: 14px;
+      padding: 6px 9px;
+      color: rgba(255,255,255,.65);
+      background: rgba(10,25,21,.72);
+      border-radius: 3px;
+      font-size: 11px;
+    }
+
+    .route-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .route-stat {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 130px;
+      padding: 22px;
+      background: rgba(12,34,29,.92);
+    }
+
+    .route-stat span {
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .route-stat strong {
+      margin: 6px 0 3px;
+      color: #fff;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 32px;
+      line-height: 1.15;
+    }
+
+    .route-stat small {
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+    }
+
+    .map-route-alt,
+    .map-node-alt,
+    body[data-route="slow"] .variant-mangshi {
+      display: none;
+    }
+
+    body[data-route="mangshi"] .map-route-main-return,
+    body[data-route="mangshi"] .map-label-main-return,
+    body[data-route="mangshi"] .variant-slow {
+      display: none !important;
+    }
+
+    body[data-route="mangshi"] .map-route-alt,
+    body[data-route="mangshi"] .map-node-alt,
+    body[data-route="mangshi"] .variant-mangshi {
+      display: block !important;
+    }
+
+    body[data-route="mangshi"] tr.variant-mangshi {
+      display: table-row !important;
+    }
+
+    body[data-route="mangshi"] .day-body.variant-mangshi,
+    body[data-route="slow"] .day-body.variant-slow {
+      display: grid !important;
+    }
+
+    .route-mobile-leg {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr);
+      gap: 14px;
+      padding: 15px 0;
+      border-top: 1px solid rgba(255,255,255,.14);
+    }
+
+    .route-mobile-leg:first-of-type {
+      border-top: 0;
+    }
+
+    .route-mobile-leg time {
+      color: #f2be60;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .route-mobile-leg strong,
+    .route-mobile-local strong {
+      display: block;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .route-mobile-leg b {
+      display: block;
+      margin: 2px 0 5px;
+      color: #a9d5c7;
+      font-size: 12px;
+    }
+
+    .route-mobile-leg span,
+    .route-mobile-local span {
+      display: block;
+      color: rgba(255,255,255,.62);
+      font-size: 11px;
+    }
+
+    .route-mobile-local {
+      margin-top: 6px;
+      padding: 16px;
+      background: rgba(255,255,255,.07);
+      border-left: 4px solid #72b89e;
+    }
+
+    .route-mobile-local span + span {
+      margin-top: 7px;
+    }
+
+    .alert {
+      display: grid;
+      grid-template-columns: 5px minmax(0, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+      padding: 18px 20px;
+      color: #eaf1ed;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 6px;
+    }
+
+    .alert::before {
+      content: "";
+      background: var(--orange);
+    }
+
+    .alert strong {
+      display: block;
+      margin-bottom: 3px;
+      color: #fff;
+    }
+
+    .alert p {
+      margin: 0;
+      color: rgba(255,255,255,.7);
+      font-size: 13px;
+    }
+
+    .airport-warning {
+      display: none;
+      margin-top: 18px;
+      padding: 18px 20px;
+      color: #5c251d;
+      background: #fff0e8;
+      border-left: 5px solid var(--orange);
+    }
+
+    body[data-airport="kunming"] .airport-warning {
+      display: block;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .overview-item {
+      padding: 22px;
+      background: var(--surface);
+      border-top: 4px solid var(--forest);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .overview-item:nth-child(2) {
+      border-color: var(--blue);
+    }
+
+    .overview-item:nth-child(3) {
+      border-color: var(--orange);
+    }
+
+    .overview-item:nth-child(4) {
+      border-color: var(--gold);
+    }
+
+    .overview-item span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .overview-item strong {
+      display: block;
+      margin-top: 8px;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 23px;
+      line-height: 1.28;
+    }
+
+    .weather-strip {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr 1.4fr;
+      gap: 1px;
+      margin-top: 28px;
+      overflow: hidden;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .weather-item {
+      min-height: 126px;
+      padding: 20px;
+      background: var(--surface);
+    }
+
+    .weather-item strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 17px;
+    }
+
+    .weather-item .temp {
+      color: var(--blue);
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .weather-item p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .overview-budget {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr);
+      margin-top: 28px;
+      overflow: hidden;
+      color: #fff;
+      background: var(--ink);
+      border-left: 6px solid var(--gold);
+      border-radius: var(--radius);
+    }
+
+    .overview-budget-main {
+      padding: 24px 26px;
+    }
+
+    .overview-budget-main span,
+    .overview-budget-breakdown span {
+      color: rgba(255,255,255,.58);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .overview-budget-main strong {
+      display: block;
+      margin: 5px 0;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 27px;
+      line-height: 1.25;
+    }
+
+    .overview-budget-main b {
+      color: #f2c96d;
+      font-size: 15px;
+    }
+
+    .overview-budget-main p {
+      margin: 6px 0 0;
+      color: rgba(255,255,255,.68);
+      font-size: 12px;
+    }
+
+    .overview-budget-breakdown {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(255,255,255,.14);
+    }
+
+    .overview-budget-breakdown div {
+      padding: 17px 18px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .overview-budget-breakdown strong {
+      display: block;
+      margin-top: 3px;
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .day-card {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 26px rgba(23,37,33,.045);
+    }
+
+    .day-date {
+      position: relative;
+      padding: 24px 22px;
+      color: #fff;
+      background: var(--forest);
+    }
+
+    .day-card.drive .day-date {
+      background: var(--blue);
+    }
+
+    .day-card.buffer .day-date {
+      color: var(--ink);
+      background: #e5b84e;
+    }
+
+    .day-date time {
+      display: block;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .day-date span {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: .78;
+    }
+
+    .day-date small {
+      position: absolute;
+      right: 16px;
+      bottom: 14px;
+      font-size: 11px;
+      opacity: .7;
+    }
+
+    .day-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(285px, .65fr);
+      grid-template-areas:
+        "heading heading"
+        "schedule guide"
+        "foot foot";
+      column-gap: 28px;
+      padding: 23px 26px 25px;
+    }
+
+    .day-heading {
+      grid-area: heading;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 18px;
+      align-items: baseline;
+      margin-bottom: 16px;
+    }
+
+    .day-heading h3 {
+      margin: 0;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .day-heading span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .schedule {
+      grid-area: schedule;
+      display: grid;
+      gap: 0;
+      margin: 0;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 74px minmax(0, 1fr);
+      gap: 14px;
+      padding: 10px 0;
+      border-top: 1px solid #edf0ed;
+    }
+
+    .schedule-row:first-child {
+      border-top: 0;
+    }
+
+    .schedule-row dt {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .schedule-row dd {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .schedule-row dd strong {
+      font-weight: 800;
+    }
+
+    .schedule-row dd span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .day-foot {
+      grid-area: foot;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 15px;
+      padding-top: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+    }
+
+    .day-foot strong {
+      color: var(--ink);
+    }
+
+    .rain-plan {
+      color: #244d6e;
+    }
+
+    .day-guide {
+      grid-area: guide;
+      align-self: stretch;
+      padding-left: 24px;
+      border-left: 1px solid var(--line);
+    }
+
+    .day-guide-block {
+      padding: 11px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .day-guide-block:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .day-guide-label {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .day-guide-block strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .day-guide-block p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.55;
+    }
+
+    .stay-band {
+      background: #e9efeb;
+    }
+
+    .food-band {
+      background: #fff;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .food-card {
+      min-height: 330px;
+      padding: 24px;
+      background: var(--paper);
+      border-top: 5px solid var(--orange);
+      border-radius: var(--radius);
+    }
+
+    .food-card:nth-child(2) {
+      border-color: var(--forest);
+    }
+
+    .food-card:nth-child(3) {
+      border-color: var(--blue);
+    }
+
+    .food-card .meal-time {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .food-card h3 {
+      margin: 7px 0 6px;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .food-card > p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .food-list {
+      margin: 18px 0 0;
+    }
+
+    .food-list div {
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .food-list dt {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .food-list dd {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .food-rule {
+      margin-top: 20px;
+      padding: 16px 18px;
+      color: #5c251d;
+      background: var(--soft-orange);
+      border-left: 4px solid var(--orange);
+      font-size: 13px;
+    }
+
+    .stay-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (min-width: 901px) {
+      body[data-route="mangshi"] .stay-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .stay-card {
+      position: relative;
+      min-height: 335px;
+      padding: 26px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .stay-card::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 54px;
+      height: 5px;
+      content: "";
+      background: var(--forest);
+    }
+
+    .stay-card:nth-child(2)::before {
+      background: var(--orange);
+    }
+
+    .stay-card:nth-child(3)::before {
+      background: var(--blue);
+    }
+
+    .stay-card .nights {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .stay-card h3 {
+      margin: 8px 0 6px;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    .stay-card .area {
+      color: var(--forest);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .stay-card ul {
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .stay-card li {
+      position: relative;
+      margin-top: 9px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .stay-card li::before {
+      position: absolute;
+      top: .7em;
+      left: 0;
+      width: 7px;
+      height: 2px;
+      content: "";
+      background: var(--orange);
+    }
+
+    .stay-price {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .budget-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(290px, .75fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .budget-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .budget-table th,
+    .budget-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .budget-table th {
+      color: var(--muted);
+      background: #eef2ef;
+      font-size: 12px;
+    }
+
+    .budget-table td:last-child,
+    .budget-table th:last-child {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .budget-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .budget-table .optional {
+      color: var(--muted);
+    }
+
+    .budget-total {
+      position: sticky;
+      top: 72px;
+      padding: 27px;
+      color: #fff;
+      background: var(--forest);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .budget-total span {
+      color: rgba(255,255,255,.65);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .budget-total strong {
+      display: block;
+      margin: 7px 0;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 37px;
+      line-height: 1.15;
+    }
+
+    .budget-total p {
+      margin: 0;
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+    }
+
+    .budget-total hr {
+      margin: 20px 0;
+      border: 0;
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    .budget-total .per-person {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .checklist-band {
+      color: #fff;
+      background: #263945;
+    }
+
+    .checklist-band .section-summary {
+      color: rgba(255,255,255,.68);
+    }
+
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .check-item {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr) auto;
+      gap: 13px;
+      align-items: start;
+      min-height: 76px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .check-item:hover {
+      background: rgba(255,255,255,.1);
+    }
+
+    .check-item input {
+      width: 20px;
+      height: 20px;
+      margin: 2px 0 0;
+      accent-color: #e8b44a;
+    }
+
+    .check-item strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .check-item span {
+      display: block;
+      margin-top: 2px;
+      color: rgba(255,255,255,.62);
+      font-size: 12px;
+    }
+
+    .check-item time {
+      color: #f0c770;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .rule {
+      min-height: 170px;
+      padding: 22px;
+      color: var(--ink);
+      background: var(--surface);
+    }
+
+    .rule strong {
+      display: block;
+      margin-bottom: 10px;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 21px;
+    }
+
+    .rule p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .execution-inline {
+      margin-top: 38px;
+    }
+
+    .execution-inline h3 {
+      margin: 0 0 14px;
+      color: #fff;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 25px;
+    }
+
+    @media (max-width: 1100px) {
+      .day-body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "heading"
+          "schedule"
+          "guide"
+          "foot";
+      }
+
+      .day-guide {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 20px;
+        margin-top: 16px;
+        padding: 15px 0 0;
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .day-guide-block:nth-child(2) {
+        padding-top: 0;
+        border-top: 0;
+      }
+    }
+
+    .sources {
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sources ol {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 26px;
+      padding-left: 20px;
+    }
+
+    .sources li {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .method-note {
+      margin-top: 24px;
+      padding: 16px 18px;
+      color: var(--muted);
+      background: var(--soft-blue);
+      border-left: 4px solid var(--blue);
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 26px 20px 34px;
+      color: #71807a;
+      background: #edf1ee;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 11px;
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --page: min(100% - 28px, 760px);
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .topline {
+        padding-bottom: 46px;
+      }
+
+      .hero-grid,
+      .route-layout,
+      .budget-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        gap: 36px;
+      }
+
+      .hero-facts {
+        max-width: 560px;
+      }
+
+      .decision-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .overview-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .overview-budget {
+        grid-template-columns: 1fr;
+      }
+
+      .weather-strip {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .weather-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .stay-grid,
+      .food-grid,
+      .rules-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stay-card {
+        min-height: auto;
+      }
+
+      .budget-total {
+        position: static;
+      }
+    }
+
+    @media (max-width: 700px) {
+      :root {
+        --page: calc(100% - 24px);
+      }
+
+      .hero-inner {
+        padding-top: 26px;
+      }
+
+      .topline {
+        align-items: flex-start;
+        padding-bottom: 44px;
+      }
+
+      .edition {
+        max-width: 210px;
+        line-height: 1.45;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .hero-lead {
+        font-size: 15px;
+      }
+
+      .hero-fact {
+        min-height: 86px;
+        padding: 14px;
+      }
+
+      .hero-fact strong {
+        font-size: 22px;
+      }
+
+      .decision-copy {
+        gap: 12px;
+      }
+
+      .decision-mark {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+      }
+
+      .segmented {
+        width: 100%;
+      }
+
+      .segmented button {
+        padding: 0 10px;
+        white-space: normal;
+        line-height: 1.25;
+      }
+
+      .page-nav-inner {
+        gap: 20px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .route-toolbar {
+        display: grid;
+      }
+
+      .map-shell {
+        min-height: 0;
+      }
+
+      .route-map-desktop {
+        display: none !important;
+      }
+
+      .route-map-mobile {
+        display: grid;
+        padding: 18px;
+      }
+
+      .map-note {
+        position: static;
+        display: block;
+        padding: 8px 18px 14px;
+        text-align: right;
+      }
+
+      .route-stats {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+      }
+
+      .route-stat {
+        min-height: 118px;
+        padding: 14px;
+      }
+
+      .route-stat strong {
+        font-size: 23px;
+      }
+
+      .route-stat small {
+        display: none;
+      }
+
+      .overview-grid,
+      .weather-strip,
+      .checklist-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .weather-item:last-child {
+        grid-column: auto;
+      }
+
+      .day-card {
+        grid-template-columns: 1fr;
+      }
+
+      .day-date {
+        min-height: 82px;
+        padding: 18px 20px;
+      }
+
+      .day-date time {
+        font-size: 29px;
+      }
+
+      .day-date small {
+        top: 18px;
+        right: 18px;
+        bottom: auto;
+      }
+
+      .day-body {
+        padding: 20px;
+      }
+
+      .day-guide {
+        grid-template-columns: 1fr;
+      }
+
+      .day-guide-block:nth-child(2) {
+        padding-top: 11px;
+        border-top: 1px solid var(--line);
+      }
+
+      .schedule-row {
+        grid-template-columns: 62px minmax(0, 1fr);
+      }
+
+      .budget-table th,
+      .budget-table td {
+        padding: 12px 10px;
+      }
+
+      .sources ol {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .route-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .route-stat {
+        min-height: 88px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      :root {
+        --page: 100%;
+      }
+
+      body {
+        color: #000;
+        background: #fff;
+        font-size: 11pt;
+      }
+
+      .hero {
+        min-height: 0;
+        color: #000;
+        background: #fff;
+        border-bottom: 2px solid #000;
+      }
+
+      .hero::before,
+      .hero::after,
+      .print-button,
+      .page-nav,
+      .decision-band .segmented,
+      .route-toolbar .segmented,
+      .route-status {
+        display: none !important;
+      }
+
+      .topline {
+        padding-bottom: 24px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr 280px;
+        gap: 24px;
+      }
+
+      .hero-lead,
+      .hero-fact span,
+      .kicker {
+        color: #333;
+      }
+
+      .hero-facts {
+        border-color: #aaa;
+        background: #aaa;
+      }
+
+      .hero-fact {
+        color: #000;
+        background: #fff;
+      }
+
+      .hero-fact strong {
+        color: #000;
+      }
+
+      .section {
+        padding: 30px 0;
+      }
+
+      .route-band,
+      .checklist-band {
+        color: #000;
+        background: #fff;
+      }
+
+      .route-band .section-summary,
+      .checklist-band .section-summary {
+        color: #333;
+      }
+
+      .map-shell,
+      .route-stats,
+      .alert,
+      .budget-total {
+        break-inside: avoid;
+      }
+
+      .route-map-desktop {
+        display: block !important;
+      }
+
+      .route-map-mobile {
+        display: none !important;
+      }
+
+      .day-card,
+      .stay-card,
+      .weather-strip,
+      .rules-grid {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .check-item {
+        color: #000;
+        background: #fff;
+        border-color: #aaa;
+      }
+
+      .check-item span {
+        color: #333;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      footer {
+        background: #fff;
+      }
+    }
+  </style>
+</head>
+<body data-route="mangshi" data-airport="dali">
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="topline">
+        <div class="edition">2026 国庆｜家庭慢行版</div>
+        <button class="print-button" type="button" onclick="window.print()">打印 / 导出 PDF</button>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">大理落地 · 腾冲自然深度 · 芒市一晚 · 大理返程</p>
+          <h1>滇西自然<br>自驾路书</h1>
+          <p class="hero-lead">
+            4人同行，含60岁长辈。9月30日一早抵达大理，落地当天即开始游览，10月2日开始自驾。
+            腾冲三天按同方向组合自然景观，10月6日顺路住芒市；不赶路，但不再用半天填满一天。
+          </p>
+        </div>
+
+        <div class="hero-facts" aria-label="行程摘要">
+          <div class="hero-fact">
+            <strong>9天8晚</strong>
+            <span>09.30–10.08</span>
+          </div>
+          <div class="hero-fact">
+            <strong id="hero-distance">约1,030 km</strong>
+            <span>含腾冲当地用车</span>
+          </div>
+          <div class="hero-fact">
+            <strong id="tengchong-nights">4晚</strong>
+            <span>腾冲固定住宿</span>
+          </div>
+          <div class="hero-fact">
+            <strong>18:00</strong>
+            <span>每日驾驶硬截止</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="decision-band">
+    <div class="decision-inner">
+      <div class="decision-copy">
+        <div class="decision-mark" aria-hidden="true">✓</div>
+        <div>
+          <strong>返程优先选大理机场</strong>
+          <p>10月7日回到大理并在机场附近还车、住宿，10月8日中午航班不需要承担长距离道路风险。</p>
+        </div>
+      </div>
+
+      <div class="segmented" aria-label="返程机场">
+        <button type="button" data-airport-choice="dali" aria-pressed="true">大理返程｜推荐</button>
+        <button type="button" data-airport-choice="kunming" aria-pressed="false">昆明返程</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="page-nav" aria-label="页面导航">
+    <div class="page-nav-inner">
+      <a href="#overview">总览</a>
+      <a href="#route">线路总览</a>
+      <a href="#itinerary">每日安排</a>
+      <a href="#checklist">出发前</a>
+      <a href="#sources">依据</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section" id="overview">
+      <div class="section-head">
+        <div class="section-index">01 / 决策总览</div>
+        <div>
+          <h2>先固定节奏，再决定景点</h2>
+          <p class="section-summary">
+            推荐大理2晚、腾冲4晚、芒市1晚、大理机场附近1晚。芒市能补上热带植物、傣味和夜市，
+            与腾冲差异明显；只住一晚、不去瑞丽，新增约140公里但不会挤掉腾冲三个完整自然日。
+          </p>
+        </div>
+      </div>
+
+      <div class="overview-grid">
+        <div class="overview-item">
+          <span>取车</span>
+          <strong>10月2日 08:30<br>大理市区优先</strong>
+        </div>
+        <div class="overview-item">
+          <span>还车</span>
+          <strong>10月7日傍晚<br>大理机场优先</strong>
+        </div>
+        <div class="overview-item">
+          <span>主驾规则</span>
+          <strong>90–120分钟<br>强制轮换或休息</strong>
+        </div>
+        <div class="overview-item">
+          <span>车型底线</span>
+          <strong>中型SUV以上<br>四箱需实装检查</strong>
+        </div>
+      </div>
+
+      <div class="weather-strip" aria-label="天气预报摘要">
+        <div class="weather-item">
+          <strong>大理｜09.30–10.02</strong>
+          <div class="temp">15–25°C</div>
+          <p>当前预报以阵雨为主。9月30日安排古城、三塔与生态廊道，10月1日走喜洲、周城和洱海西岸。</p>
+        </div>
+        <div class="weather-item">
+          <strong>腾冲｜10.02–10.07</strong>
+          <div class="temp">14–25°C</div>
+          <p>多日存在降雨概率。热海石阶、古镇石板路和湿地栈道需穿防滑鞋。</p>
+        </div>
+        <div class="weather-item">
+          <strong>天气执行规则</strong>
+          <div class="temp">48h</div>
+          <p>15天预报只用于排结构；每个户外日前48小时重新核对。中雨以上取消火山攀爬，不用“既然来了”强行执行。</p>
+        </div>
+      </div>
+
+      <div class="overview-budget" aria-label="行程总预算">
+        <div class="overview-budget-main">
+          <span id="budget-plan-label">推荐腾冲 + 芒市版｜不含往返机票</span>
+          <strong id="budget-heading">4人落地后预算：约1.73–2.95万元</strong>
+          <b id="budget-total">¥17,250–29,450</b>
+          <p id="budget-target">更现实的舒适目标值：约22,000–25,500元。</p>
+          <p>人均 <b id="budget-per-person">约 ¥4,310–7,360</b></p>
+        </div>
+        <div class="overview-budget-breakdown">
+          <div><span>住宿｜2间房×8晚</span><strong>¥6,200–12,000</strong></div>
+          <div><span>租车与保障</span><strong>¥2,600–4,200</strong></div>
+          <div><span>餐饮｜4人</span><strong>¥4,800–7,200</strong></div>
+          <div><span>门票与温泉</span><strong>¥1,800–2,900</strong></div>
+          <div><span>油费与停车</span><strong>¥950–1,450</strong></div>
+          <div><span>机动金与芒市增量</span><strong>¥900–1,700</strong></div>
+        </div>
+      </div>
+
+      <div class="airport-warning" role="note">
+        <strong>昆明返程会改变整个尾段。</strong>
+        建议10月6日从腾冲回大理、10月7日再开约317公里到昆明并住机场附近。
+        这会少一个腾冲完整日，并增加约4–6小时驾驶；不建议10月7日从腾冲直接开昆明。
+      </div>
+    </section>
+
+    <section class="route-band" id="route">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-index">02 / 线路图</div>
+          <div>
+            <h2>一张图看懂全程驾驶</h2>
+            <p class="section-summary">
+              三段长途驾驶按日期区分；大理两日、腾冲三条日游线和芒市半日景点也在对应城市旁展开。
+            </p>
+          </div>
+        </div>
+
+        <div class="route-toolbar">
+          <div class="segmented" aria-label="路线版本">
+            <button type="button" data-route-choice="mangshi" aria-pressed="true">腾冲 + 芒市｜推荐</button>
+            <button type="button" data-route-choice="slow" aria-pressed="false">仅腾冲5晚｜备选</button>
+          </div>
+          <div class="route-status" id="route-status">自然与傣味兼顾 · 约1,030公里 · 芒市1晚</div>
+        </div>
+
+        <div class="route-layout">
+          <div class="map-shell" aria-label="大理、腾冲和芒市全程驾驶总览图">
+            <svg class="route-map-desktop" viewBox="0 0 1000 620" role="img" aria-labelledby="map-title map-desc">
+              <title id="map-title">大理、腾冲和芒市全程驾驶总览</title>
+              <desc id="map-desc">地图标出大理、漾濞、永平、保山、龙江大桥、腾冲、龙陵和芒市，以及长途驾驶方向和大理、腾冲、芒市三地景点。</desc>
+
+              <defs>
+                <pattern id="contours" width="210" height="150" patternUnits="userSpaceOnUse">
+                  <path d="M-20 42 C42 0 102 8 158 42 S240 84 280 32" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+                  <path d="M-32 82 C38 36 116 42 170 78 S250 122 296 68" fill="none" stroke="rgba(255,255,255,.055)" stroke-width="1"/>
+                  <path d="M-42 122 C24 78 104 84 164 118 S248 150 302 108" fill="none" stroke="rgba(255,255,255,.045)" stroke-width="1"/>
+                </pattern>
+                <filter id="route-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#06110e" flood-opacity=".45"/>
+                </filter>
+              </defs>
+
+              <rect width="1000" height="620" fill="#203a34"/>
+              <rect width="1000" height="620" fill="url(#contours)"/>
+
+              <g transform="translate(38 28)" aria-label="线路图例">
+                <text x="0" y="0" fill="#fff" font-size="14" font-weight="700">全程路线图例</text>
+                <line x1="0" y1="22" x2="38" y2="22" stroke="#f0bc5a" stroke-width="6" stroke-linecap="round"/>
+                <text x="48" y="26" fill="rgba(255,255,255,.68)" font-size="11">10.02 去腾冲</text>
+                <line x1="139" y1="22" x2="177" y2="22" stroke="#e66e47" stroke-width="6" stroke-linecap="round"/>
+                <text x="187" y="26" fill="rgba(255,255,255,.68)" font-size="11">10.06 去芒市</text>
+                <line x1="278" y1="22" x2="316" y2="22" stroke="#74a7d5" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 7"/>
+                <text x="326" y="26" fill="rgba(255,255,255,.68)" font-size="11">10.07 回大理</text>
+              </g>
+
+              <g transform="translate(936 31)" aria-label="指北针">
+                <path d="M0 28 L10 0 L20 28 L10 22 Z" fill="#f0bc5a"/>
+                <text x="10" y="43" fill="rgba(255,255,255,.68)" font-size="11" text-anchor="middle">N</text>
+              </g>
+
+              <path d="M932 52 C855 122 844 202 770 266 C694 331 668 430 602 594" fill="none" stroke="#7eb5c7" stroke-width="21" opacity=".14"/>
+              <path d="M932 52 C855 122 844 202 770 266 C694 331 668 430 602 594" fill="none" stroke="#90c6d7" stroke-width="2" opacity=".55"/>
+              <text x="813" y="256" fill="rgba(255,255,255,.42)" font-size="11" transform="rotate(-55 813 256)">怒江水系</text>
+
+              <path d="M900 105 C850 112 825 126 795 140 C758 156 736 160 700 165 C642 173 610 194 555 225 C504 254 456 267 410 255 C348 238 297 207 250 190"
+                    fill="none" stroke="rgba(255,255,255,.12)" stroke-width="15" stroke-linecap="round"/>
+              <path d="M900 105 C850 112 825 126 795 140 C758 156 736 160 700 165 C642 173 610 194 555 225 C504 254 456 267 410 255 C348 238 297 207 250 190"
+                    fill="none" stroke="#f0bc5a" stroke-width="7" stroke-linecap="round" filter="url(#route-shadow)"/>
+
+              <path d="M250 190 C286 246 340 326 420 390 C458 433 487 481 520 520"
+                    class="map-route-alt" fill="none" stroke="#e66e47" stroke-width="7" stroke-linecap="round" filter="url(#route-shadow)"/>
+              <path d="M520 520 C480 473 444 430 420 390 C470 322 520 270 555 225 C648 215 785 155 900 105"
+                    class="map-route-alt" fill="none" stroke="#74a7d5" stroke-width="6" stroke-linecap="round"
+                    stroke-dasharray="12 9" filter="url(#route-shadow)"/>
+
+              <path d="M250 190 C420 95 698 78 900 105"
+                    class="map-route-main-return" fill="none" stroke="#74a7d5" stroke-width="6" stroke-linecap="round"
+                    stroke-dasharray="12 9" filter="url(#route-shadow)"/>
+
+              <g transform="translate(620 72)">
+                <rect width="172" height="44" rx="3" fill="#122923" stroke="rgba(240,188,90,.45)"/>
+                <text x="12" y="18" fill="#f0bc5a" font-size="12" font-weight="700">10.02 · 约340 km</text>
+                <text x="12" y="34" fill="rgba(255,255,255,.62)" font-size="11">大理 → 腾冲 · 7–8h</text>
+              </g>
+
+              <g class="map-route-alt" transform="translate(266 279)">
+                <rect width="172" height="44" rx="3" fill="#122923" stroke="rgba(230,110,71,.45)"/>
+                <text x="12" y="18" fill="#ef8a68" font-size="12" font-weight="700">10.06 · 约140 km</text>
+                <text x="12" y="34" fill="rgba(255,255,255,.62)" font-size="11">腾冲 → 芒市 · 2–2.5h</text>
+              </g>
+
+              <g class="map-route-alt" transform="translate(643 375)">
+                <rect width="183" height="44" rx="3" fill="#122923" stroke="rgba(116,167,213,.48)"/>
+                <text x="12" y="18" fill="#9bc5e9" font-size="12" font-weight="700">10.07 · 约322 km</text>
+                <text x="12" y="34" fill="rgba(255,255,255,.62)" font-size="11">芒市 → 大理 · 7–8h</text>
+              </g>
+
+              <g class="map-label-main-return" transform="translate(523 94)">
+                <rect width="190" height="44" rx="3" fill="#122923" stroke="rgba(116,167,213,.48)"/>
+                <text x="12" y="18" fill="#9bc5e9" font-size="12" font-weight="700">10.07 · 约340 km</text>
+                <text x="12" y="34" fill="rgba(255,255,255,.62)" font-size="11">腾冲 → 大理 · 8–9h</text>
+              </g>
+
+              <text x="718" y="146" fill="#f6d995" font-size="11">G56 杭瑞高速</text>
+              <text x="419" y="231" fill="#f6d995" font-size="11">S10 保腾高速</text>
+              <text x="612" y="285" class="map-route-alt" fill="#9bc5e9" font-size="11">G56 杭瑞高速返程</text>
+
+              <g aria-label="大理">
+                <circle cx="900" cy="105" r="18" fill="#fff"/>
+                <circle cx="900" cy="105" r="8" fill="#174b3d"/>
+                <text x="921" y="100" fill="#fff" font-size="18" font-weight="700">大理</text>
+                <text x="921" y="119" fill="rgba(255,255,255,.62)" font-size="11">09.30–10.02 / 10.07</text>
+              </g>
+
+              <g aria-label="漾濞">
+                <circle cx="795" cy="140" r="7" fill="#f0bc5a"/>
+                <text x="805" y="132" fill="#fff" font-size="12" font-weight="700">漾濞</text>
+                <text x="805" y="148" fill="rgba(255,255,255,.5)" font-size="10">顺濞段路况</text>
+              </g>
+
+              <g aria-label="永平">
+                <circle cx="700" cy="165" r="7" fill="#f0bc5a"/>
+                <text x="710" y="157" fill="#fff" font-size="12" font-weight="700">永平</text>
+                <text x="710" y="173" fill="rgba(255,255,255,.5)" font-size="10">服务区休息</text>
+              </g>
+
+              <g aria-label="保山">
+                <circle cx="555" cy="225" r="11" fill="#f0bc5a"/>
+                <text x="570" y="220" fill="#fff" font-size="15" font-weight="700">保山</text>
+                <text x="570" y="238" fill="rgba(255,255,255,.55)" font-size="10">午餐 · 换驾</text>
+              </g>
+
+              <g aria-label="龙江大桥">
+                <circle cx="410" cy="255" r="8" fill="#f0bc5a"/>
+                <text x="422" y="253" fill="#fff" font-size="12" font-weight="700">龙江大桥</text>
+                <text x="422" y="269" fill="rgba(255,255,255,.5)" font-size="10">短休节点</text>
+              </g>
+
+              <g aria-label="腾冲">
+                <circle cx="250" cy="190" r="19" fill="#fff"/>
+                <circle cx="250" cy="190" r="8" fill="#e5683d"/>
+                <text x="174" y="159" fill="#fff" font-size="20" font-weight="700">腾冲</text>
+                <text id="map-tengchong-stay" x="147" y="177" fill="rgba(255,255,255,.62)" font-size="11">10.02–10.06 · 4晚</text>
+              </g>
+
+              <g class="map-node-alt" aria-label="龙陵">
+                <circle cx="420" cy="390" r="8" fill="#e66e47"/>
+                <text x="434" y="386" fill="#fff" font-size="13" font-weight="700">龙陵</text>
+                <text x="434" y="402" fill="rgba(255,255,255,.5)" font-size="10">途中休息</text>
+              </g>
+
+              <g class="map-node-alt" aria-label="芒市">
+                <circle cx="520" cy="520" r="18" fill="#fff"/>
+                <circle cx="520" cy="520" r="8" fill="#315f8e"/>
+                <text x="542" y="515" fill="#fff" font-size="18" font-weight="700">芒市</text>
+                <text x="542" y="534" fill="rgba(255,255,255,.62)" font-size="11">10.06 · 住一晚</text>
+                <text x="542" y="552" fill="#a9c7df" font-size="10">珍奇园 · 银塔 · 金塔 · 美食城</text>
+              </g>
+
+              <g transform="translate(38 330)" aria-label="腾冲本地三条游览线">
+                <rect width="300" height="245" rx="5" fill="rgba(9,31,26,.88)" stroke="rgba(255,255,255,.14)"/>
+                <text x="18" y="29" fill="#fff" font-size="15" font-weight="700">腾冲本地 3 条同向游览线</text>
+                <text x="18" y="49" fill="rgba(255,255,255,.48)" font-size="10">避免每天在城区两侧反复折返</text>
+
+                <text x="18" y="82" fill="#9ecfc0" font-size="11" font-weight="700">10.03 北线</text>
+                <circle cx="96" cy="78" r="4" fill="#72b89e"/>
+                <line x1="100" y1="78" x2="128" y2="78" stroke="#72b89e" stroke-width="2"/>
+                <circle cx="132" cy="78" r="4" fill="#72b89e"/>
+                <line x1="136" y1="78" x2="164" y2="78" stroke="#72b89e" stroke-width="2"/>
+                <circle cx="168" cy="78" r="4" fill="#72b89e"/>
+                <text x="18" y="101" fill="rgba(255,255,255,.72)" font-size="11">城区 → 火山公园 → 北海湿地 → 城区</text>
+
+                <text x="18" y="132" fill="#9ecfc0" font-size="11" font-weight="700">10.04 南线</text>
+                <circle cx="96" cy="128" r="4" fill="#72b89e"/>
+                <line x1="100" y1="128" x2="128" y2="128" stroke="#72b89e" stroke-width="2"/>
+                <circle cx="132" cy="128" r="4" fill="#72b89e"/>
+                <line x1="136" y1="128" x2="164" y2="128" stroke="#72b89e" stroke-width="2"/>
+                <circle cx="168" cy="128" r="4" fill="#72b89e"/>
+                <text x="18" y="151" fill="rgba(255,255,255,.72)" font-size="11">城区 → 热海 → 司莫拉 → 城区</text>
+
+                <text x="18" y="182" fill="#9ecfc0" font-size="11" font-weight="700">10.05 城郊线</text>
+                <circle cx="106" cy="178" r="4" fill="#72b89e"/>
+                <line x1="110" y1="178" x2="138" y2="178" stroke="#72b89e" stroke-width="2"/>
+                <circle cx="142" cy="178" r="4" fill="#72b89e"/>
+                <line x1="146" y1="178" x2="174" y2="178" stroke="#72b89e" stroke-width="2"/>
+                <circle cx="178" cy="178" r="4" fill="#72b89e"/>
+                <text x="18" y="201" fill="rgba(255,255,255,.72)" font-size="11">下绮罗 → 和顺 → 叠水河 → 东山草原</text>
+                <text x="18" y="225" fill="rgba(255,255,255,.44)" font-size="10">三天当地驾驶合计约200–230 km</text>
+              </g>
+
+              <g transform="translate(700 438)" aria-label="大理两日景点">
+                <rect width="260" height="126" rx="5" fill="rgba(9,31,26,.9)" stroke="rgba(255,255,255,.14)"/>
+                <text x="16" y="27" fill="#fff" font-size="14" font-weight="700">大理 2 日景点链</text>
+                <text x="16" y="52" fill="#f0bc5a" font-size="11" font-weight="700">09.30</text>
+                <text x="66" y="52" fill="rgba(255,255,255,.72)" font-size="11">古城 → 三塔倒影 → 龙龛/才村</text>
+                <text x="16" y="79" fill="#f0bc5a" font-size="11" font-weight="700">10.01</text>
+                <text x="66" y="79" fill="rgba(255,255,255,.72)" font-size="11">喜洲 → 稻田 → 周城 → 海舌</text>
+                <text x="16" y="105" fill="rgba(255,255,255,.46)" font-size="10">海舌未约到：改走喜洲洱海西岸</text>
+              </g>
+            </svg>
+
+            <div class="route-map-mobile" aria-label="手机纵向路线总览">
+              <div class="route-mobile-local">
+                <strong>09.30–10.01｜大理景点</strong>
+                <span>首日：大理古城 → 三塔倒影 → 龙龛/才村</span>
+                <span>次日：喜洲 → 稻田 → 周城 → 海舌或洱海西岸</span>
+              </div>
+              <div class="route-mobile-leg">
+                <time datetime="2026-10-02">10.02</time>
+                <div>
+                  <strong>大理 → 腾冲</strong>
+                  <b>约340 km · 按7–8小时</b>
+                  <span>G56：大理 → 漾濞 → 永平 → 保山；经龙江大桥接腾冲。</span>
+                </div>
+              </div>
+              <div class="route-mobile-local">
+                <strong>10.03–10.05｜腾冲三条线</strong>
+                <span>北线：火山公园 → 北海湿地</span>
+                <span>南线：热海 → 司莫拉</span>
+                <span>城郊线：下绮罗 → 和顺 → 叠水河 → 东山草原</span>
+              </div>
+              <div class="route-mobile-leg variant-mangshi">
+                <time datetime="2026-10-06">10.06</time>
+                <div>
+                  <strong>腾冲 → 芒市</strong>
+                  <b>约140 km · 2–2.5小时</b>
+                  <span>经龙陵进入芒市；珍奇园 → 银塔 → 金塔 → 美食城。</span>
+                </div>
+              </div>
+              <div class="route-mobile-leg variant-mangshi">
+                <time datetime="2026-10-07">10.07</time>
+                <div>
+                  <strong>芒市 → 大理机场片区</strong>
+                  <b>约322 km · 按7–8小时</b>
+                  <span>G56：芒市 → 龙陵 → 保山 → 永平 → 大理。</span>
+                </div>
+              </div>
+              <div class="route-mobile-leg variant-slow">
+                <time datetime="2026-10-07">10.07</time>
+                <div>
+                  <strong>腾冲 → 大理机场片区</strong>
+                  <b>约340 km · 按8–9小时</b>
+                  <span>经龙江大桥、保山和永平返回大理。</span>
+                </div>
+              </div>
+            </div>
+            <div class="map-note">方位与道路为总览表达，实时路线以当天导航为准</div>
+          </div>
+
+          <aside class="route-stats" aria-label="路线指标">
+            <div class="route-stat">
+              <span>预计总里程</span>
+              <strong id="route-distance">约1,030 km</strong>
+              <small id="route-distance-note">城市道路与景区往返已计入</small>
+            </div>
+            <div class="route-stat">
+              <span>累计驾驶</span>
+              <strong id="route-hours">18–22 h</strong>
+              <small>不含堵车与休息时间</small>
+            </div>
+            <div class="route-stat">
+              <span>住宿搬运</span>
+              <strong id="route-moves">3 次</strong>
+              <small id="route-moves-note">大理 → 腾冲 → 芒市 → 大理机场</small>
+            </div>
+          </aside>
+        </div>
+
+        <div class="alert">
+          <div>
+            <strong>杭瑞高速顺濞段是本次行程的首要异常点</strong>
+            <p>
+              8月28日已恢复通行，但官方说明仍为临时双向单幅通行。10月2日和10月7日出发前，
+              必须同时查看高德/百度实时导航与“大理交警”路况；若显示事故或长距离红色拥堵，当晚只办理入住并就近吃饭。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="itinerary">
+      <div class="section-head">
+        <div class="section-index">03 / 每日行程</div>
+        <div>
+          <h2>逐日时间安排</h2>
+          <p class="section-summary">
+            9月30日以08:00左右落地为基准；实际航班若有小幅变化，上午时间顺延。每日预算均按4人并计入当晚两间房估算，10月8日除外。
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="day-card">
+          <div class="day-date">
+            <time datetime="2026-09-30">09.30</time>
+            <span>大理首日</span>
+            <small>宿大理</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>上午抵达 + 古城 + 三塔 + 洱海日落</h3>
+              <span>按08:00落地示例 / 当天不开车</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>08:00–09:00</dt>
+                <dd><strong>落地、取行李，机场集合</strong><span>四人和行李齐全后再叫六座网约车，不分两辆车。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>09:00–10:15</dt>
+                <dd><strong>大理机场 → 古城南门外酒店</strong><span>先寄存行李；国庆前客流按75分钟预留，不等正式入住再出门。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>10:30–12:30</dt>
+                <dd><strong>南门 → 五华楼 → 人民路上段</strong><span>上午完成古城主线，避开下午和晚间最密集客流。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:30–15:00</dt>
+                <dd><strong>午餐、办理入住与整理行李</strong><span>午餐可选白族砂锅鱼、炒乳扇和时蔬；14:00后办理入住，随后直接前往三塔。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:30–16:30</dt>
+                <dd><strong>三塔倒影公园</strong><span>看三塔、倒影池与苍山背景，不进入崇圣寺纵深区域。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>17:00–18:40</dt>
+                <dd><strong>龙龛或才村生态廊道</strong><span>网约车往返，沿湖步行约3–4公里，看苍山洱海与傍晚光线。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>19:00</dt>
+                <dd><strong>古城南门外晚餐</strong><span>用餐后直接回酒店，不再进入人民路夜间核心人流。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="9月30日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>古城格局、三塔倒影与苍洱日落</strong>
+                <p>上午看南门与街巷，下午看三塔水面倒影，傍晚转入生态廊道。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>全程网约车，不取车</strong>
+                <p>机场到古城约45–60分钟；三塔、龙龛与酒店间均为短途网约车。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>白族砂锅鱼、炒乳扇、时蔬</strong>
+                <p>首日晚餐选酒店附近，口味先清淡，避免落地当天排长队。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>古城南门外 / 一塔路</strong>
+                <p>连续住2晚；选电梯、早餐、隔音和24小时前台，两间房约1800–3400元。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>住宿：</strong>大理古城南门外 / 一塔路</span>
+              <span><strong>步行：</strong>约7–9 km，分三个时段</span>
+              <span><strong>当日预算：</strong>约1900–3400元</span>
+              <span class="rain-plan"><strong>中雨：</strong>保留古城与三塔，生态廊道缩短</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="day-date">
+            <time datetime="2026-10-01">10.01</time>
+            <span>喜洲田园日</span>
+            <small>宿大理</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>喜洲古镇 + 稻田 + 周城 + 洱海西岸</h3>
+              <span>当天不开车 / 建议包车</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>08:30</dt>
+                <dd><strong>酒店出发前往喜洲</strong><span>建议包车一天，避开国庆临时叫车困难；约09:15抵达古镇外围。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>09:15–11:15</dt>
+                <dd><strong>喜洲古镇与白族民居</strong><span>从四方街进入，重点看转角楼、严家大院外围和传统街巷。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>11:15–12:00</dt>
+                <dd><strong>喜洲稻田与夫妻树方向</strong><span>国庆前后可看田园收获景观；只走田埂公共区域，不进入收费拍摄场。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:00–13:10</dt>
+                <dd><strong>喜洲午餐</strong><span>喜洲粑粑作为点心分食，正餐选白族家常菜、乳扇和蔬菜。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:30–14:50</dt>
+                <dd><strong>周城扎染村</strong><span>看白族扎染工艺和院落，体验项目控制在60分钟内。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:10–17:00</dt>
+                <dd><strong>海舌生态公园或喜洲洱海岸线</strong><span>预约成功进入海舌；没有名额就走夫妻树—桃源码头一带的洱海西岸。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>17:45–19:15</dt>
+                <dd><strong>返回古城，晚餐并确认取车</strong><span>复核10月2日取车网点、驾驶人证件、油量规则与门店营业时间。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月1日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>白族民居、稻田与洱海西岸</strong>
+                <p>喜洲兼具古镇建筑和田园风景，周城补充扎染，下午回到湖岸看苍洱景观。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>包车约80–100 km · 累计2–2.5小时</strong>
+                <p>古城—喜洲—周城—海舌—古城形成顺路闭环；古镇车辆停外围。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>喜洲粑粑、乳扇、白族家常菜</strong>
+                <p>粑粑甜咸各买一个供四人分食，正餐不要只靠小吃。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>继续住古城南门外</strong>
+                <p>不换酒店；晚间整理自驾行李，10月2日取车时不用拖箱穿古城。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>步行：</strong>约6–8 km，古镇与湖岸分段完成</span>
+              <span><strong>交通：</strong>4人建议包车，不在喜洲临时等返程车</span>
+              <span><strong>当日预算：</strong>约1900–3600元</span>
+              <span class="rain-plan"><strong>中雨：</strong>保留喜洲与周城，湖岸行程缩短</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card drive">
+          <div class="day-date">
+            <time datetime="2026-10-02">10.02</time>
+            <span>长途驾驶日</span>
+            <small>宿腾冲</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>大理 → 保山 → 腾冲</h3>
+              <span>约340 km / 按7–8小时排</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>08:00</dt>
+                <dd><strong>取车、拍摄验车视频</strong><span>两名司机都登记；检查轮胎、雨刷、玻璃、备胎/补胎工具与油量。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>08:40</dt>
+                <dd><strong>离开大理，进入杭瑞高速</strong><span>当天不追求早到，只要求18:00前安全抵达。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>10:20</dt>
+                <dd><strong>永平或曲硐服务区休息20分钟</strong><span>第一位司机完成约90分钟驾驶后轮换。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:20</dt>
+                <dd><strong>保山附近午餐与长休息</strong><span>控制在50–70分钟，避免吃太饱后立即驾驶。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>14:40</dt>
+                <dd><strong>龙江大桥附近服务区短停</strong><span>只作休息，不为了拍照绕行或占用应急车道。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>16:00–17:30</dt>
+                <dd><strong>抵达腾冲城区酒店</strong><span>超过17:30仍未到，晚餐改为酒店附近，不再去和顺。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月2日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">沿途看点</span>
+                <strong>苍山西坡、保山坝子与龙江大桥</strong>
+                <p>这一天的景观在路上，不单独进入景区；大桥只在服务区安全位置短停。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>约340 km · G56 + S10</strong>
+                <p>按7–8小时排，永平、保山、龙江大桥分段休息，两名司机轮换。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>保山午餐；腾冲大救驾或烧肉饵丝</strong>
+                <p>中午不过饱，抵达晚餐加一份清淡时蔬即可。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>腾越镇 / 热海路 / 腾冲城区</strong>
+                <p>推荐连续住4晚；确认自有停车场、电梯和早餐，两间房约3000–6000元。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>驾驶：</strong>主驾约3.5h + 副驾约2.5h</span>
+              <span><strong>高速费：</strong>国庆政策期内0元</span>
+              <span><strong>当日预算：</strong>约1800–3300元</span>
+              <span class="rain-plan"><strong>雨天：</strong>车速下调，预留时间不变</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="day-date">
+            <time datetime="2026-10-03">10.03</time>
+            <span>火山湿地日</span>
+            <small>宿腾冲</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>火山公园 + 北海湿地</h3>
+              <span>同一北线，合并最省路</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>08:30</dt>
+                <dd><strong>早餐后出发去火山公园</strong><span>提前看低云、降雨和风速；热气球受天气影响大，不作为必做项目。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>09:20–11:50</dt>
+                <dd><strong>火山地质公园，小空山短线优先</strong><span>长辈身体好也不必连续爬两座火山；留体力给下午湿地。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:10</dt>
+                <dd><strong>马站方向午餐</strong><span>选择铜瓢牛肉或清淡炒菜，午饭控制60分钟，不为网红店排长队。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:20</dt>
+                <dd><strong>前往北海湿地</strong><span>两处车程通常约40–60分钟，按实时导航与国庆拥堵修正。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>14:10–16:40</dt>
+                <dd><strong>湿地栈道、草排与观景区</strong><span>以慢走和观景为主；17:00前离开，天黑前回腾冲城区。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>18:00</dt>
+                <dd><strong>城区晚餐</strong><span>推荐提前订土锅子，4人更适合分食；另点大薄片和时蔬即可。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月3日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>火山锥地貌 + 高原湿地生态</strong>
+                <p>上午看火山口与地质景观，下午转入开阔湿地、草排和候鸟生境。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>北线约2.5–3小时驾驶</strong>
+                <p>城区到火山、火山到湿地约40–60分钟；两个景区均使用正规停车场。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>午餐铜瓢牛肉，晚餐土锅子</strong>
+                <p>土锅子提前一天预订；4人再配大薄片和一份时蔬。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>继续住腾冲城区</strong>
+                <p>当天不搬行李，晚餐后步行或短途网约车回酒店。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>驾驶：</strong>约2.5–3h</span>
+              <span><strong>步行：</strong>约5–7 km，可缩短火山段</span>
+              <span><strong>当日预算：</strong>约1750–3100元</span>
+              <span class="rain-plan"><strong>中雨：</strong>取消火山攀爬，只留湿地短线或改10月6日补位</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="day-date">
+            <time datetime="2026-10-04">10.04</time>
+            <span>地热体验日</span>
+            <small>宿腾冲</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>热海景区 + 司莫拉佤族村</h3>
+              <span>同一南线，相距约9 km</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>08:30</dt>
+                <dd><strong>早餐后前往热海</strong><span>争取09:30前入园，避开午后团队客流。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>09:20–12:00</dt>
+                <dd><strong>热海地热景观</strong><span>完整步道约2.5公里且台阶多；父亲体力一般时直接选“大滚锅短线”。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:15</dt>
+                <dd><strong>热海或清水镇方向午餐</strong><span>推荐烧肉饵丝或家常炒菜，避开泡汤前饮酒和过饱。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:30–15:40</dt>
+                <dd><strong>司莫拉佤族村田园慢走</strong><span>看田园、村寨与观景台，不追求走完全部路线；与热海顺路，比回城后再折返更合理。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>16:40–18:00</dt>
+                <dd><strong>返回城区，玉泉园散步或泡温泉</strong><span>泡汤只选酒店或城区近处，单次10–15分钟；饮酒后不泡。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月4日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>地热奇观 + 佤族田园村寨</strong>
+                <p>热海看喷气孔、热泉和大滚锅；司莫拉以稻田、村寨与观景台为主。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>南线约70 km · 驾驶1.5–2小时</strong>
+                <p>热海与司莫拉相距约9公里，同日顺路完成，避免回城后再次折返。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>烧肉饵丝、腌菜大烧、棕包炒肉</strong>
+                <p>中午吃饵丝或家常菜，晚餐从两道腾冲菜中选一荤一素。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>继续住腾冲城区</strong>
+                <p>想泡汤优先选酒店或城区近处，避免泡汤后再长距离驾驶。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>驾驶：</strong>约1.5–2h</span>
+              <span><strong>强度：</strong>中等，台阶集中在热海</span>
+              <span><strong>当日预算：</strong>约1600–3500元</span>
+              <span class="rain-plan"><strong>中雨：</strong>热海走大滚锅短线，司莫拉视道路情况取消</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="day-date">
+            <time datetime="2026-10-05">10.05</time>
+            <span>早市古镇草原</span>
+            <small>宿腾冲</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>下绮罗早市 + 和顺古镇 + 东山草原</h3>
+              <span>早起换来三个差异化体验</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>06:50</dt>
+                <dd><strong>抵达下绮罗小菜街</strong><span>也常被称为绮罗早市；7点开市，先吃稀豆粉配饵丝/饵块、破酥包。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>08:10</dt>
+                <dd><strong>离开早市前买甜白酒</strong><span>常在9–10点售罄；少量尝味即可，驾驶人不饮含酒精饮品。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>08:40–11:40</dt>
+                <dd><strong>和顺图书馆 → 洗衣亭 → 野鸭湖</strong><span>车辆停景区外；核心区石板路慢走，重点看水系与古镇景观。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:00–13:10</dt>
+                <dd><strong>古镇外围午餐</strong><span>午餐可选大救驾、腌菜大烧，餐后直接前往叠水河。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:30–14:30</dt>
+                <dd><strong>叠水河瀑布短走</strong><span>城区内完成瀑布和峡谷观景，控制步行量后再去东山。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:00–17:20</dt>
+                <dd><strong>东山草原看高山草甸与腾冲坝子</strong><span>以观景和短走为主，17:20开始下山，确保天黑前回城区。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月5日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>早市、古镇水系、瀑布与高山草甸</strong>
+                <p>早市看腾冲日常，和顺看水系，叠水河补充瀑布景观，东山俯瞰腾冲坝子。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>城郊线约50–70 km</strong>
+                <p>和顺车辆停景区外；东山17:20下山，保持天黑前回到城区。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>稀豆粉、饵丝、破酥包、甜白酒</strong>
+                <p>甜白酒通常9–10点前售罄；午餐选大救驾或腌菜大烧。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>腾冲城区最后一晚</strong>
+                <p>晚间收拾行李并加油，次日09:00退房前往芒市。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>步行：</strong>约7–9 km，分早市、古镇和下午两段</span>
+              <span><strong>门票参考：</strong>和顺55元/人</span>
+              <span><strong>当日预算：</strong>约1500–2700元</span>
+              <span class="rain-plan"><strong>中雨：</strong>保留早市、和顺与叠水河，东山改玉泉园</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="day-date">
+            <time datetime="2026-10-06">10.06</time>
+            <span class="variant-slow">自然机动日</span>
+            <span class="variant-mangshi">芒市一晚</span>
+            <small class="variant-slow">宿腾冲</small>
+            <small class="variant-mangshi">宿芒市</small>
+          </div>
+          <div class="day-body variant-slow">
+            <div class="day-heading">
+              <h3>补回雨天取消项，或来凤山 + 温泉</h3>
+              <span>只在不去芒市时启用</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>09:30</dt>
+                <dd><strong>优先补回前三天因雨取消的自然景点</strong><span>火山、湿地、东山只补一个，不重复已经完成的路线。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>无缺项</dt>
+                <dd><strong>来凤山森林公园 + 城区午餐</strong><span>上午走林间步道，午餐后逛玉泉园或本地市场。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:30</dt>
+                <dd><strong>城区温泉或自由活动</strong><span>这一天承担天气缓冲，不再增加远距离景点。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月6日仅腾冲方案补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>来凤山森林或天气补位</strong>
+                <p>优先完成此前受天气影响的火山、湿地或东山；都已完成则走来凤山林间步道。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>城区短途或单景点往返</strong>
+                <p>当天驾驶控制在2小时内，作为连续户外行程后的恢复日。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>补吃腾冲饵丝、铜瓢牛肉或土锅子</strong>
+                <p>从前几天未吃到的菜中选一项，不再专程跨城找店。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>腾冲城区第5晚</strong>
+                <p>保持原酒店不搬行李，两间房五晚总价约3800–7500元。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>价值：</strong>减少天气导致的核心景点损失</span>
+              <span><strong>当日预算：</strong>约1600–3800元</span>
+              <span class="rain-plan"><strong>持续降雨：</strong>直接休整，不为填满日程冒险</span>
+            </div>
+          </div>
+
+          <div class="day-body variant-mangshi">
+            <div class="day-heading">
+              <h3>腾冲 → 芒市，热带植物与傣味夜市</h3>
+              <span>约140 km / 2–2.5小时</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>09:00</dt>
+                <dd><strong>退房后前往芒市</strong><span>途中正常休息一次，11:30左右抵达；入住后车辆停酒店，当晚改用网约车。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>11:45–13:30</dt>
+                <dd><strong>午餐、入住与树包塔短走</strong><span>先试熟食版柠檬撒或过手米线；办理入住后步行或乘车看树包塔。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:50–15:50</dt>
+                <dd><strong>勐巴娜西珍奇园</strong><span>看热带植物、古树与孔雀，和腾冲火山地貌差异明显；不感兴趣可改树包塔短停。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>16:10–18:20</dt>
+                <dd><strong>银塔 → 金塔日落</strong><span>两处相近，先银塔后金塔；全程网约车，日落后不由家人夜驾。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>19:00</dt>
+                <dd><strong>勐巴娜西美食城晚餐</strong><span>香茅草烤鱼、烤牛舌/猪尾、舂鸡脚、泡鲁达；体力好再去新玩厂，二选一即可。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月6日芒市方案补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">景点看点</span>
+                <strong>热带植物、孔雀与金银双塔</strong>
+                <p>珍奇园的植物景观与腾冲差异明显，傍晚用银塔白色空间和金塔日落收尾。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>约140 km · 驾驶2–2.5小时</strong>
+                <p>经龙陵方向进入芒市；入住后车辆停酒店，下午和夜间全部网约车。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>柠檬撒、烤鱼、舂鸡脚、泡鲁达</strong>
+                <p>午餐先选熟食版柠檬撒或过手米线，晚餐集中在美食城完成。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>芒市广场 / 团结大街</strong>
+                <p>住市中心有停车场的商务酒店，两间房一晚约500–1000元。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>结论：</strong>值得住一晚，但不延伸瑞丽</span>
+              <span><strong>增量里程：</strong>约120–150 km</span>
+              <span><strong>当日预算：</strong>约2000–3550元</span>
+              <span class="rain-plan"><strong>大雨：</strong>珍奇园缩短，银塔取消，只留金塔与晚餐</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card drive">
+          <div class="day-date">
+            <time datetime="2026-10-07">10.07</time>
+            <span>返程驾驶日</span>
+            <small>宿大理机场</small>
+          </div>
+          <div class="day-body variant-slow">
+            <div class="day-heading">
+              <h3>腾冲 → 大理机场片区</h3>
+              <span>约340 km / 按8–9小时排</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>07:20</dt>
+                <dd><strong>早餐、退房、加满油</strong><span>10月7日是返程高峰，必须在08:00前进入主路。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>07:40</dt>
+                <dd><strong>正式出发</strong><span>按龙江大桥、保山、永平三段轮换驾驶。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>09:20</dt>
+                <dd><strong>龙江大桥附近第一次休息</strong><span>20分钟，确认顺濞段实时路况。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>11:30</dt>
+                <dd><strong>保山或永平午餐</strong><span>以导航拥堵位置决定，不为固定餐厅绕行。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:30–17:00</dt>
+                <dd><strong>抵达大理机场/满江片区</strong><span>办理酒店入住后，傍晚直接在机场网点还车；不要拖到10月8日。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月7日仅腾冲方案补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">当天重点</span>
+                <strong>分段驾驶与准时还车</strong>
+                <p>按龙江大桥、保山、永平分三段轮换，途中景观只在服务区观看。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>约340 km · 按8–9小时</strong>
+                <p>08:00前进入主路；到大理后先加油、验车，再办理酒店入住。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>午餐随路况选保山或永平</strong>
+                <p>晚餐在满江或机场片区解决，不再回古城。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>大理机场路 / 满江片区</strong>
+                <p>距机场15–25分钟，确认接送机；两间房一晚约600–1100元。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>硬规则：</strong>当天不安排任何景点</span>
+              <span><strong>当日预算：</strong>约1650–2850元</span>
+              <span><strong>还车：</strong>保留油站小票与结算截图</span>
+            </div>
+          </div>
+
+          <div class="day-body variant-mangshi">
+            <div class="day-heading">
+              <h3>芒市 → 大理机场片区</h3>
+              <span>约322 km / 按7–8小时排</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>07:20</dt>
+                <dd><strong>早餐、退房、加满油</strong><span>返程高峰日，08:00前离开芒市。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>07:40</dt>
+                <dd><strong>沿杭瑞高速向大理</strong><span>约90分钟轮换驾驶，不去瑞丽、不进腾冲。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>10:00</dt>
+                <dd><strong>龙陵/保山方向休息</strong><span>根据实时拥堵决定午餐点。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:00–17:00</dt>
+                <dd><strong>抵达大理机场片区并还车</strong><span>超过17:00则先联系门店确认营业与还车方式。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月7日芒市方案补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">当天重点</span>
+                <strong>芒市直返大理，不回腾冲</strong>
+                <p>经龙陵、保山、永平返回，核心目标是17:00前完成还车与入住。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程停车</span>
+                <strong>约322 km · 按7–8小时</strong>
+                <p>90分钟左右轮换驾驶；龙陵或保山休息，顺濞段再次核对实时路况。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>早餐在芒市，午餐随路况安排</strong>
+                <p>返程日以清淡快餐为主，晚餐在满江或机场片区。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住哪里</span>
+                <strong>大理机场路 / 满江片区</strong>
+                <p>距机场15–25分钟并确认接送机，两间房一晚约600–1100元。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>硬规则：</strong>当天不安排任何景点</span>
+              <span><strong>当日预算：</strong>约1650–2850元</span>
+              <span><strong>风险：</strong>芒市早晨可能有阵雨或雾</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card buffer">
+          <div class="day-date">
+            <time datetime="2026-10-08">10.08</time>
+            <span>返程日</span>
+            <small>大理起飞</small>
+          </div>
+          <div class="day-body">
+            <div class="day-heading">
+              <h3>只处理机场流程</h3>
+              <span>以12:00航班示例</span>
+            </div>
+            <dl class="schedule">
+              <div class="schedule-row">
+                <dt>08:30</dt>
+                <dd><strong>早餐、复核证件与托运行李</strong><span>租车已在前一晚归还，不让还车流程侵占值机时间。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>09:15</dt>
+                <dd><strong>酒店出发前往大理机场</strong><span>带长辈与较多行李，按起飞前2小时到达。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>10:00</dt>
+                <dd><strong>办理值机与托运</strong><span>若实际航班早于12:00，所有时间等量前移。</span></dd>
+              </div>
+            </dl>
+            <aside class="day-guide" aria-label="10月8日补充信息">
+              <div class="day-guide-block">
+                <span class="day-guide-label">当天重点</span>
+                <strong>早餐、值机与托运行李</strong>
+                <p>车辆已在前一晚归还，早晨不再处理租车手续。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">车程</span>
+                <strong>酒店到机场约15–25分钟</strong>
+                <p>预约可装四人行李的车辆，按起飞前2小时到达。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">吃什么</span>
+                <strong>优先酒店早餐</strong>
+                <p>准备水和简单零食，机场内不再安排正式正餐。</p>
+              </div>
+              <div class="day-guide-block">
+                <span class="day-guide-label">住宿</span>
+                <strong>当日返程，无新增住宿</strong>
+                <p>若航班临时取消，优先续住机场片区，不返回古城。</p>
+              </div>
+            </aside>
+            <div class="day-foot">
+              <span><strong>前提：</strong>优先购买大理中午返程航班</span>
+              <span><strong>当日预算：</strong>约200–400元</span>
+              <span><strong>备用：</strong>航班变动时优先改晚，不追加夜驾</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="food-band" id="food" hidden>
+      <div class="section">
+        <div class="section-head">
+          <div class="section-index">04 / 沿途吃什么</div>
+          <div>
+            <h2>早市要早，正餐按四人一桌点</h2>
+            <p class="section-summary">
+              腾冲重点吃本地家常菜和饵丝，芒市重点吃傣味与夜市小吃。以下按行程餐次安排，不为单一餐厅跨城绕路。
+            </p>
+          </div>
+        </div>
+
+        <div class="food-grid">
+          <article class="food-card">
+            <div class="meal-time">10.05｜06:50–08:10</div>
+            <h3>下绮罗小菜街早市</h3>
+            <p>你问的腾冲早市就是这里，也常被称为“绮罗早市”。官方信息显示清晨7点开市。</p>
+            <dl class="food-list">
+              <div>
+                <dt>第一口</dt>
+                <dd>稀豆粉配饵丝或烧饵块，四人可分着尝，不必每人点一套。</dd>
+              </div>
+              <div>
+                <dt>带着吃</dt>
+                <dd>破酥包，甜咸口各买几个，适合作为上午加餐。</dd>
+              </div>
+              <div>
+                <dt>早点买</dt>
+                <dd>甜白酒通常9–10点售罄；驾驶人不饮含酒精饮品。</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="food-card">
+            <div class="meal-time">10.02–10.05｜腾冲正餐</div>
+            <h3>四人点菜顺序</h3>
+            <p>先点一锅、一荤、一素和一份主食，吃不够再加，避免连续几天都点同类重口菜。</p>
+            <dl class="food-list">
+              <div>
+                <dt>10.02 抵达晚餐</dt>
+                <dd>大救驾或烧肉饵丝，加一份清淡时蔬。</dd>
+              </div>
+              <div>
+                <dt>10.03 晚餐</dt>
+                <dd>土锅子建议提前预订；配大薄片，四人分食最合适。</dd>
+              </div>
+              <div>
+                <dt>10.04–10.05</dt>
+                <dd>铜瓢牛肉、腌菜大烧、棕包炒肉轮换点，不必一顿集齐。</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="food-card">
+            <div class="meal-time">10.06｜芒市午后与晚餐</div>
+            <h3>傣味从熟食开始</h3>
+            <p>芒市值得去的核心不只是塔景，而是和腾冲完全不同的热带城市气质与饮食。</p>
+            <dl class="food-list">
+              <div>
+                <dt>午餐</dt>
+                <dd>熟食版柠檬撒或过手米线；默认不点生食、苦撒。</dd>
+              </div>
+              <div>
+                <dt>下午甜品</dt>
+                <dd>泡鲁达配甩粑粑，四人各点一份会偏多，先点两份共享。</dd>
+              </div>
+              <div>
+                <dt>美食城晚餐</dt>
+                <dd>香茅草烤鱼、烤牛舌或猪尾、舂鸡脚，再配蔬菜和主食。</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="food-rule">
+          <strong>点餐底线：</strong>
+          长途驾驶前不饮酒、不吃过量生冷；土锅子提前一天订即可。夜市只选勐巴娜西美食城或新玩厂其中一处，不连续赶场。
+        </div>
+      </div>
+    </section>
+
+    <section class="stay-band" id="stay" hidden>
+      <div class="section">
+        <div class="section-head">
+          <div class="section-index">05 / 住宿建议</div>
+          <div>
+            <h2>按“搬运行李成本”选区域</h2>
+            <p class="section-summary">
+              四人带长辈和较多行李，位置、停车、电梯比景观房更重要。默认订两间双床房，并优先选择可免费取消。
+            </p>
+          </div>
+        </div>
+
+        <div class="stay-grid">
+          <article class="stay-card">
+            <div class="nights">09.30–10.02｜2晚</div>
+            <h3>大理前段</h3>
+            <div class="area">古城南门外 / 一塔路</div>
+            <ul>
+              <li>步行可进古城，但不拖箱走核心石板路</li>
+              <li>网约车容易定位，10月2日取车方便</li>
+              <li>筛选：电梯、早餐、隔音、24小时前台</li>
+              <li>不要住双廊，10月2日上高速会额外绕行</li>
+            </ul>
+            <div class="stay-price">两间房两晚：约1800–3400元</div>
+          </article>
+
+          <article class="stay-card">
+            <div class="nights">
+              <span class="variant-slow">10.02–10.07｜5晚</span>
+              <span class="variant-mangshi">10.02–10.06｜4晚</span>
+            </div>
+            <h3>腾冲主住</h3>
+            <div class="area">腾越镇 / 热海路 / 城区</div>
+            <ul>
+              <li class="variant-slow">五晚不换酒店，减少行李搬运</li>
+              <li class="variant-mangshi">四晚固定住宿，10月6日退房前往芒市</li>
+              <li>必须确认自有停车场与电梯</li>
+              <li>去和顺、热海、东山草原均容易调度</li>
+              <li>不建议住和顺核心区：游客车不能进入</li>
+            </ul>
+            <div class="stay-price variant-slow">两间房五晚：约3800–7500元</div>
+            <div class="stay-price variant-mangshi">两间房四晚：约3000–6000元</div>
+          </article>
+
+          <article class="stay-card variant-mangshi">
+            <div class="nights">10.06–10.07｜1晚</div>
+            <h3>芒市扩展</h3>
+            <div class="area">芒市广场 / 团结大街</div>
+            <ul>
+              <li>选择市中心有停车场的商务酒店</li>
+              <li>步行或短途网约车解决晚餐</li>
+              <li>不住偏远度假区，次日上高速更直接</li>
+              <li>筛选：电梯、双床、早餐、可晚到</li>
+            </ul>
+            <div class="stay-price">两间房一晚：约500–1000元</div>
+          </article>
+
+          <article class="stay-card">
+            <div class="nights">10.07–10.08｜1晚</div>
+            <h3>大理尾段</h3>
+            <div class="area">机场路 / 满江片区</div>
+            <ul>
+              <li>距机场约15–25分钟优先</li>
+              <li>确认免费接送机或可预约大车</li>
+              <li>10月7日傍晚先还车，再入住</li>
+              <li>不回古城，避免10月8日早高峰穿城</li>
+            </ul>
+            <div class="stay-price">两间房一晚：约600–1100元</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="budget" hidden>
+      <div class="section-head">
+        <div class="section-index">06 / 预算规划</div>
+        <div>
+          <h2 id="legacy-budget-heading">4人落地后预算：约1.73–2.95万元</h2>
+          <p class="section-summary">
+            不含往返云南机票；住宿按两间房计算。价格处于国庆动态区间，最终应以已锁定订单为准。
+          </p>
+        </div>
+      </div>
+
+      <div class="budget-layout">
+        <table class="budget-table">
+          <thead>
+            <tr>
+              <th>项目</th>
+              <th>计算口径</th>
+              <th>4人预算</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>租车与保障</td>
+              <td>中型SUV，约6个计费日，含基础/尊享保障</td>
+              <td>2600–4200元</td>
+            </tr>
+            <tr>
+              <td>燃油</td>
+              <td>约1000–1100 km，8.5–10 L/100km</td>
+              <td>700–950元</td>
+            </tr>
+            <tr>
+              <td>高速与停车</td>
+              <td>长途均在免费期，预算主要为停车</td>
+              <td>250–500元</td>
+            </tr>
+            <tr>
+              <td>住宿</td>
+              <td>2间房 × 8晚</td>
+              <td>6200–12000元</td>
+            </tr>
+            <tr>
+              <td>餐饮</td>
+              <td>4人 × 8天，家常餐为主</td>
+              <td>4800–7200元</td>
+            </tr>
+            <tr>
+              <td>门票与温泉</td>
+              <td>三塔、喜洲包车、火山、湿地、热海、和顺、芒市景点，含可选泡汤</td>
+              <td>1800–2900元</td>
+            </tr>
+            <tr>
+              <td>机动金</td>
+              <td>临时接驳、雨具、药品、退改与餐费波动</td>
+              <td>600–1000元</td>
+            </tr>
+            <tr class="optional variant-mangshi">
+              <td>芒市段增量</td>
+              <td>燃油、停车与房价差，不含购物</td>
+              <td>约300–700元</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <aside class="budget-total">
+          <span id="legacy-budget-plan-label">推荐腾冲 + 芒市版｜不含机票</span>
+          <strong id="legacy-budget-total">¥17,250–29,450</strong>
+          <p id="legacy-budget-target">更现实的舒适目标值：约22,000–25,500元。</p>
+          <hr>
+          <span>折算人均</span>
+          <div class="per-person" id="legacy-budget-per-person">约 ¥4,310–7,360</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="checklist-band" id="checklist">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-index">04 / 出发前清单</div>
+          <div>
+            <h2>只盯尚未完成的关键项</h2>
+            <p class="section-summary">勾选状态会保存在当前浏览器。越靠前的项目，错过后的替代成本越高。</p>
+          </div>
+        </div>
+
+        <div class="checklist-grid">
+          <label class="check-item">
+            <input type="checkbox" data-check="flight">
+            <span><strong>锁定大理返程航班</strong><span>10月8日中午；避免昆明返程压缩两天行程。</span></span>
+            <time>立即</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="hotel">
+            <span><strong>确认主方案四段住宿</strong><span>大理前段、腾冲、芒市、大理机场；两间房，逐项核对电梯与停车。</span></span>
+            <time>立即</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="car">
+            <span><strong>确认租车完整费用</strong><span>两名驾驶人、保险免赔、轮胎玻璃、超时、取还网点。</span></span>
+            <time>立即</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="luggage">
+            <span><strong>核对后备厢</strong><span>四个大箱不要只看“5座”；要求同级实车装载尺寸。</span></span>
+            <time>取车前</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="market">
+            <span><strong>确认早市与东山开放情况</strong><span>10月4日晚核对下绮罗小菜街位置、东山草原天气与临时管制。</span></span>
+            <time>提前1天</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="xizhou">
+            <span><strong>确认喜洲包车与海舌预约</strong><span>9月30日晚确认包车接送；计划进入海舌时同步核对官方预约入口。</span></span>
+            <time>提前1天</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="weather">
+            <span><strong>重查天气与路况</strong><span>10月1日晚查去程；10月6日晚查返程与顺濞段。</span></span>
+            <time>前一晚</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="health">
+            <span><strong>准备长辈常用药与健康信息</strong><span>血压、心脑血管情况会直接决定是否泡温泉和走完整热海步道。</span></span>
+            <time>出发前</time>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" data-check="offline">
+            <span><strong>下载离线地图</strong><span>大理、保山、腾冲、德宏；保存租车救援与保险电话。</span></span>
+            <time>出发前</time>
+          </label>
+        </div>
+
+        <div class="execution-inline">
+          <h3>路况、天气与体力预案</h3>
+          <div class="rules-grid">
+            <div class="rule">
+              <strong>道路变红</strong>
+              <p>导航预计到达晚于18:00，晚餐改在酒店附近并保持驾驶截止时间。顺濞段发生事故时，不自行钻国道小路。</p>
+            </div>
+            <div class="rule">
+              <strong>雨势变大</strong>
+              <p>中雨以上火山改为城区活动；热海只走短线；湿地栈道明显积水则改为温泉或酒店休整。</p>
+            </div>
+            <div class="rule">
+              <strong>长辈状态下降</strong>
+              <p>出现头晕、胸闷、膝痛或睡眠不足，当日只保留吃饭与休息。温泉不能替代医疗判断。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="safety" hidden>
+      <div class="section-head">
+        <div class="section-index">08 / 执行规则</div>
+        <div>
+          <h2>路况、天气与体力预案</h2>
+          <p class="section-summary">以下情况出现时，直接切换到对应安排，不临时增加新的跨城路线。</p>
+        </div>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule">
+          <strong>道路变红</strong>
+          <p>导航预计到达晚于18:00，晚餐改在酒店附近并保持驾驶截止时间。顺濞段发生事故时，不自行钻国道小路。</p>
+        </div>
+        <div class="rule">
+          <strong>雨势变大</strong>
+          <p>中雨以上火山改为城区活动；热海只走短线；湿地栈道明显积水则改为温泉或酒店休整。</p>
+        </div>
+        <div class="rule">
+          <strong>长辈状态下降</strong>
+          <p>出现头晕、胸闷、膝痛或睡眠不足，当日只保留吃饭与休息。温泉不能替代医疗判断。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="section-head">
+        <div class="section-index">05 / 信息依据</div>
+        <div>
+          <h2>已核对的政策与数据</h2>
+          <p class="section-summary">路线里程为公开导航数据的规划值；天气与国庆管制会变化，已在页面内标明复核节点。</p>
+        </div>
+      </div>
+
+      <div class="sources">
+        <ol>
+          <li><a href="https://www.dali.gov.cn/dlzrmzf/c101530/pc/content/2093335744229724160/content_2093335744229724160.html">大理州政府：杭瑞高速顺濞段恢复双向单幅通行</a></li>
+          <li><a href="http://m.toutiao.com/group/7689694116006937151/">新华社信息：2026国庆高速免费10月1日0时至7日24时</a></li>
+          <li><a href="https://www.dali.gov.cn/dlzrmzf/c101724/pc/content/2087739880912244736/content_2087739880912244736.html">大理州文旅局：喜洲、周城与洱海西岸推荐线路</a></li>
+          <li><a href="https://www.dali.gov.cn/dlzrmzf/c101724/pc/content/1968887530844688384/content_1968887530844688384.html">大理州政府：崇圣寺三塔与倒影公园信息</a></li>
+          <li><a href="https://www.tchsgz.com/details/FBDu3yMWs.html">和顺古镇：2026年4月起核心区实行车辆准入</a></li>
+          <li><a href="http://www.chinaspa.cn/news_1/193.html">热海景区：步道、长辈及温泉安全提示</a></li>
+          <li><a href="https://www.tengchong.gov.cn/info/1732/15051.htm">腾冲市政府：北海湿地景区介绍</a></li>
+          <li><a href="https://tengchong.gov.cn/info/1732/34978.htm">腾冲市政府：司莫拉佤族村与热海区位信息</a></li>
+          <li><a href="https://www.tcdscy.com/">东山草原景区官网：草甸规模与开放信息</a></li>
+          <li><a href="https://www.tengchong.gov.cn/info/9617/5890463.htm">腾冲市政府：下绮罗小菜街早市与本地早餐</a></li>
+          <li><a href="https://m.yunnan.cn/system/2026/09/18/034154248.shtml">云南网：腾冲土锅子、大薄片、大救驾等地方菜</a></li>
+          <li><a href="https://m.yunnan.cn/system/2026/07/24/034094584.shtml">云南网：芒市塔景、美食城与夜间游线</a></li>
+          <li><a href="https://wap.weather.com.cn/mweather15d/101290201.shtml">中国天气网：大理15天预报</a></li>
+          <li><a href="https://cnr.weather.com.cn/mweather15d/101290506.shtml">中国天气网：腾冲15天预报</a></li>
+          <li><a href="http://cha.zuzuche.com/lu/tengchong/2664.html">公开导航参考：腾冲—大理约340公里</a></li>
+          <li><a href="http://cha.zuzuche.com/lu/dehongdaizujingpozu/2664.html">公开导航参考：芒市—大理约322公里</a></li>
+          <li><a href="https://m.chinawutong.com/tools/tengchong_mangshi.html">公开导航参考：腾冲—芒市约140公里</a></li>
+        </ol>
+
+        <div class="method-note">
+          <strong>制图说明：</strong>
+          线路图为离线示意图，以主要城市的相对方位和行程流向为表达重点，不是按比例道路地图。
+          它不调用外部地图瓦片，手机离线打开仍可查看；实时导航、事故、封路和景区临时管制必须以出发当天官方信息为准。
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    行程版本：2026-09-26 ｜ 适用条件：4人、含60岁长辈、不开夜车、国庆自驾 ｜ 预算不含往返云南机票
+  </footer>
+
+  <script>
+    const routeData = {
+      slow: {
+        distance: "约900 km",
+        hours: "17–20 h",
+        moves: "2 次",
+        movesNote: "大理 → 腾冲 → 大理机场",
+        status: "天气缓冲更多 · 约900公里 · 腾冲5晚",
+        tengchongNights: "5晚",
+        mapTengchongStay: "10.02–10.07 · 5晚",
+        budgetLabel: "仅腾冲5晚备选｜不含机票",
+        budgetHeading: "4人落地后预算：约1.70–2.88万元",
+        budgetTotal: "¥16,950–28,750",
+        budgetTarget: "更现实的舒适目标值：约21,500–25,000元。",
+        budgetPerPerson: "约 ¥4,240–7,190"
+      },
+      mangshi: {
+        distance: "约1,030 km",
+        hours: "18–22 h",
+        moves: "3 次",
+        movesNote: "大理 → 腾冲 → 芒市 → 大理机场",
+        status: "自然与傣味兼顾 · 约1,030公里 · 芒市1晚",
+        tengchongNights: "4晚",
+        mapTengchongStay: "10.02–10.06 · 4晚",
+        budgetLabel: "推荐腾冲 + 芒市版｜不含机票",
+        budgetHeading: "4人落地后预算：约1.73–2.95万元",
+        budgetTotal: "¥17,250–29,450",
+        budgetTarget: "更现实的舒适目标值：约22,000–25,500元。",
+        budgetPerPerson: "约 ¥4,310–7,360"
+      }
+    };
+
+    document.querySelectorAll("[data-route-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const route = button.dataset.routeChoice;
+        const data = routeData[route];
+        document.body.dataset.route = route;
+
+        document.querySelectorAll("[data-route-choice]").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+
+        document.getElementById("hero-distance").textContent = data.distance;
+        document.getElementById("tengchong-nights").textContent = data.tengchongNights;
+        document.getElementById("route-distance").textContent = data.distance;
+        document.getElementById("route-hours").textContent = data.hours;
+        document.getElementById("route-moves").textContent = data.moves;
+        document.getElementById("route-moves-note").textContent = data.movesNote;
+        document.getElementById("map-tengchong-stay").textContent = data.mapTengchongStay;
+        document.getElementById("route-status").textContent = data.status;
+        document.getElementById("budget-plan-label").textContent = data.budgetLabel;
+        document.getElementById("budget-heading").textContent = data.budgetHeading;
+        document.getElementById("budget-total").textContent = data.budgetTotal;
+        document.getElementById("budget-target").textContent = data.budgetTarget;
+        document.getElementById("budget-per-person").textContent = data.budgetPerPerson;
+      });
+    });
+
+    document.querySelectorAll("[data-airport-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.body.dataset.airport = button.dataset.airportChoice;
+        document.querySelectorAll("[data-airport-choice]").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+      });
+    });
+
+    const savedChecks = JSON.parse(localStorage.getItem("west-yunnan-trip-checks") || "{}");
+    document.querySelectorAll("[data-check]").forEach((checkbox) => {
+      checkbox.checked = Boolean(savedChecks[checkbox.dataset.check]);
+      checkbox.addEventListener("change", () => {
+        savedChecks[checkbox.dataset.check] = checkbox.checked;
+        localStorage.setItem("west-yunnan-trip-checks", JSON.stringify(savedChecks));
+      });
+    });
+  </script>
+</body>
+</html>
