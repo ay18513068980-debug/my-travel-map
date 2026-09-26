@@ -80,35 +80,28 @@
       min-height: 560px;
       overflow: hidden;
       color: #fff;
-      background:
-        linear-gradient(112deg, rgba(15, 48, 40, 0.98), rgba(23, 75, 61, 0.94) 58%, rgba(28, 79, 96, 0.9));
+      background: #20372f;
     }
 
     .hero::before {
       position: absolute;
+      z-index: 1;
       inset: 0;
       content: "";
-      opacity: 0.2;
-      background-image:
-        repeating-radial-gradient(ellipse at 18% 70%, transparent 0 22px, rgba(255,255,255,.22) 23px 24px, transparent 25px 43px),
-        repeating-radial-gradient(ellipse at 84% 18%, transparent 0 31px, rgba(255,255,255,.14) 32px 33px, transparent 34px 58px);
-      background-size: 470px 310px, 560px 390px;
+      background: rgba(9, 31, 25, .62);
     }
 
     .hero::after {
+      display: none;
+    }
+
+    .hero-image {
       position: absolute;
-      right: -7vw;
-      bottom: -145px;
-      width: 56vw;
-      min-width: 640px;
-      height: 360px;
-      content: "";
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 50%;
-      transform: rotate(-8deg);
-      box-shadow:
-        0 0 0 46px rgba(255,255,255,.04),
-        0 0 0 92px rgba(255,255,255,.025);
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 44%;
     }
 
     .hero-inner {
@@ -811,11 +804,44 @@
       display: grid;
       grid-template-columns: minmax(0, 1.35fr) minmax(285px, .65fr);
       grid-template-areas:
+        "media media"
         "heading heading"
         "schedule guide"
         "foot foot";
       column-gap: 28px;
       padding: 23px 26px 25px;
+    }
+
+    .day-media {
+      position: relative;
+      grid-area: media;
+      aspect-ratio: 16 / 5;
+      min-height: 190px;
+      max-height: 270px;
+      margin: 0 0 20px;
+      overflow: hidden;
+      background: #dce4de;
+      border-radius: 5px;
+    }
+
+    .day-media img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .day-media figcaption {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      max-width: calc(100% - 24px);
+      padding: 6px 9px;
+      color: #fff;
+      background: rgba(12, 35, 29, .78);
+      border-radius: 3px;
+      font-size: 11px;
+      line-height: 1.4;
     }
 
     .day-heading {
@@ -880,6 +906,18 @@
       margin-top: 2px;
       color: var(--muted);
       font-size: 12px;
+    }
+
+    .schedule-row dd .segment-distance {
+      display: inline-block;
+      margin: 0 0 0 7px;
+      padding: 2px 6px;
+      color: var(--forest);
+      background: var(--soft-green);
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 800;
+      vertical-align: 1px;
     }
 
     .day-foot {
@@ -1297,6 +1335,7 @@
       .day-body {
         grid-template-columns: 1fr;
         grid-template-areas:
+          "media"
           "heading"
           "schedule"
           "guide"
@@ -1560,6 +1599,13 @@
         padding: 20px;
       }
 
+      .day-media {
+        aspect-ratio: 4 / 3;
+        min-height: 0;
+        max-height: 230px;
+        margin-bottom: 17px;
+      }
+
       .day-guide {
         grid-template-columns: 1fr;
       }
@@ -1718,6 +1764,7 @@
   <a class="skip-link" href="#main">跳到正文</a>
 
   <header class="hero">
+    <img class="hero-image" src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20panoramic%20travel%20photograph%20of%20Cangshan%20mountain%20glowing%20with%20golden%20sunrise%20above%20Erhai%20Lake%20in%20Dali%20Yunnan%2C%20clear%20mountain%20ridges%2C%20calm%20blue%20water%2C%20early%20autumn%2C%20natural%20colors%2C%20elegant%20editorial%20travel%20photography%2C%20no%20text%2C%20no%20people%2C%20wide%20composition&amp;image_size=landscape_16_9" alt="苍山日照金山与洱海晨光" fetchpriority="high">
     <div class="hero-inner">
       <div class="topline">
         <div class="edition">2026 国庆｜家庭慢行版</div>
@@ -1913,6 +1960,12 @@
                 <text x="10" y="43" fill="rgba(255,255,255,.68)" font-size="11" text-anchor="middle">N</text>
               </g>
 
+              <g transform="translate(430 20)" aria-label="大理至腾冲分段里程">
+                <rect width="440" height="44" rx="3" fill="rgba(9,31,26,.86)" stroke="rgba(255,255,255,.14)"/>
+                <text x="12" y="17" fill="#fff" font-size="10" font-weight="700">去程分段</text>
+                <text x="12" y="33" fill="rgba(255,255,255,.68)" font-size="10">大理—永平 104 · 永平—保山 87 · 保山—龙江 100 · 龙江—腾冲 49 km</text>
+              </g>
+
               <path d="M932 52 C855 122 844 202 770 266 C694 331 668 430 602 594" fill="none" stroke="#7eb5c7" stroke-width="21" opacity=".14"/>
               <path d="M932 52 C855 122 844 202 770 266 C694 331 668 430 602 594" fill="none" stroke="#90c6d7" stroke-width="2" opacity=".55"/>
               <text x="813" y="256" fill="rgba(255,255,255,.42)" font-size="11" transform="rotate(-55 813 256)">怒江水系</text>
@@ -2023,7 +2076,7 @@
                 <circle cx="132" cy="78" r="4" fill="#72b89e"/>
                 <line x1="136" y1="78" x2="164" y2="78" stroke="#72b89e" stroke-width="2"/>
                 <circle cx="168" cy="78" r="4" fill="#72b89e"/>
-                <text x="18" y="101" fill="rgba(255,255,255,.72)" font-size="11">城区 → 火山公园 → 北海湿地 → 城区</text>
+                <text x="18" y="101" fill="rgba(255,255,255,.72)" font-size="10">城 25 → 火山 20 → 黑鱼河 10 → 湿地 13 → 城</text>
 
                 <text x="18" y="132" fill="#9ecfc0" font-size="11" font-weight="700">10.04 南线</text>
                 <circle cx="96" cy="128" r="4" fill="#72b89e"/>
@@ -2031,7 +2084,7 @@
                 <circle cx="132" cy="128" r="4" fill="#72b89e"/>
                 <line x1="136" y1="128" x2="164" y2="128" stroke="#72b89e" stroke-width="2"/>
                 <circle cx="168" cy="128" r="4" fill="#72b89e"/>
-                <text x="18" y="151" fill="rgba(255,255,255,.72)" font-size="11">城区 → 热海 → 司莫拉 → 城区</text>
+                <text x="18" y="151" fill="rgba(255,255,255,.72)" font-size="10">城 10 → 热海 9 → 司莫拉 15 → 城</text>
 
                 <text x="18" y="182" fill="#9ecfc0" font-size="11" font-weight="700">10.05 城郊线</text>
                 <circle cx="106" cy="178" r="4" fill="#72b89e"/>
@@ -2039,8 +2092,8 @@
                 <circle cx="142" cy="178" r="4" fill="#72b89e"/>
                 <line x1="146" y1="178" x2="174" y2="178" stroke="#72b89e" stroke-width="2"/>
                 <circle cx="178" cy="178" r="4" fill="#72b89e"/>
-                <text x="18" y="201" fill="rgba(255,255,255,.72)" font-size="11">下绮罗 → 和顺 → 叠水河 → 东山草原</text>
-                <text x="18" y="225" fill="rgba(255,255,255,.44)" font-size="10">三天当地驾驶合计约200–230 km</text>
+                <text x="18" y="201" fill="rgba(255,255,255,.72)" font-size="9">城 4 → 绮罗 9 → 和顺 3 → 叠水河 7 → 东山 7 → 城</text>
+                <text x="18" y="225" fill="rgba(255,255,255,.44)" font-size="10">三天当地驾驶合计约140–160 km</text>
               </g>
 
               <g transform="translate(700 438)" aria-label="大理两日景点">
@@ -2049,7 +2102,7 @@
                 <text x="16" y="52" fill="#f0bc5a" font-size="11" font-weight="700">09.30</text>
                 <text x="66" y="52" fill="rgba(255,255,255,.72)" font-size="11">古城 → 三塔倒影 → 龙龛/才村</text>
                 <text x="16" y="79" fill="#f0bc5a" font-size="11" font-weight="700">10.01</text>
-                <text x="66" y="79" fill="rgba(255,255,255,.72)" font-size="11">喜洲 → 稻田 → 周城 → 海舌</text>
+                <text x="66" y="79" fill="rgba(255,255,255,.72)" font-size="10">周城 8 → 喜洲 2 → 稻田 4 → 海舌</text>
                 <text x="16" y="105" fill="rgba(255,255,255,.46)" font-size="10">海舌未约到：改走喜洲洱海西岸</text>
               </g>
             </svg>
@@ -2057,28 +2110,28 @@
             <div class="route-map-mobile" aria-label="手机纵向路线总览">
               <div class="route-mobile-local">
                 <strong>09.30–10.01｜大理景点</strong>
-                <span>首日：大理古城 → 三塔倒影 → 龙龛/才村</span>
-                <span>次日：喜洲 → 稻田 → 周城 → 海舌或洱海西岸</span>
+                <span>首日：机场 30 → 古城 4 → 三塔 15 → 龙龛/才村 15 → 古城</span>
+                <span>次日：古城 32 → 周城 8 → 喜洲 2 → 稻田 4 → 海舌 24 → 古城</span>
               </div>
               <div class="route-mobile-leg">
                 <time datetime="2026-10-02">10.02</time>
                 <div>
                   <strong>大理 → 腾冲</strong>
                   <b>约340 km · 按7–8小时</b>
-                  <span>G56：大理 → 漾濞 → 永平 → 保山；经龙江大桥接腾冲。</span>
+                  <span>大理—永平 104 · 永平—保山 87 · 保山—龙江 100 · 龙江—腾冲 49 km</span>
                 </div>
               </div>
               <div class="route-mobile-local">
                 <strong>10.03–10.05｜腾冲三条线</strong>
-                <span>北线：火山公园 → 北海湿地</span>
-                <span>南线：热海 → 司莫拉</span>
-                <span>城郊线：下绮罗 → 和顺 → 叠水河 → 东山草原</span>
+                <span>北线：城区 25 → 火山 20 → 黑鱼河 10 → 湿地 13 → 城区</span>
+                <span>南线：城区 10 → 热海 9 → 司莫拉 15 → 城区</span>
+                <span>城郊：城区 4 → 绮罗 9 → 和顺 3 → 叠水河 7 → 东山 7 → 城区</span>
               </div>
               <div class="route-mobile-leg variant-mangshi">
                 <time datetime="2026-10-06">10.06</time>
                 <div>
                   <strong>腾冲 → 芒市</strong>
-                  <b>约140 km · 2–2.5小时</b>
+                  <b>约141 km · 2–2.5小时</b>
                   <span>经龙陵进入芒市；珍奇园 → 银塔 → 金塔 → 美食城。</span>
                 </div>
               </div>
@@ -2087,7 +2140,7 @@
                 <div>
                   <strong>芒市 → 大理机场片区</strong>
                   <b>约322 km · 按7–8小时</b>
-                  <span>G56：芒市 → 龙陵 → 保山 → 永平 → 大理。</span>
+                  <span>芒市—龙陵 80 · 龙陵—保山 70 · 保山—大理 172 km</span>
                 </div>
               </div>
               <div class="route-mobile-leg variant-slow">
@@ -2095,7 +2148,7 @@
                 <div>
                   <strong>腾冲 → 大理机场片区</strong>
                   <b>约340 km · 按8–9小时</b>
-                  <span>经龙江大桥、保山和永平返回大理。</span>
+                  <span>腾冲—龙江 55 · 龙江—保山 95 · 保山—永平 87 · 永平—大理 105 km</span>
                 </div>
               </div>
             </div>
@@ -2152,6 +2205,10 @@
             <small>宿大理</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20the%20Three%20Pagodas%20reflected%20in%20a%20still%20pond%20with%20Cangshan%20mountain%20and%20soft%20late%20afternoon%20light%2C%20Dali%20Yunnan%2C%20natural%20colors%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="三塔倒影与苍山" loading="lazy" decoding="async">
+              <figcaption>三塔倒影 · 苍洱暮色</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>上午抵达 + 古城 + 三塔 + 洱海日落</h3>
               <span>按08:00落地示例 / 当天不开车</span>
@@ -2163,7 +2220,7 @@
               </div>
               <div class="schedule-row">
                 <dt>09:00–10:15</dt>
-                <dd><strong>大理机场 → 古城南门外酒店</strong><span>先寄存行李；国庆前客流按75分钟预留，不等正式入住再出门。</span></dd>
+                <dd><strong>大理机场 → 古城南门外酒店</strong><span class="segment-distance">约30 km</span><span>先寄存行李；国庆前客流按75分钟预留，不等正式入住再出门。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>10:30–12:30</dt>
@@ -2175,15 +2232,15 @@
               </div>
               <div class="schedule-row">
                 <dt>15:30–16:30</dt>
-                <dd><strong>三塔倒影公园</strong><span>看三塔、倒影池与苍山背景，不进入崇圣寺纵深区域。</span></dd>
+                <dd><strong>酒店 → 三塔倒影公园</strong><span class="segment-distance">约4 km</span><span>看三塔、倒影池与苍山背景，不进入崇圣寺纵深区域。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>17:00–18:40</dt>
-                <dd><strong>龙龛或才村生态廊道</strong><span>网约车往返，沿湖步行约3–4公里，看苍山洱海与傍晚光线。</span></dd>
+                <dd><strong>三塔 → 龙龛或才村生态廊道</strong><span class="segment-distance">约15 km</span><span>沿湖步行约3–4公里，看苍山洱海与傍晚光线。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>19:00</dt>
-                <dd><strong>古城南门外晚餐</strong><span>用餐后直接回酒店，不再进入人民路夜间核心人流。</span></dd>
+                <dd><strong>生态廊道 → 古城南门外</strong><span class="segment-distance">约15 km</span><span>用餐后直接回酒店，不再进入人民路夜间核心人流。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="9月30日补充信息">
@@ -2224,50 +2281,54 @@
             <small>宿大理</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20golden%20green%20rice%20fields%20outside%20Xizhou%20old%20town%20with%20Cangshan%20mountain%20in%20the%20distance%2C%20Dali%20Yunnan%20in%20early%20October%2C%20authentic%20rural%20landscape%2C%20natural%20soft%20light%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="喜洲稻田与苍山" loading="lazy" decoding="async">
+              <figcaption>喜洲稻田 · 十月田野</figcaption>
+            </figure>
             <div class="day-heading">
-              <h3>喜洲古镇 + 稻田 + 周城 + 洱海西岸</h3>
+              <h3>周城扎染 + 喜洲古镇 + 稻田 + 海舌</h3>
               <span>当天不开车 / 建议包车</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>08:30</dt>
-                <dd><strong>酒店出发前往喜洲</strong><span>建议包车一天，避开国庆临时叫车困难；约09:15抵达古镇外围。</span></dd>
+                <dd><strong>古城酒店 → 周城扎染村</strong><span class="segment-distance">约32 km</span><span>建议包车一天，先到最北端再逐段向南返回，减少折返。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>09:15–11:15</dt>
-                <dd><strong>喜洲古镇与白族民居</strong><span>从四方街进入，重点看转角楼、严家大院外围和传统街巷。</span></dd>
-              </div>
-              <div class="schedule-row">
-                <dt>11:15–12:00</dt>
-                <dd><strong>喜洲稻田与夫妻树方向</strong><span>国庆前后可看田园收获景观；只走田埂公共区域，不进入收费拍摄场。</span></dd>
-              </div>
-              <div class="schedule-row">
-                <dt>12:00–13:10</dt>
-                <dd><strong>喜洲午餐</strong><span>喜洲粑粑作为点心分食，正餐选白族家常菜、乳扇和蔬菜。</span></dd>
-              </div>
-              <div class="schedule-row">
-                <dt>13:30–14:50</dt>
+                <dt>09:20–10:40</dt>
                 <dd><strong>周城扎染村</strong><span>看白族扎染工艺和院落，体验项目控制在60分钟内。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>15:10–17:00</dt>
-                <dd><strong>海舌生态公园或喜洲洱海岸线</strong><span>预约成功进入海舌；没有名额就走夫妻树—桃源码头一带的洱海西岸。</span></dd>
+                <dt>11:00–12:30</dt>
+                <dd><strong>周城 → 喜洲古镇</strong><span class="segment-distance">约8 km</span><span>古镇只走四方街、转角楼与传统街巷，把更多时间留给田野和湖岸。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>12:30–13:30</dt>
+                <dd><strong>喜洲午餐</strong><span>喜洲粑粑作为点心分食，正餐选白族家常菜、乳扇和蔬菜。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:40–14:30</dt>
+                <dd><strong>喜洲古镇 → 稻田与夫妻树方向</strong><span class="segment-distance">约2 km</span><span>国庆前后看田园收获景观，只走田埂公共区域。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>15:00–17:10</dt>
+                <dd><strong>稻田 → 海舌生态公园</strong><span class="segment-distance">约4 km</span><span>预约成功进入海舌；没有名额就走夫妻树—桃源码头一带的洱海西岸。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>17:45–19:15</dt>
-                <dd><strong>返回古城，晚餐并确认取车</strong><span>复核10月2日取车网点、驾驶人证件、油量规则与门店营业时间。</span></dd>
+                <dd><strong>海舌 → 大理古城</strong><span class="segment-distance">约24 km</span><span>晚餐后复核10月2日取车网点、驾驶人证件与门店营业时间。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月1日补充信息">
               <div class="day-guide-block">
                 <span class="day-guide-label">景点看点</span>
                 <strong>白族民居、稻田与洱海西岸</strong>
-                <p>喜洲兼具古镇建筑和田园风景，周城补充扎染，下午回到湖岸看苍洱景观。</p>
+                <p>周城看扎染，喜洲古镇短逛；下午把完整时间留给稻田和湖岸。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
-                <strong>包车约80–100 km · 累计2–2.5小时</strong>
-                <p>古城—喜洲—周城—海舌—古城形成顺路闭环；古镇车辆停外围。</p>
+                <strong>包车约70–80 km · 累计约2小时</strong>
+                <p>古城—周城—喜洲—海舌—古城，由北向南返回；古镇车辆停外围。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">吃什么</span>
@@ -2296,6 +2357,10 @@
             <small>宿腾冲</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20the%20Longjiang%20suspension%20bridge%20crossing%20a%20deep%20green%20mountain%20valley%20on%20the%20road%20from%20Baoshan%20to%20Tengchong%20Yunnan%2C%20clear%20daytime%2C%20natural%20colors%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="龙江大桥与高黎贡山谷" loading="lazy" decoding="async">
+              <figcaption>保腾高速 · 龙江大桥</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>大理 → 保山 → 腾冲</h3>
               <span>约340 km / 按7–8小时排</span>
@@ -2311,19 +2376,19 @@
               </div>
               <div class="schedule-row">
                 <dt>10:20</dt>
-                <dd><strong>永平或曲硐服务区休息20分钟</strong><span>第一位司机完成约90分钟驾驶后轮换。</span></dd>
+                <dd><strong>大理 → 永平或曲硐服务区</strong><span class="segment-distance">约104 km</span><span>休息20分钟，第一位司机完成约90分钟驾驶后轮换。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>12:20</dt>
-                <dd><strong>保山附近午餐与长休息</strong><span>控制在50–70分钟，避免吃太饱后立即驾驶。</span></dd>
+                <dd><strong>永平 → 保山附近午餐</strong><span class="segment-distance">约87 km</span><span>长休息控制在50–70分钟，避免吃太饱后立即驾驶。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>14:40</dt>
-                <dd><strong>龙江大桥附近服务区短停</strong><span>只作休息，不为了拍照绕行或占用应急车道。</span></dd>
+                <dd><strong>保山 → 龙江大桥附近服务区</strong><span class="segment-distance">约100 km</span><span>只作休息，不为了拍照绕行或占用应急车道。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>16:00–17:30</dt>
-                <dd><strong>抵达腾冲城区酒店</strong><span>超过17:30仍未到，晚餐改为酒店附近，不再去和顺。</span></dd>
+                <dd><strong>龙江大桥 → 腾冲城区酒店</strong><span class="segment-distance">约49 km</span><span>超过17:30仍未到，晚餐改为酒店附近，不再去和顺。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月2日补充信息">
@@ -2364,46 +2429,50 @@
             <small>宿腾冲</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20Black%20Fish%20River%20volcanic%20valley%20in%20Tengchong%20Yunnan%2C%20clear%20stream%20flowing%20past%20dark%20basalt%20columnar%20rock%20and%20lush%20subtropical%20forest%2C%20natural%20daylight%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="腾冲黑鱼河与火山柱状节理" loading="lazy" decoding="async">
+              <figcaption>黑鱼河 · 火山岩谷地</figcaption>
+            </figure>
             <div class="day-heading">
-              <h3>火山公园 + 北海湿地</h3>
-              <span>同一北线，合并最省路</span>
+              <h3>火山公园 + 柱状节理/黑鱼河 + 北海湿地</h3>
+              <span>北线顺路串联 · 约68 km</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>08:30</dt>
-                <dd><strong>早餐后出发去火山公园</strong><span>提前看低云、降雨和风速；热气球受天气影响大，不作为必做项目。</span></dd>
+                <dd><strong>腾冲城区 → 火山公园</strong><span class="segment-distance">约25 km</span><span>提前看低云、降雨和风速；热气球受天气影响大，不作为必做项目。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>09:20–11:50</dt>
+                <dt>09:15–10:50</dt>
                 <dd><strong>火山地质公园，小空山短线优先</strong><span>长辈身体好也不必连续爬两座火山；留体力给下午湿地。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>12:10</dt>
-                <dd><strong>马站方向午餐</strong><span>选择铜瓢牛肉或清淡炒菜，午饭控制60分钟，不为网红店排长队。</span></dd>
+                <dt>11:20–12:40</dt>
+                <dd><strong>火山公园 → 柱状节理/黑鱼河</strong><span class="segment-distance">约20 km</span><span>选一个停车点短走，看火山岩峡谷与清溪，不走完整长线。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>13:20</dt>
-                <dd><strong>前往北海湿地</strong><span>两处车程通常约40–60分钟，按实时导航与国庆拥堵修正。</span></dd>
+                <dt>12:40–13:40</dt>
+                <dd><strong>曲石方向午餐</strong><span>选择铜瓢牛肉或清淡炒菜，不为网红店排长队。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>14:10–16:40</dt>
-                <dd><strong>湿地栈道、草排与观景区</strong><span>以慢走和观景为主；17:00前离开，天黑前回腾冲城区。</span></dd>
+                <dt>14:00–16:20</dt>
+                <dd><strong>黑鱼河 → 北海湿地</strong><span class="segment-distance">约10 km</span><span>走湿地栈道与观景区，16:30前离开。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>18:00</dt>
-                <dd><strong>城区晚餐</strong><span>推荐提前订土锅子，4人更适合分食；另点大薄片和时蔬即可。</span></dd>
+                <dt>17:00–18:00</dt>
+                <dd><strong>北海湿地 → 腾冲城区</strong><span class="segment-distance">约13 km</span><span>回城后吃土锅子，4人分食并配大薄片与时蔬。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月3日补充信息">
               <div class="day-guide-block">
                 <span class="day-guide-label">景点看点</span>
-                <strong>火山锥地貌 + 高原湿地生态</strong>
-                <p>上午看火山口与地质景观，下午转入开阔湿地、草排和候鸟生境。</p>
+                <strong>火山锥、玄武岩峡谷与高原湿地</strong>
+                <p>火山口之后顺路看柱状节理或黑鱼河，再转入开阔湿地。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
-                <strong>北线约2.5–3小时驾驶</strong>
-                <p>城区到火山、火山到湿地约40–60分钟；两个景区均使用正规停车场。</p>
+                <strong>北线约68 km · 驾驶约2小时</strong>
+                <p>按城区—火山—黑鱼河—湿地—城区顺序，不再往返穿城。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">吃什么</span>
@@ -2417,7 +2486,7 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>驾驶：</strong>约2.5–3h</span>
+              <span><strong>驾驶：</strong>约68 km / 约2h</span>
               <span><strong>步行：</strong>约5–7 km，可缩短火山段</span>
               <span><strong>当日预算：</strong>约1750–3100元</span>
               <span class="rain-plan"><strong>中雨：</strong>取消火山攀爬，只留湿地短线或改10月6日补位</span>
@@ -2432,6 +2501,10 @@
             <small>宿腾冲</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20geothermal%20steam%20rising%20from%20mineral%20pools%20and%20forest%20at%20Rehai%20scenic%20area%20Tengchong%20Yunnan%2C%20natural%20daylight%2C%20detailed%20landscape%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="腾冲热海地热景观" loading="lazy" decoding="async">
+              <figcaption>热海 · 地热蒸汽与山林</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>热海景区 + 司莫拉佤族村</h3>
               <span>同一南线，相距约9 km</span>
@@ -2439,7 +2512,7 @@
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>08:30</dt>
-                <dd><strong>早餐后前往热海</strong><span>争取09:30前入园，避开午后团队客流。</span></dd>
+                <dd><strong>腾冲城区 → 热海</strong><span class="segment-distance">约10 km</span><span>争取09:30前入园，避开午后团队客流。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>09:20–12:00</dt>
@@ -2451,11 +2524,11 @@
               </div>
               <div class="schedule-row">
                 <dt>13:30–15:40</dt>
-                <dd><strong>司莫拉佤族村田园慢走</strong><span>看田园、村寨与观景台，不追求走完全部路线；与热海顺路，比回城后再折返更合理。</span></dd>
+                <dd><strong>热海 → 司莫拉佤族村</strong><span class="segment-distance">约9 km</span><span>看田园、村寨与观景台，不追求走完全部路线。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>16:40–18:00</dt>
-                <dd><strong>返回城区，玉泉园散步或泡温泉</strong><span>泡汤只选酒店或城区近处，单次10–15分钟；饮酒后不泡。</span></dd>
+                <dd><strong>司莫拉 → 腾冲城区</strong><span class="segment-distance">约15 km</span><span>泡汤只选酒店或城区近处，单次10–15分钟；饮酒后不泡。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月4日补充信息">
@@ -2466,8 +2539,8 @@
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
-                <strong>南线约70 km · 驾驶1.5–2小时</strong>
-                <p>热海与司莫拉相距约9公里，同日顺路完成，避免回城后再次折返。</p>
+                <strong>南线约35–45 km · 驾驶约1小时</strong>
+                <p>热海与司莫拉相距约9公里，同日顺路完成。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">吃什么</span>
@@ -2496,6 +2569,10 @@
             <small>宿腾冲</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20Dongshan%20alpine%20grassland%20above%20Tengchong%20basin%20at%20golden%20hour%2C%20rolling%20green%20meadow%2C%20distant%20layered%20mountains%2C%20open%20sky%2C%20natural%20colors%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="腾冲东山草原与山谷" loading="lazy" decoding="async">
+              <figcaption>东山草原 · 腾冲坝子</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>下绮罗早市 + 和顺古镇 + 东山草原</h3>
               <span>早起换来三个差异化体验</span>
@@ -2503,7 +2580,7 @@
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>06:50</dt>
-                <dd><strong>抵达下绮罗小菜街</strong><span>也常被称为绮罗早市；7点开市，先吃稀豆粉配饵丝/饵块、破酥包。</span></dd>
+                <dd><strong>腾冲城区 → 下绮罗小菜街</strong><span class="segment-distance">约4 km</span><span>也常被称为绮罗早市；7点开市，先吃稀豆粉配饵丝/饵块、破酥包。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>08:10</dt>
@@ -2511,7 +2588,7 @@
               </div>
               <div class="schedule-row">
                 <dt>08:40–11:40</dt>
-                <dd><strong>和顺图书馆 → 洗衣亭 → 野鸭湖</strong><span>车辆停景区外；核心区石板路慢走，重点看水系与古镇景观。</span></dd>
+                <dd><strong>下绮罗 → 和顺古镇</strong><span class="segment-distance">约9 km</span><span>车辆停景区外；走图书馆、洗衣亭与野鸭湖。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>12:00–13:10</dt>
@@ -2519,11 +2596,11 @@
               </div>
               <div class="schedule-row">
                 <dt>13:30–14:30</dt>
-                <dd><strong>叠水河瀑布短走</strong><span>城区内完成瀑布和峡谷观景，控制步行量后再去东山。</span></dd>
+                <dd><strong>和顺 → 叠水河瀑布</strong><span class="segment-distance">约3 km</span><span>完成瀑布和峡谷观景，控制步行量后再去东山。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>15:00–17:20</dt>
-                <dd><strong>东山草原看高山草甸与腾冲坝子</strong><span>以观景和短走为主，17:20开始下山，确保天黑前回城区。</span></dd>
+                <dd><strong>叠水河 → 东山草原 → 城区</strong><span class="segment-distance">约7 km + 7 km</span><span>以观景和短走为主，17:20开始下山。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月5日补充信息">
@@ -2534,7 +2611,7 @@
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
-                <strong>城郊线约50–70 km</strong>
+                <strong>城郊线约30–40 km</strong>
                 <p>和顺车辆停景区外；东山17:20下山，保持天黑前回到城区。</p>
               </div>
               <div class="day-guide-block">
@@ -2566,6 +2643,10 @@
             <small class="variant-mangshi">宿芒市</small>
           </div>
           <div class="day-body variant-slow">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20Laifeng%20Mountain%20forest%20trail%20in%20Tengchong%20Yunnan%2C%20tall%20native%20trees%20and%20soft%20morning%20light%2C%20peaceful%20natural%20scene%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="腾冲来凤山林间步道" loading="lazy" decoding="async">
+              <figcaption>来凤山 · 林间缓冲日</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>补回雨天取消项，或来凤山 + 温泉</h3>
               <span>只在不去芒市时启用</span>
@@ -2577,7 +2658,7 @@
               </div>
               <div class="schedule-row">
                 <dt>无缺项</dt>
-                <dd><strong>来凤山森林公园 + 城区午餐</strong><span>上午走林间步道，午餐后逛玉泉园或本地市场。</span></dd>
+                <dd><strong>城区 → 来凤山森林公园</strong><span class="segment-distance">约4 km</span><span>上午走林间步道，午餐后逛玉泉园或本地市场。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>15:30</dt>
@@ -2614,6 +2695,10 @@
           </div>
 
           <div class="day-body variant-mangshi">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20Menghuan%20Golden%20Pagoda%20in%20Mangshi%20Yunnan%20surrounded%20by%20tropical%20palm%20trees%20at%20sunset%2C%20authentic%20architecture%2C%20natural%20warm%20light%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="芒市勐焕大金塔与热带植物" loading="lazy" decoding="async">
+              <figcaption>勐焕金塔 · 热带暮色</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>腾冲 → 芒市，热带植物与傣味夜市</h3>
               <span>约140 km / 2–2.5小时</span>
@@ -2621,7 +2706,7 @@
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>09:00</dt>
-                <dd><strong>退房后前往芒市</strong><span>途中正常休息一次，11:30左右抵达；入住后车辆停酒店，当晚改用网约车。</span></dd>
+                <dd><strong>腾冲 → 芒市</strong><span class="segment-distance">约141 km</span><span>途中正常休息一次，11:30左右抵达；入住后车辆停酒店。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>11:45–13:30</dt>
@@ -2629,11 +2714,11 @@
               </div>
               <div class="schedule-row">
                 <dt>13:50–15:50</dt>
-                <dd><strong>勐巴娜西珍奇园</strong><span>看热带植物、古树与孔雀，和腾冲火山地貌差异明显；不感兴趣可改树包塔短停。</span></dd>
+                <dd><strong>酒店 → 勐巴娜西珍奇园</strong><span class="segment-distance">约3 km</span><span>看热带植物、古树与孔雀；不感兴趣可在市区慢走。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>16:10–18:20</dt>
-                <dd><strong>银塔 → 金塔日落</strong><span>两处相近，先银塔后金塔；全程网约车，日落后不由家人夜驾。</span></dd>
+                <dd><strong>珍奇园 → 银塔 → 金塔日落</strong><span class="segment-distance">约7 km + 2 km</span><span>雷牙让书店顺路可停30分钟；日落后不由家人夜驾。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>19:00</dt>
@@ -2678,6 +2763,10 @@
             <small>宿大理机场</small>
           </div>
           <div class="day-body variant-slow">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20the%20G56%20mountain%20expressway%20winding%20through%20green%20western%20Yunnan%20valleys%2C%20safe%20clear%20road%20seen%20from%20a%20scenic%20overlook%2C%20daylight%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="滇西山谷中的杭瑞高速" loading="lazy" decoding="async">
+              <figcaption>返程 · 高黎贡山谷</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>腾冲 → 大理机场片区</h3>
               <span>约340 km / 按8–9小时排</span>
@@ -2689,15 +2778,19 @@
               </div>
               <div class="schedule-row">
                 <dt>07:40</dt>
-                <dd><strong>正式出发</strong><span>按龙江大桥、保山、永平三段轮换驾驶。</span></dd>
+                <dd><strong>腾冲 → 龙江大桥</strong><span class="segment-distance">约55 km</span><span>第一段先由主驾完成，服务区休息20分钟。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>09:20</dt>
-                <dd><strong>龙江大桥附近第一次休息</strong><span>20分钟，确认顺濞段实时路况。</span></dd>
+                <dd><strong>龙江大桥 → 保山</strong><span class="segment-distance">约95 km</span><span>进入保山前确认顺濞段实时路况。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>11:30</dt>
-                <dd><strong>保山或永平午餐</strong><span>以导航拥堵位置决定，不为固定餐厅绕行。</span></dd>
+                <dd><strong>保山 → 永平午餐</strong><span class="segment-distance">约87 km</span><span>以导航拥堵位置决定，不为固定餐厅绕行。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>13:10</dt>
+                <dd><strong>永平 → 大理机场片区</strong><span class="segment-distance">约105 km</span><span>末段由状态更好的司机驾驶。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>15:30–17:00</dt>
@@ -2734,6 +2827,10 @@
           </div>
 
           <div class="day-body variant-mangshi">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20the%20G56%20mountain%20expressway%20winding%20through%20green%20western%20Yunnan%20valleys%2C%20safe%20clear%20road%20seen%20from%20a%20scenic%20overlook%2C%20daylight%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="滇西山谷中的杭瑞高速" loading="lazy" decoding="async">
+              <figcaption>返程 · 杭瑞高速山谷</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>芒市 → 大理机场片区</h3>
               <span>约322 km / 按7–8小时排</span>
@@ -2745,11 +2842,15 @@
               </div>
               <div class="schedule-row">
                 <dt>07:40</dt>
-                <dd><strong>沿杭瑞高速向大理</strong><span>约90分钟轮换驾驶，不去瑞丽、不进腾冲。</span></dd>
+                <dd><strong>芒市 → 龙陵</strong><span class="segment-distance">约80 km</span><span>沿杭瑞高速向大理，不去瑞丽、不进腾冲。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>10:00</dt>
-                <dd><strong>龙陵/保山方向休息</strong><span>根据实时拥堵决定午餐点。</span></dd>
+                <dd><strong>龙陵 → 保山</strong><span class="segment-distance">约70 km</span><span>休息并根据实时拥堵决定午餐点。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>11:30</dt>
+                <dd><strong>保山 → 大理机场片区</strong><span class="segment-distance">约172 km</span><span>中途在永平附近再休息一次。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>15:00–17:00</dt>
@@ -2793,6 +2894,10 @@
             <small>大理起飞</small>
           </div>
           <div class="day-body">
+            <figure class="day-media">
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20early%20morning%20light%20over%20Erhai%20Lake%20and%20Cangshan%20mountain%20near%20Dali%20airport%2C%20calm%20blue%20water%20and%20pale%20sky%2C%20natural%20colors%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="大理机场片区的苍山洱海晨光" loading="lazy" decoding="async">
+              <figcaption>大理晨光 · 平稳返程</figcaption>
+            </figure>
             <div class="day-heading">
               <h3>只处理机场流程</h3>
               <span>以12:00航班示例</span>
@@ -2804,7 +2909,7 @@
               </div>
               <div class="schedule-row">
                 <dt>09:15</dt>
-                <dd><strong>酒店出发前往大理机场</strong><span>带长辈与较多行李，按起飞前2小时到达。</span></dd>
+                <dd><strong>酒店 → 大理机场</strong><span class="segment-distance">约8–15 km</span><span>带长辈与较多行李，按起飞前2小时到达。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>10:00</dt>
@@ -3193,6 +3298,7 @@
           <li><a href="https://www.tchsgz.com/details/FBDu3yMWs.html">和顺古镇：2026年4月起核心区实行车辆准入</a></li>
           <li><a href="http://www.chinaspa.cn/news_1/193.html">热海景区：步道、长辈及温泉安全提示</a></li>
           <li><a href="https://www.tengchong.gov.cn/info/1732/15051.htm">腾冲市政府：北海湿地景区介绍</a></li>
+          <li><a href="https://www.tengchong.gov.cn/info/9431/5818793.htm">腾冲市政府：曲石镇、柱状节理与黑鱼河区位</a></li>
           <li><a href="https://tengchong.gov.cn/info/1732/34978.htm">腾冲市政府：司莫拉佤族村与热海区位信息</a></li>
           <li><a href="https://www.tcdscy.com/">东山草原景区官网：草甸规模与开放信息</a></li>
           <li><a href="https://www.tengchong.gov.cn/info/9617/5890463.htm">腾冲市政府：下绮罗小菜街早市与本地早餐</a></li>
@@ -3203,12 +3309,16 @@
           <li><a href="http://cha.zuzuche.com/lu/tengchong/2664.html">公开导航参考：腾冲—大理约340公里</a></li>
           <li><a href="http://cha.zuzuche.com/lu/dehongdaizujingpozu/2664.html">公开导航参考：芒市—大理约322公里</a></li>
           <li><a href="https://m.chinawutong.com/tools/tengchong_mangshi.html">公开导航参考：腾冲—芒市约140公里</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%96%9C%E6%B4%B2%E6%B5%B7%E8%88%8C%E5%85%AC%E5%9B%AD&amp;source=web_search_result_notes&amp;type=51">小红书公开笔记：喜洲古镇、稻田与海舌体验顺序</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%85%BE%E5%86%B2%20%E4%B8%89%E5%A4%A9%20%E8%87%AA%E7%84%B6%20%E8%B7%AF%E7%BA%BF&amp;source=web_search_result_notes&amp;type=51">小红书公开笔记：腾冲三日动线与体力反馈</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%8A%92%E5%B8%82%20%E4%B8%80%E6%97%A5%E6%B8%B8%20%E8%B7%AF%E7%BA%BF&amp;source=web_search_result_notes&amp;type=51">小红书公开笔记：芒市金银塔与市区游线</a></li>
         </ol>
 
         <div class="method-note">
           <strong>制图说明：</strong>
           线路图为离线示意图，以主要城市的相对方位和行程流向为表达重点，不是按比例道路地图。
-          它不调用外部地图瓦片，手机离线打开仍可查看；实时导航、事故、封路和景区临时管制必须以出发当天官方信息为准。
+          它不调用外部地图瓦片，手机离线打开仍可查看；小红书仅用于体验与动线交叉参考，里程仍以公开导航规划值表达。
+          实时导航、事故、封路和景区临时管制必须以出发当天官方信息为准。
         </div>
       </div>
     </section>
