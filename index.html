@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="2026国庆大理、腾冲、芒市9天8晚家庭自驾路书，含逐日时间、路线、景点、餐饮、住宿与预算。">
+  <meta name="description" content="2026国庆大理、腾冲、芒市9天8晚家庭自驾路书，含自然景观、逐日路线、餐饮、住宿、预算与旅行记录。">
   <meta property="og:title" content="滇西自然自驾路书｜2026.09.30–10.08">
   <meta property="og:description" content="大理、腾冲、芒市9天8晚家庭自驾路线与逐日执行细节。">
   <meta property="og:type" content="website">
@@ -423,18 +423,19 @@
 
     .map-shell {
       position: relative;
-      min-height: 620px;
+      min-height: 660px;
       overflow: hidden;
       background: #203a34;
       border: 1px solid rgba(255,255,255,.15);
       border-radius: var(--radius);
+      box-shadow: 0 18px 44px rgba(5,20,16,.2);
     }
 
     .map-shell svg {
       display: block;
       width: 100%;
       height: 100%;
-      min-height: 620px;
+      min-height: 660px;
     }
 
     .route-map-mobile {
@@ -467,28 +468,112 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 130px;
-      padding: 22px;
+      min-height: 86px;
+      padding: 13px 16px;
       background: rgba(12,34,29,.92);
     }
 
     .route-stat span {
       color: rgba(255,255,255,.55);
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 700;
     }
 
     .route-stat strong {
-      margin: 6px 0 3px;
+      margin: 3px 0 1px;
       color: #fff;
-      font-family: "Songti SC", "STSong", serif;
-      font-size: 32px;
+      font-family: inherit;
+      font-size: 20px;
+      font-weight: 800;
       line-height: 1.15;
     }
 
     .route-stat small {
       color: rgba(255,255,255,.62);
+      font-size: 10px;
+    }
+
+    .route-overview {
+      position: relative;
+      display: flex;
+      min-height: 460px;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 0 0 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius);
+      isolation: isolate;
+    }
+
+    .route-overview::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      background: rgba(8, 31, 25, .56);
+    }
+
+    .route-overview-image {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .route-overview h3 {
+      margin: 0;
+      padding: 30px 24px 20px;
+      color: #fff;
+      font-family: "Songti SC", "STSong", serif;
+      font-size: 28px;
+    }
+
+    .route-overview-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      background: rgba(8, 29, 24, .76);
+      backdrop-filter: blur(6px);
+    }
+
+    .route-overview-item {
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr);
+      gap: 10px;
+      min-height: 78px;
+      padding: 13px 16px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      border-left: 1px solid rgba(255,255,255,.1);
+    }
+
+    .route-overview-item:nth-child(3n + 1) {
+      border-left: 0;
+    }
+
+    .route-overview-item time {
+      color: #f0bc5a;
       font-size: 12px;
+      font-weight: 800;
+    }
+
+    .route-overview-item strong,
+    .route-overview-item span {
+      display: block;
+    }
+
+    .route-overview-item strong {
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .route-overview-item span {
+      margin-top: 3px;
+      color: rgba(255,255,255,.58);
+      font-size: 11px;
+      line-height: 1.5;
     }
 
     .map-route-alt,
@@ -613,15 +698,15 @@
     .overview-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 10px;
     }
 
     .overview-item {
-      padding: 22px;
+      padding: 10px 12px 11px;
       background: var(--surface);
-      border-top: 4px solid var(--forest);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+      border-top: 2px solid var(--forest);
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(23, 37, 33, .045);
     }
 
     .overview-item:nth-child(2) {
@@ -639,51 +724,56 @@
     .overview-item span {
       display: block;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 700;
     }
 
     .overview-item strong {
       display: block;
-      margin-top: 8px;
-      font-family: "Songti SC", "STSong", serif;
-      font-size: 23px;
-      line-height: 1.28;
+      margin-top: 2px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 750;
+      line-height: 1.4;
     }
 
     .weather-strip {
       display: grid;
-      grid-template-columns: 1.1fr 1fr 1.4fr;
-      gap: 1px;
-      margin-top: 28px;
-      overflow: hidden;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 16px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
     .weather-item {
-      min-height: 126px;
-      padding: 20px;
-      background: var(--surface);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 12px;
+      align-items: center;
+      min-height: 58px;
+      padding: 10px 14px;
+      border-left: 1px solid var(--line);
+    }
+
+    .weather-item:first-child {
+      border-left: 0;
     }
 
     .weather-item strong {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 17px;
+      grid-row: 1 / 3;
+      font-size: 13px;
     }
 
     .weather-item .temp {
       color: var(--blue);
-      font-size: 25px;
+      font-size: 18px;
       font-weight: 800;
+      line-height: 1.2;
     }
 
-    .weather-item p {
-      margin: 7px 0 0;
+    .weather-item small {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 10px;
     }
 
     .overview-budget {
@@ -815,9 +905,8 @@
     .day-media {
       position: relative;
       grid-area: media;
-      aspect-ratio: 16 / 5;
-      min-height: 190px;
-      max-height: 270px;
+      width: 100%;
+      height: 238px;
       margin: 0 0 20px;
       overflow: hidden;
       background: #dce4de;
@@ -829,6 +918,89 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .day-media-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .day-media-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .day-media-slide {
+      position: relative;
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      scroll-snap-align: start;
+    }
+
+    .day-media-nav {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      display: grid;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      color: #fff;
+      background: rgba(9, 29, 24, .7);
+      border: 1px solid rgba(255,255,255,.34);
+      border-radius: 50%;
+      cursor: pointer;
+      place-items: center;
+      transform: translateY(-50%);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .day-media-nav:hover,
+    .day-media-nav:focus-visible {
+      background: rgba(9, 29, 24, .92);
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    .day-media-prev {
+      left: 10px;
+    }
+
+    .day-media-next {
+      right: 10px;
+    }
+
+    .day-media-dots {
+      position: absolute;
+      z-index: 3;
+      left: 50%;
+      bottom: 12px;
+      display: flex;
+      gap: 5px;
+      padding: 5px 7px;
+      background: rgba(9, 29, 24, .62);
+      border-radius: 20px;
+      transform: translateX(-50%);
+    }
+
+    .day-media-dot {
+      width: 5px;
+      height: 5px;
+      padding: 0;
+      background: rgba(255,255,255,.45);
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .day-media-dot[aria-current="true"] {
+      background: #fff;
     }
 
     .day-media figcaption {
@@ -955,6 +1127,146 @@
     .day-guide-block:first-child {
       padding-top: 0;
       border-top: 0;
+    }
+
+    .budget-section .overview-budget {
+      margin-top: 0;
+    }
+
+    .memory-band {
+      color: #fff;
+      background: #254239;
+    }
+
+    .memory-band .section-index {
+      color: #f0bc5a;
+    }
+
+    .memory-band .section-summary {
+      color: rgba(255,255,255,.66);
+    }
+
+    .memory-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: 12px;
+      padding: 16px;
+      background: rgba(255,255,255,.07);
+      border-top: 1px solid rgba(255,255,255,.16);
+      border-bottom: 1px solid rgba(255,255,255,.16);
+    }
+
+    .memory-field {
+      display: grid;
+      gap: 4px;
+    }
+
+    .memory-field span,
+    .memory-count {
+      color: rgba(255,255,255,.62);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .memory-field select,
+    .memory-add {
+      min-height: 42px;
+      padding: 0 13px;
+      color: #fff;
+      background: #173129;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 4px;
+    }
+
+    .memory-field select {
+      min-width: 220px;
+    }
+
+    .memory-add {
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .memory-add:hover,
+    .memory-add:focus-visible {
+      background: #315e4f;
+      outline: 2px solid #f0bc5a;
+      outline-offset: 2px;
+    }
+
+    .memory-add:disabled {
+      cursor: wait;
+      opacity: .6;
+    }
+
+    .memory-input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .memory-count {
+      margin-left: auto;
+      padding-bottom: 10px;
+    }
+
+    .memory-empty {
+      margin: 0;
+      padding: 28px 16px 0;
+      color: rgba(255,255,255,.5);
+      font-size: 13px;
+    }
+
+    .memory-gallery {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 20px 16px 8px;
+      scroll-snap-type: x mandatory;
+      scrollbar-color: rgba(255,255,255,.28) transparent;
+    }
+
+    .memory-photo {
+      position: relative;
+      flex: 0 0 min(320px, 38vw);
+      margin: 0;
+      overflow: hidden;
+      background: #132b24;
+      border-radius: 6px;
+      scroll-snap-align: start;
+    }
+
+    .memory-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .memory-photo figcaption {
+      padding: 9px 11px 10px;
+      color: rgba(255,255,255,.78);
+      font-size: 11px;
+    }
+
+    .memory-remove {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 34px;
+      height: 34px;
+      padding: 0;
+      color: #fff;
+      background: rgba(10,25,21,.78);
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      line-height: 1;
     }
 
     .day-guide-label {
@@ -1432,12 +1744,16 @@
         grid-template-columns: 1fr;
       }
 
-      .weather-strip {
+      .route-overview-grid {
         grid-template-columns: 1fr 1fr;
       }
 
-      .weather-item:last-child {
-        grid-column: 1 / -1;
+      .route-overview-item:nth-child(3n + 1) {
+        border-left: 1px solid rgba(255,255,255,.1);
+      }
+
+      .route-overview-item:nth-child(2n + 1) {
+        border-left: 0;
       }
 
       .stay-grid,
@@ -1553,27 +1869,35 @@
         grid-template-rows: 1fr;
       }
 
-      .route-stat {
-        min-height: 118px;
-        padding: 14px;
-      }
-
-      .route-stat strong {
-        font-size: 23px;
-      }
-
       .route-stat small {
         display: none;
       }
 
-      .overview-grid,
-      .weather-strip,
       .checklist-grid {
         grid-template-columns: 1fr;
       }
 
-      .weather-item:last-child {
-        grid-column: auto;
+      .overview-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .weather-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .weather-item {
+        grid-template-columns: 1fr;
+        gap: 1px;
+        text-align: center;
+      }
+
+      .weather-item strong {
+        grid-row: auto;
+        font-size: 11px;
+      }
+
+      .weather-item .temp {
+        font-size: 15px;
       }
 
       .day-card {
@@ -1600,10 +1924,47 @@
       }
 
       .day-media {
-        aspect-ratio: 4 / 3;
-        min-height: 0;
-        max-height: 230px;
+        height: 205px;
         margin-bottom: 17px;
+      }
+
+      .route-overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .route-overview {
+        min-height: 0;
+        padding-top: 90px;
+      }
+
+      .route-overview h3 {
+        padding: 22px 18px 14px;
+        font-size: 24px;
+      }
+
+      .route-overview-item,
+      .route-overview-item:nth-child(3n + 1),
+      .route-overview-item:nth-child(2n + 1) {
+        border-left: 0;
+      }
+
+      .memory-toolbar {
+        align-items: stretch;
+      }
+
+      .memory-field,
+      .memory-field select,
+      .memory-add {
+        width: 100%;
+      }
+
+      .memory-count {
+        margin-left: 0;
+        padding-bottom: 0;
+      }
+
+      .memory-photo {
+        flex-basis: 82%;
       }
 
       .day-guide {
@@ -1641,6 +2002,10 @@
 
     @media (prefers-reduced-motion: reduce) {
       html {
+        scroll-behavior: auto;
+      }
+
+      .day-media-track {
         scroll-behavior: auto;
       }
     }
@@ -1777,7 +2142,7 @@
           <h1>滇西自然<br>自驾路书</h1>
           <p class="hero-lead">
             4人同行，含60岁长辈。9月30日一早抵达大理，落地当天即开始游览，10月2日开始自驾。
-            腾冲三天按同方向组合自然景观，10月6日顺路住芒市；不赶路，但不再用半天填满一天。
+            从苍山洱海到腾冲火山湿地，在高黎贡山雨林轻徒步后南下芒市，慢慢走进滇西南的热带风物。
           </p>
         </div>
 
@@ -1787,7 +2152,7 @@
             <span>09.30–10.08</span>
           </div>
           <div class="hero-fact">
-            <strong id="hero-distance">约1,030 km</strong>
+            <strong id="hero-distance">约1,110 km</strong>
             <span>含腾冲当地用车</span>
           </div>
           <div class="hero-fact">
@@ -1796,7 +2161,7 @@
           </div>
           <div class="hero-fact">
             <strong>18:00</strong>
-            <span>每日驾驶硬截止</span>
+            <span>每日驾驶结束</span>
           </div>
         </div>
       </div>
@@ -1808,13 +2173,13 @@
       <div class="decision-copy">
         <div class="decision-mark" aria-hidden="true">✓</div>
         <div>
-          <strong>返程优先选大理机场</strong>
-          <p>10月7日回到大理并在机场附近还车、住宿，10月8日中午航班不需要承担长距离道路风险。</p>
+          <strong>大理机场从容收尾</strong>
+          <p>10月7日回到大理机场片区还车、住宿，10月8日轻松前往航站楼。</p>
         </div>
       </div>
 
       <div class="segmented" aria-label="返程机场">
-        <button type="button" data-airport-choice="dali" aria-pressed="true">大理返程｜推荐</button>
+        <button type="button" data-airport-choice="dali" aria-pressed="true">大理返程</button>
         <button type="button" data-airport-choice="kunming" aria-pressed="false">昆明返程</button>
       </div>
     </div>
@@ -1825,6 +2190,8 @@
       <a href="#overview">总览</a>
       <a href="#route">线路总览</a>
       <a href="#itinerary">每日安排</a>
+      <a href="#budget">预算</a>
+      <a href="#memories">旅行记录</a>
       <a href="#checklist">出发前</a>
       <a href="#sources">依据</a>
     </div>
@@ -1833,12 +2200,12 @@
   <main id="main">
     <section class="section" id="overview">
       <div class="section-head">
-        <div class="section-index">01 / 决策总览</div>
+        <div class="section-index">01 / 旅程序章</div>
         <div>
-          <h2>先固定节奏，再决定景点</h2>
+          <h2>从苍山洱海，驶向高黎贡山</h2>
           <p class="section-summary">
-            推荐大理2晚、腾冲4晚、芒市1晚、大理机场附近1晚。芒市能补上热带植物、傣味和夜市，
-            与腾冲差异明显；只住一晚、不去瑞丽，新增约140公里但不会挤掉腾冲三个完整自然日。
+            大理的晨光与田园、腾冲的火山湿地和温泉、芒市的热带植物与傣味，
+            串成一条由高原湖泊渐入滇西南雨林的自然路线。
           </p>
         </div>
       </div>
@@ -1853,55 +2220,37 @@
           <strong>10月7日傍晚<br>大理机场优先</strong>
         </div>
         <div class="overview-item">
-          <span>主驾规则</span>
-          <strong>90–120分钟<br>强制轮换或休息</strong>
+          <span>途中休息</span>
+          <strong>每90–120分钟<br>休息或换驾</strong>
         </div>
         <div class="overview-item">
-          <span>车型底线</span>
-          <strong>中型SUV以上<br>四箱需实装检查</strong>
+          <span>用车空间</span>
+          <strong>中型SUV以上<br>适配四人行李</strong>
         </div>
       </div>
 
       <div class="weather-strip" aria-label="天气预报摘要">
         <div class="weather-item">
-          <strong>大理｜09.30–10.02</strong>
+          <strong>大理</strong>
           <div class="temp">15–25°C</div>
-          <p>当前预报以阵雨为主。9月30日安排古城、三塔与生态廊道，10月1日走喜洲、周城和洱海西岸。</p>
+          <small>09.30–10.02</small>
         </div>
         <div class="weather-item">
-          <strong>腾冲｜10.02–10.07</strong>
+          <strong>腾冲</strong>
           <div class="temp">14–25°C</div>
-          <p>多日存在降雨概率。热海石阶、古镇石板路和湿地栈道需穿防滑鞋。</p>
+          <small>10.02–10.06</small>
         </div>
         <div class="weather-item">
-          <strong>天气执行规则</strong>
-          <div class="temp">48h</div>
-          <p>15天预报只用于排结构；每个户外日前48小时重新核对。中雨以上取消火山攀爬，不用“既然来了”强行执行。</p>
-        </div>
-      </div>
-
-      <div class="overview-budget" aria-label="行程总预算">
-        <div class="overview-budget-main">
-          <span id="budget-plan-label">推荐腾冲 + 芒市版｜不含往返机票</span>
-          <strong id="budget-heading">4人落地后预算：约1.73–2.95万元</strong>
-          <b id="budget-total">¥17,250–29,450</b>
-          <p id="budget-target">更现实的舒适目标值：约22,000–25,500元。</p>
-          <p>人均 <b id="budget-per-person">约 ¥4,310–7,360</b></p>
-        </div>
-        <div class="overview-budget-breakdown">
-          <div><span>住宿｜2间房×8晚</span><strong>¥6,200–12,000</strong></div>
-          <div><span>租车与保障</span><strong>¥2,600–4,200</strong></div>
-          <div><span>餐饮｜4人</span><strong>¥4,800–7,200</strong></div>
-          <div><span>门票与温泉</span><strong>¥1,800–2,900</strong></div>
-          <div><span>油费与停车</span><strong>¥950–1,450</strong></div>
-          <div><span>机动金与芒市增量</span><strong>¥900–1,700</strong></div>
+          <strong>芒市</strong>
+          <div class="temp">17–33°C</div>
+          <small>10.06–10.07</small>
         </div>
       </div>
 
       <div class="airport-warning" role="note">
         <strong>昆明返程会改变整个尾段。</strong>
-        建议10月6日从腾冲回大理、10月7日再开约317公里到昆明并住机场附近。
-        这会少一个腾冲完整日，并增加约4–6小时驾驶；不建议10月7日从腾冲直接开昆明。
+        10月6日从腾冲回大理，10月7日再开约317公里到昆明并住机场附近。
+        相比大理返程少一个腾冲完整日，并增加约4–6小时驾驶。
       </div>
     </section>
 
@@ -1919,10 +2268,10 @@
 
         <div class="route-toolbar">
           <div class="segmented" aria-label="路线版本">
-            <button type="button" data-route-choice="mangshi" aria-pressed="true">腾冲 + 芒市｜推荐</button>
-            <button type="button" data-route-choice="slow" aria-pressed="false">仅腾冲5晚｜备选</button>
+            <button type="button" data-route-choice="mangshi" aria-pressed="true">腾冲 + 芒市</button>
+            <button type="button" data-route-choice="slow" aria-pressed="false">腾冲深度线</button>
           </div>
-          <div class="route-status" id="route-status">自然与傣味兼顾 · 约1,030公里 · 芒市1晚</div>
+          <div class="route-status" id="route-status">高黎贡轻徒步 · 约1,110公里 · 芒市1晚</div>
         </div>
 
         <div class="route-layout">
@@ -2049,6 +2398,7 @@
                 <circle cx="250" cy="190" r="8" fill="#e5683d"/>
                 <text x="174" y="159" fill="#fff" font-size="20" font-weight="700">腾冲</text>
                 <text id="map-tengchong-stay" x="147" y="177" fill="rgba(255,255,255,.62)" font-size="11">10.02–10.06 · 4晚</text>
+                <text x="172" y="220" fill="#9ecfc0" font-size="10">火山 · 湿地 · 热海</text>
               </g>
 
               <g class="map-node-alt" aria-label="龙陵">
@@ -2065,10 +2415,23 @@
                 <text x="542" y="552" fill="#a9c7df" font-size="10">珍奇园 · 银塔 · 金塔 · 美食城</text>
               </g>
 
+              <g aria-label="沿途自然地貌">
+                <text x="785" y="84" fill="rgba(255,255,255,.46)" font-size="10">苍山 · 洱海</text>
+                <text x="447" y="197" fill="rgba(255,255,255,.42)" font-size="10">高黎贡山</text>
+                <text class="map-node-alt" x="548" y="577" fill="rgba(255,255,255,.46)" font-size="10">热带植物 · 傣味街巷</text>
+              </g>
+
+              <g aria-label="界头高黎贡山轻徒步">
+                <path d="M250 190 C218 160 186 128 148 104" fill="none" stroke="#72b89e" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 6"/>
+                <circle cx="148" cy="104" r="7" fill="#72b89e"/>
+                <text x="62" y="89" fill="#fff" font-size="12" font-weight="700">界头 · 高黎贡</text>
+                <text x="62" y="108" fill="rgba(255,255,255,.58)" font-size="10">10.05 · 中坪5 km轻徒步</text>
+              </g>
+
               <g transform="translate(38 330)" aria-label="腾冲本地三条游览线">
                 <rect width="300" height="245" rx="5" fill="rgba(9,31,26,.88)" stroke="rgba(255,255,255,.14)"/>
-                <text x="18" y="29" fill="#fff" font-size="15" font-weight="700">腾冲本地 3 条同向游览线</text>
-                <text x="18" y="49" fill="rgba(255,255,255,.48)" font-size="10">避免每天在城区两侧反复折返</text>
+                <text x="18" y="29" fill="#fff" font-size="15" font-weight="700">腾冲 3 条自然游览线</text>
+                <text x="18" y="49" fill="rgba(255,255,255,.48)" font-size="10">火山湿地、地热村寨与高黎贡雨林</text>
 
                 <text x="18" y="82" fill="#9ecfc0" font-size="11" font-weight="700">10.03 北线</text>
                 <circle cx="96" cy="78" r="4" fill="#72b89e"/>
@@ -2086,14 +2449,14 @@
                 <circle cx="168" cy="128" r="4" fill="#72b89e"/>
                 <text x="18" y="151" fill="rgba(255,255,255,.72)" font-size="10">城 10 → 热海 9 → 司莫拉 15 → 城</text>
 
-                <text x="18" y="182" fill="#9ecfc0" font-size="11" font-weight="700">10.05 城郊线</text>
+                <text x="18" y="182" fill="#9ecfc0" font-size="11" font-weight="700">10.05 高黎贡</text>
                 <circle cx="106" cy="178" r="4" fill="#72b89e"/>
                 <line x1="110" y1="178" x2="138" y2="178" stroke="#72b89e" stroke-width="2"/>
                 <circle cx="142" cy="178" r="4" fill="#72b89e"/>
                 <line x1="146" y1="178" x2="174" y2="178" stroke="#72b89e" stroke-width="2"/>
                 <circle cx="178" cy="178" r="4" fill="#72b89e"/>
-                <text x="18" y="201" fill="rgba(255,255,255,.72)" font-size="9">城 4 → 绮罗 9 → 和顺 3 → 叠水河 7 → 东山 7 → 城</text>
-                <text x="18" y="225" fill="rgba(255,255,255,.44)" font-size="10">三天当地驾驶合计约140–160 km</text>
+                <text x="18" y="201" fill="rgba(255,255,255,.72)" font-size="9">城 60 → 界头中坪 · 5 km徒步 → 城 60</text>
+                <text x="18" y="225" fill="rgba(255,255,255,.44)" font-size="10">三天当地驾驶合计约230–250 km</text>
               </g>
 
               <g transform="translate(700 438)" aria-label="大理两日景点">
@@ -2124,8 +2487,8 @@
               <div class="route-mobile-local">
                 <strong>10.03–10.05｜腾冲三条线</strong>
                 <span>北线：城区 25 → 火山 20 → 黑鱼河 10 → 湿地 13 → 城区</span>
-                <span>南线：城区 10 → 热海 9 → 司莫拉 15 → 城区</span>
-                <span>城郊：城区 4 → 绮罗 9 → 和顺 3 → 叠水河 7 → 东山 7 → 城区</span>
+                <span>南线：城区 4 → 早市 14 → 热海 9 → 司莫拉 15 → 城区</span>
+                <span>徒步：城区 60 → 界头中坪 · 5 km轻徒步 → 城区 60</span>
               </div>
               <div class="route-mobile-leg variant-mangshi">
                 <time datetime="2026-10-06">10.06</time>
@@ -2157,29 +2520,82 @@
 
           <aside class="route-stats" aria-label="路线指标">
             <div class="route-stat">
-              <span>预计总里程</span>
-              <strong id="route-distance">约1,030 km</strong>
-              <small id="route-distance-note">城市道路与景区往返已计入</small>
+              <span>行程里程</span>
+              <strong id="route-distance">约1,110 km</strong>
+              <small id="route-distance-note">含城市与景区往返</small>
             </div>
             <div class="route-stat">
-              <span>累计驾驶</span>
+              <span>驾驶时长</span>
               <strong id="route-hours">18–22 h</strong>
               <small>不含堵车与休息时间</small>
             </div>
             <div class="route-stat">
-              <span>住宿搬运</span>
-              <strong id="route-moves">3 次</strong>
+              <span>住宿城市</span>
+              <strong id="route-moves">4 地</strong>
               <small id="route-moves-note">大理 → 腾冲 → 芒市 → 大理机场</small>
             </div>
           </aside>
         </div>
 
+        <div class="route-overview" aria-label="9天完整行程纵览">
+          <img class="route-overview-image" src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20wide%20panoramic%20travel%20photograph%20of%20western%20Yunnan%20landscape%2C%20Cangshan%20mountain%20and%20Erhai%20Lake%20leading%20toward%20lush%20Gaoligong%20mountain%20valleys%2C%20early%20autumn%20morning%20light%2C%20natural%20green%20and%20blue%20colors%2C%20clear%20layered%20terrain%2C%20no%20text%2C%20no%20people%2C%20editorial%20travel%20photography&amp;image_size=landscape_16_9" alt="苍山洱海与高黎贡山自然景观" loading="lazy" decoding="async">
+          <h3>9天完整行程纵览</h3>
+          <div class="route-overview-grid">
+            <div class="route-overview-item">
+              <time datetime="2026-09-30">09.30</time>
+              <div><strong>抵达大理</strong><span>古城 · 三塔倒影 · 洱海日落</span></div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-01">10.01</time>
+              <div><strong>大理田园线</strong><span>周城 · 喜洲 · 稻田 · 海舌</span></div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-02">10.02</time>
+              <div><strong>大理 → 腾冲</strong><span>约340 km · 永平、保山分段休息</span></div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-03">10.03</time>
+              <div><strong>腾冲北线</strong><span>火山 · 黑鱼河 · 北海湿地</span></div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-04">10.04</time>
+              <div><strong>腾冲南线</strong><span>下绮罗早市 · 热海 · 司莫拉</span></div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-05">10.05</time>
+              <div><strong>高黎贡徒步</strong><span>界头中坪 · 5 km雨林与瀑布</span></div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-06">10.06</time>
+              <div>
+                <strong class="variant-mangshi">腾冲 → 芒市</strong>
+                <span class="variant-mangshi">约141 km · 珍奇园 · 金银塔 · 夜市</span>
+                <strong class="variant-slow">腾冲慢游日</strong>
+                <span class="variant-slow">来凤山 · 城区慢游 · 温泉</span>
+              </div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-07">10.07</time>
+              <div>
+                <strong class="variant-mangshi">芒市 → 大理</strong>
+                <span class="variant-mangshi">约322 km · 傍晚还车</span>
+                <strong class="variant-slow">腾冲 → 大理</strong>
+                <span class="variant-slow">约340 km · 傍晚还车</span>
+              </div>
+            </div>
+            <div class="route-overview-item">
+              <time datetime="2026-10-08">10.08</time>
+              <div><strong>大理返程</strong><span>机场酒店 → 大理机场</span></div>
+            </div>
+          </div>
+        </div>
+
         <div class="alert">
           <div>
-            <strong>杭瑞高速顺濞段是本次行程的首要异常点</strong>
+            <strong>杭瑞高速顺濞段路况提示</strong>
             <p>
-              8月28日已恢复通行，但官方说明仍为临时双向单幅通行。10月2日和10月7日出发前，
-              必须同时查看高德/百度实时导航与“大理交警”路况；若显示事故或长距离红色拥堵，当晚只办理入住并就近吃饭。
+              目前为临时双向单幅通行。10月2日和10月7日出发前查看实时导航与“大理交警”路况，
+              如遇长距离拥堵，抵达后就近入住用餐。
             </p>
           </div>
         </div>
@@ -2191,9 +2607,6 @@
         <div class="section-index">03 / 每日行程</div>
         <div>
           <h2>逐日时间安排</h2>
-          <p class="section-summary">
-            9月30日以08:00左右落地为基准；实际航班若有小幅变化，上午时间顺延。每日预算均按4人并计入当晚两间房估算，10月8日除外。
-          </p>
         </div>
       </div>
 
@@ -2210,7 +2623,7 @@
               <figcaption>三塔倒影 · 苍洱暮色</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>上午抵达 + 古城 + 三塔 + 洱海日落</h3>
+              <h3>初见苍洱｜古城、三塔与洱海日落</h3>
               <span>按08:00落地示例 / 当天不开车</span>
             </div>
             <dl class="schedule">
@@ -2286,7 +2699,7 @@
               <figcaption>喜洲稻田 · 十月田野</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>周城扎染 + 喜洲古镇 + 稻田 + 海舌</h3>
+              <h3>风吹稻田｜周城、喜洲与海舌</h3>
               <span>当天不开车 / 建议包车</span>
             </div>
             <dl class="schedule">
@@ -2362,7 +2775,7 @@
               <figcaption>保腾高速 · 龙江大桥</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>大理 → 保山 → 腾冲</h3>
+              <h3>翻越群山｜从大理驶向腾冲</h3>
               <span>约340 km / 按7–8小时排</span>
             </div>
             <dl class="schedule">
@@ -2388,7 +2801,7 @@
               </div>
               <div class="schedule-row">
                 <dt>16:00–17:30</dt>
-                <dd><strong>龙江大桥 → 腾冲城区酒店</strong><span class="segment-distance">约49 km</span><span>超过17:30仍未到，晚餐改为酒店附近，不再去和顺。</span></dd>
+                <dd><strong>龙江大桥 → 腾冲城区酒店</strong><span class="segment-distance">约49 km</span><span>超过17:30仍未到，抵达后在酒店附近晚餐。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月2日补充信息">
@@ -2434,13 +2847,13 @@
               <figcaption>黑鱼河 · 火山岩谷地</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>火山公园 + 柱状节理/黑鱼河 + 北海湿地</h3>
+              <h3>火山与水｜黑鱼河、火山公园与湿地</h3>
               <span>北线顺路串联 · 约68 km</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>08:30</dt>
-                <dd><strong>腾冲城区 → 火山公园</strong><span class="segment-distance">约25 km</span><span>提前看低云、降雨和风速；热气球受天气影响大，不作为必做项目。</span></dd>
+                <dd><strong>腾冲城区 → 火山公园</strong><span class="segment-distance">约25 km</span><span>提前看低云、降雨和风速；热气球视当天运行情况决定。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>09:15–10:50</dt>
@@ -2452,7 +2865,7 @@
               </div>
               <div class="schedule-row">
                 <dt>12:40–13:40</dt>
-                <dd><strong>曲石方向午餐</strong><span>选择铜瓢牛肉或清淡炒菜，不为网红店排长队。</span></dd>
+                <dd><strong>曲石方向午餐</strong><span>选择铜瓢牛肉或清淡炒菜，就近用餐。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>14:00–16:20</dt>
@@ -2497,7 +2910,7 @@
         <article class="day-card">
           <div class="day-date">
             <time datetime="2026-10-04">10.04</time>
-            <span>地热体验日</span>
+            <span>早市地热日</span>
             <small>宿腾冲</small>
           </div>
           <div class="day-body">
@@ -2506,17 +2919,21 @@
               <figcaption>热海 · 地热蒸汽与山林</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>热海景区 + 司莫拉佤族村</h3>
-              <span>同一南线，相距约9 km</span>
+              <h3>地热之乡｜早市、热海与司莫拉</h3>
+              <span>清晨早市 + 腾冲南线</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
-                <dt>08:30</dt>
-                <dd><strong>腾冲城区 → 热海</strong><span class="segment-distance">约10 km</span><span>争取09:30前入园，避开午后团队客流。</span></dd>
+                <dt>06:50–08:05</dt>
+                <dd><strong>腾冲城区 → 下绮罗小菜街</strong><span class="segment-distance">约4 km</span><span>吃稀豆粉配饵丝、烧饵块或破酥包，逛完即走。</span></dd>
+              </div>
+              <div class="schedule-row">
+                <dt>08:05–09:00</dt>
+                <dd><strong>下绮罗 → 热海</strong><span class="segment-distance">约14 km</span><span>上午入园，避开午后团队客流。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>09:20–12:00</dt>
-                <dd><strong>热海地热景观</strong><span>完整步道约2.5公里且台阶多；父亲体力一般时直接选“大滚锅短线”。</span></dd>
+                <dd><strong>热海地热景观</strong><span>完整步道约2.5公里且台阶较多；如需减少步行，可选“大滚锅短线”。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>12:15</dt>
@@ -2534,13 +2951,13 @@
             <aside class="day-guide" aria-label="10月4日补充信息">
               <div class="day-guide-block">
                 <span class="day-guide-label">景点看点</span>
-                <strong>地热奇观 + 佤族田园村寨</strong>
-                <p>热海看喷气孔、热泉和大滚锅；司莫拉以稻田、村寨与观景台为主。</p>
+                <strong>早市烟火 + 地热奇观 + 田园村寨</strong>
+                <p>清晨先看腾冲日常，随后前往热海和司莫拉。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
-                <strong>南线约35–45 km · 驾驶约1小时</strong>
-                <p>热海与司莫拉相距约9公里，同日顺路完成。</p>
+                <strong>南线约45–55 km · 驾驶约1.5小时</strong>
+                <p>下绮罗、热海与司莫拉依次向南衔接。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">吃什么</span>
@@ -2554,7 +2971,7 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>驾驶：</strong>约1.5–2h</span>
+              <span><strong>驾驶：</strong>约1.5–2h / 约45–55 km</span>
               <span><strong>强度：</strong>中等，台阶集中在热海</span>
               <span><strong>当日预算：</strong>约1600–3500元</span>
               <span class="rain-plan"><strong>中雨：</strong>热海走大滚锅短线，司莫拉视道路情况取消</span>
@@ -2565,59 +2982,59 @@
         <article class="day-card">
           <div class="day-date">
             <time datetime="2026-10-05">10.05</time>
-            <span>早市古镇草原</span>
+            <span>高黎贡徒步</span>
             <small>宿腾冲</small>
           </div>
           <div class="day-body">
             <figure class="day-media">
-              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20Dongshan%20alpine%20grassland%20above%20Tengchong%20basin%20at%20golden%20hour%2C%20rolling%20green%20meadow%2C%20distant%20layered%20mountains%2C%20open%20sky%2C%20natural%20colors%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="腾冲东山草原与山谷" loading="lazy" decoding="async">
-              <figcaption>东山草原 · 腾冲坝子</figcaption>
+              <img src="https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=Photorealistic%20travel%20photograph%20of%20Gaoligong%20Mountain%20rainforest%20near%20Zhongping%20village%20Tengchong%20Yunnan%2C%20mossy%20ancient%20trees%2C%20clear%20stream%20and%20waterfall%2C%20soft%20natural%20light%2C%20no%20text%2C%20wide%20editorial%20composition&amp;image_size=landscape_16_9" alt="高黎贡山中坪雨林与瀑布" loading="lazy" decoding="async">
+              <figcaption>高黎贡山 · 中坪雨林</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>下绮罗早市 + 和顺古镇 + 东山草原</h3>
-              <span>早起换来三个差异化体验</span>
+              <h3>走进雨林｜高黎贡山 5 km 轻徒步</h3>
+              <span>界头中坪 · 正规向导带队</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
-                <dt>06:50</dt>
-                <dd><strong>腾冲城区 → 下绮罗小菜街</strong><span class="segment-distance">约4 km</span><span>也常被称为绮罗早市；7点开市，先吃稀豆粉配饵丝/饵块、破酥包。</span></dd>
+                <dt>08:00–09:30</dt>
+                <dd><strong>腾冲城区 → 界头镇中坪村</strong><span class="segment-distance">约55–65 km</span><span>使用含接送、进山手续与户外保险的小团。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>08:10</dt>
-                <dd><strong>离开早市前买甜白酒</strong><span>常在9–10点售罄；少量尝味即可，驾驶人不饮含酒精饮品。</span></dd>
+                <dt>09:30–10:00</dt>
+                <dd><strong>中坪村集合与热身</strong><span>领取登山杖，听向导说明路况；长辈先确认膝盖与呼吸状态。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>08:40–11:40</dt>
-                <dd><strong>下绮罗 → 和顺古镇</strong><span class="segment-distance">约9 km</span><span>车辆停景区外；走图书馆、洗衣亭与野鸭湖。</span></dd>
+                <dt>10:00–13:00</dt>
+                <dd><strong>中坪大瀑布 5 km 轻徒步</strong><span>沿森林、溪流和土路前行，全程约3小时；雨后路滑时缩短路线。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>12:00–13:10</dt>
-                <dd><strong>古镇外围午餐</strong><span>午餐可选大救驾、腌菜大烧，餐后直接前往叠水河。</span></dd>
+                <dt>13:00–14:30</dt>
+                <dd><strong>山野午餐与休息</strong><span>补充热食和水，下午不再安排高强度路线。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>13:30–14:30</dt>
-                <dd><strong>和顺 → 叠水河瀑布</strong><span class="segment-distance">约3 km</span><span>完成瀑布和峡谷观景，控制步行量后再去东山。</span></dd>
+                <dt>14:30–15:30</dt>
+                <dd><strong>野猪箐古桥或林缘短走</strong><span>长辈可留在休息点，不参加额外涉水与陡坡。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>15:00–17:20</dt>
-                <dd><strong>叠水河 → 东山草原 → 城区</strong><span class="segment-distance">约7 km + 7 km</span><span>以观景和短走为主，17:20开始下山。</span></dd>
+                <dt>15:30–17:00</dt>
+                <dd><strong>界头中坪 → 腾冲城区</strong><span class="segment-distance">约55–65 km</span><span>回到酒店后休息，晚餐在城区解决。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月5日补充信息">
               <div class="day-guide-block">
                 <span class="day-guide-label">景点看点</span>
-                <strong>早市、古镇水系、瀑布与高山草甸</strong>
-                <p>早市看腾冲日常，和顺看水系，叠水河补充瀑布景观，东山俯瞰腾冲坝子。</p>
+                <strong>原始森林、溪流与中坪大瀑布</strong>
+                <p>5公里开放线路串联大河谷、森林、瀑布与野猪箐古桥。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
-                <strong>城郊线约30–40 km</strong>
-                <p>和顺车辆停景区外；东山17:20下山，保持天黑前回到城区。</p>
+                <strong>往返约110–130 km · 接送约2–3小时</strong>
+                <p>跟随正规向导进入开放线路，不自行进山或离队。</p>
               </div>
               <div class="day-guide-block">
-                <span class="day-guide-label">吃什么</span>
-                <strong>稀豆粉、饵丝、破酥包、甜白酒</strong>
-                <p>甜白酒通常9–10点前售罄；午餐选大救驾或腌菜大烧。</p>
+                <span class="day-guide-label">装备</span>
+                <strong>防滑徒步鞋、速干衣、登山杖</strong>
+                <p>另带轻便雨衣、防蚊液、饮水和一套替换袜。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">住哪里</span>
@@ -2626,10 +3043,10 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>步行：</strong>约7–9 km，分早市、古镇和下午两段</span>
-              <span><strong>门票参考：</strong>和顺55元/人</span>
-              <span><strong>当日预算：</strong>约1500–2700元</span>
-              <span class="rain-plan"><strong>中雨：</strong>保留早市、和顺与叠水河，东山改玉泉园</span>
+              <span><strong>徒步：</strong>约5 km / 约3h</span>
+              <span><strong>向导：</strong>含进山手续与户外保险</span>
+              <span><strong>当日预算：</strong>约2200–3800元</span>
+              <span class="rain-plan"><strong>大雨：</strong>改为和顺古镇与叠水河短线</span>
             </div>
           </div>
         </article>
@@ -2637,7 +3054,7 @@
         <article class="day-card">
           <div class="day-date">
             <time datetime="2026-10-06">10.06</time>
-            <span class="variant-slow">自然机动日</span>
+            <span class="variant-slow">腾冲慢游日</span>
             <span class="variant-mangshi">芒市一晚</span>
             <small class="variant-slow">宿腾冲</small>
             <small class="variant-mangshi">宿芒市</small>
@@ -2648,28 +3065,28 @@
               <figcaption>来凤山 · 林间缓冲日</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>补回雨天取消项，或来凤山 + 温泉</h3>
-              <span>只在不去芒市时启用</span>
+              <h3>留在腾冲｜来凤山与温泉</h3>
+              <span>腾冲深度线</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>09:30</dt>
-                <dd><strong>优先补回前三天因雨取消的自然景点</strong><span>火山、湿地、东山只补一个，不重复已经完成的路线。</span></dd>
+                <dd><strong>城区 → 来凤山森林公园</strong><span class="segment-distance">约4 km</span><span>沿林间步道缓行，俯瞰腾冲坝子。</span></dd>
               </div>
               <div class="schedule-row">
-                <dt>无缺项</dt>
-                <dd><strong>城区 → 来凤山森林公园</strong><span class="segment-distance">约4 km</span><span>上午走林间步道，午餐后逛玉泉园或本地市场。</span></dd>
+                <dt>12:00</dt>
+                <dd><strong>城区午餐与本地市场</strong><span>午餐后逛玉泉园或本地市场。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>15:30</dt>
-                <dd><strong>城区温泉或自由活动</strong><span>这一天承担天气缓冲，不再增加远距离景点。</span></dd>
+                <dd><strong>城区温泉或自由活动</strong><span>午后留给泡汤、咖啡馆或酒店休息。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月6日仅腾冲方案补充信息">
               <div class="day-guide-block">
                 <span class="day-guide-label">景点看点</span>
-                <strong>来凤山森林或天气补位</strong>
-                <p>优先完成此前受天气影响的火山、湿地或东山；都已完成则走来凤山林间步道。</p>
+                <strong>来凤山森林与城区温泉</strong>
+                <p>上午走林间步道，下午回到城区慢游。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
@@ -2688,9 +3105,9 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>价值：</strong>减少天气导致的核心景点损失</span>
+              <span><strong>节奏：</strong>上午森林，下午温泉</span>
               <span><strong>当日预算：</strong>约1600–3800元</span>
-              <span class="rain-plan"><strong>持续降雨：</strong>直接休整，不为填满日程冒险</span>
+              <span class="rain-plan"><strong>持续降雨：</strong>改为城区咖啡馆与酒店休息</span>
             </div>
           </div>
 
@@ -2700,7 +3117,7 @@
               <figcaption>勐焕金塔 · 热带暮色</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>腾冲 → 芒市，热带植物与傣味夜市</h3>
+              <h3>南下芒市｜热带植物与傣味夜市</h3>
               <span>约140 km / 2–2.5小时</span>
             </div>
             <dl class="schedule">
@@ -2748,7 +3165,7 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>结论：</strong>值得住一晚，但不延伸瑞丽</span>
+              <span><strong>芒市停留：</strong>1晚 · 金银塔与傣味夜市</span>
               <span><strong>增量里程：</strong>约120–150 km</span>
               <span><strong>当日预算：</strong>约2000–3550元</span>
               <span class="rain-plan"><strong>大雨：</strong>珍奇园缩短，银塔取消，只留金塔与晚餐</span>
@@ -2768,13 +3185,13 @@
               <figcaption>返程 · 高黎贡山谷</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>腾冲 → 大理机场片区</h3>
+              <h3>翻山回大理｜腾冲至机场片区</h3>
               <span>约340 km / 按8–9小时排</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>07:20</dt>
-                <dd><strong>早餐、退房、加满油</strong><span>10月7日是返程高峰，必须在08:00前进入主路。</span></dd>
+                <dd><strong>早餐、退房、加满油</strong><span>10月7日是返程高峰，建议08:00前进入主路。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>07:40</dt>
@@ -2820,7 +3237,7 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>硬规则：</strong>当天不安排任何景点</span>
+              <span><strong>当天安排：</strong>以返程驾驶和还车为主</span>
               <span><strong>当日预算：</strong>约1650–2850元</span>
               <span><strong>还车：</strong>保留油站小票与结算截图</span>
             </div>
@@ -2832,7 +3249,7 @@
               <figcaption>返程 · 杭瑞高速山谷</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>芒市 → 大理机场片区</h3>
+              <h3>沿山归程｜芒市至大理</h3>
               <span>约322 km / 按7–8小时排</span>
             </div>
             <dl class="schedule">
@@ -2880,9 +3297,9 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>硬规则：</strong>当天不安排任何景点</span>
+              <span><strong>当天安排：</strong>以返程驾驶和还车为主</span>
               <span><strong>当日预算：</strong>约1650–2850元</span>
-              <span><strong>风险：</strong>芒市早晨可能有阵雨或雾</span>
+              <span><strong>晨间天气：</strong>芒市可能有阵雨或雾</span>
             </div>
           </div>
         </article>
@@ -2899,7 +3316,7 @@
               <figcaption>大理晨光 · 平稳返程</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>只处理机场流程</h3>
+              <h3>洱海晨光｜从大理启程返家</h3>
               <span>以12:00航班示例</span>
             </div>
             <dl class="schedule">
@@ -2939,12 +3356,73 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>前提：</strong>优先购买大理中午返程航班</span>
+              <span><strong>航班：</strong>大理中午返程</span>
               <span><strong>当日预算：</strong>约200–400元</span>
-              <span><strong>备用：</strong>航班变动时优先改晚，不追加夜驾</span>
+              <span><strong>航班变动：</strong>顺延机场流程</span>
             </div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="section budget-section" id="budget">
+      <div class="section-head">
+        <div class="section-index">04 / 行程预算</div>
+        <div>
+          <h2>4人全程预算</h2>
+        </div>
+      </div>
+
+      <div class="overview-budget" aria-label="行程总预算">
+        <div class="overview-budget-main">
+          <span id="budget-plan-label">腾冲 + 芒市线｜不含往返机票</span>
+          <strong id="budget-heading">4人落地后预算：约1.82–3.07万元</strong>
+          <b id="budget-total">¥18,150–30,700</b>
+          <p id="budget-target">舒适预算约23,000–27,000元。</p>
+          <p>人均 <b id="budget-per-person">约 ¥4,540–7,680</b></p>
+        </div>
+        <div class="overview-budget-breakdown">
+          <div><span>住宿｜2间房×8晚</span><strong>¥6,200–12,000</strong></div>
+          <div><span>租车与保障</span><strong>¥2,600–4,200</strong></div>
+          <div><span>餐饮｜4人</span><strong>¥4,800–7,200</strong></div>
+          <div><span>门票、徒步与温泉</span><strong>¥2,600–4,100</strong></div>
+          <div><span>油费与停车</span><strong>¥1,050–1,550</strong></div>
+          <div><span>机动金与芒市增量</span><strong>¥900–1,700</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-band" id="memories">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-index">05 / 旅行记录</div>
+          <div>
+            <h2>把路书变成真实记录</h2>
+            <p class="section-summary">按日期加入旅途照片，内容保存在当前浏览器。</p>
+          </div>
+        </div>
+
+        <div class="memory-toolbar">
+          <label class="memory-field" for="memory-day">
+            <span>记录到</span>
+            <select id="memory-day">
+              <option value="09.30|大理首日">09.30｜大理首日</option>
+              <option value="10.01|喜洲田园">10.01｜喜洲田园</option>
+              <option value="10.02|大理至腾冲">10.02｜大理至腾冲</option>
+              <option value="10.03|火山与湿地">10.03｜火山与湿地</option>
+              <option value="10.04|热海与司莫拉">10.04｜热海与司莫拉</option>
+              <option value="10.05|高黎贡山徒步">10.05｜高黎贡山徒步</option>
+              <option value="10.06|芒市或机动日">10.06｜芒市或机动日</option>
+              <option value="10.07|返程">10.07｜返程</option>
+              <option value="10.08|大理返程">10.08｜大理返程</option>
+            </select>
+          </label>
+          <button class="memory-add" id="memory-add" type="button">添加照片</button>
+          <input class="memory-input" id="memory-input" type="file" accept="image/*" multiple aria-label="选择旅行照片">
+          <span class="memory-count" id="memory-count">0张照片 · 保存在本机</span>
+        </div>
+        <p class="memory-empty" id="memory-empty">还没有旅行照片</p>
+        <div class="memory-gallery" id="memory-gallery" aria-live="polite"></div>
       </div>
     </section>
 
@@ -2964,7 +3442,7 @@
           <article class="food-card">
             <div class="meal-time">10.05｜06:50–08:10</div>
             <h3>下绮罗小菜街早市</h3>
-            <p>你问的腾冲早市就是这里，也常被称为“绮罗早市”。官方信息显示清晨7点开市。</p>
+            <p>下绮罗小菜街也常被称为“绮罗早市”，通常清晨7点开市。</p>
             <dl class="food-list">
               <div>
                 <dt>第一口</dt>
@@ -3008,7 +3486,7 @@
             <dl class="food-list">
               <div>
                 <dt>午餐</dt>
-                <dd>熟食版柠檬撒或过手米线；默认不点生食、苦撒。</dd>
+                <dd>熟食版柠檬撒或过手米线，口味更适合家庭分享。</dd>
               </div>
               <div>
                 <dt>下午甜品</dt>
@@ -3023,7 +3501,7 @@
         </div>
 
         <div class="food-rule">
-          <strong>点餐底线：</strong>
+          <strong>点餐提示：</strong>
           长途驾驶前不饮酒、不吃过量生冷；土锅子提前一天订即可。夜市只选勐巴娜西美食城或新玩厂其中一处，不连续赶场。
         </div>
       </div>
@@ -3036,7 +3514,7 @@
           <div>
             <h2>按“搬运行李成本”选区域</h2>
             <p class="section-summary">
-              四人带长辈和较多行李，位置、停车、电梯比景观房更重要。默认订两间双床房，并优先选择可免费取消。
+              四人带长辈和较多行李，位置、停车、电梯比景观房更重要。此行按两间双床房规划，并优先选择可免费取消。
             </p>
           </div>
         </div>
@@ -3065,9 +3543,9 @@
             <ul>
               <li class="variant-slow">五晚不换酒店，减少行李搬运</li>
               <li class="variant-mangshi">四晚固定住宿，10月6日退房前往芒市</li>
-              <li>必须确认自有停车场与电梯</li>
+              <li>优先确认自有停车场与电梯</li>
               <li>去和顺、热海、东山草原均容易调度</li>
-              <li>不建议住和顺核心区：游客车不能进入</li>
+              <li>和顺核心区游客车不能进入，住宿以城区为宜</li>
             </ul>
             <div class="stay-price variant-slow">两间房五晚：约3800–7500元</div>
             <div class="stay-price variant-mangshi">两间房四晚：约3000–6000元</div>
@@ -3102,7 +3580,7 @@
       </div>
     </section>
 
-    <section class="section" id="budget" hidden>
+    <section class="section" id="budget-detail" hidden>
       <div class="section-head">
         <div class="section-index">06 / 预算规划</div>
         <div>
@@ -3167,7 +3645,7 @@
         </table>
 
         <aside class="budget-total">
-          <span id="legacy-budget-plan-label">推荐腾冲 + 芒市版｜不含机票</span>
+          <span id="legacy-budget-plan-label">腾冲 + 芒市线｜不含机票</span>
           <strong id="legacy-budget-total">¥17,250–29,450</strong>
           <p id="legacy-budget-target">更现实的舒适目标值：约22,000–25,500元。</p>
           <hr>
@@ -3180,10 +3658,10 @@
     <section class="checklist-band" id="checklist">
       <div class="section">
         <div class="section-head">
-          <div class="section-index">04 / 出发前清单</div>
+          <div class="section-index">06 / 出发准备</div>
           <div>
-            <h2>只盯尚未完成的关键项</h2>
-            <p class="section-summary">勾选状态会保存在当前浏览器。越靠前的项目，错过后的替代成本越高。</p>
+            <h2>出发前准备</h2>
+            <p class="section-summary">勾选状态保存在当前浏览器。</p>
           </div>
         </div>
 
@@ -3209,9 +3687,9 @@
             <time>取车前</time>
           </label>
           <label class="check-item">
-            <input type="checkbox" data-check="market">
-            <span><strong>确认早市与东山开放情况</strong><span>10月4日晚核对下绮罗小菜街位置、东山草原天气与临时管制。</span></span>
-            <time>提前1天</time>
+            <input type="checkbox" data-check="gaoligong">
+            <span><strong>确认高黎贡山徒步小团</strong><span>界头中坪5公里线，含正规向导、接送、进山手续与户外保险。</span></span>
+            <time>提前预约</time>
           </label>
           <label class="check-item">
             <input type="checkbox" data-check="xizhou">
@@ -3236,19 +3714,19 @@
         </div>
 
         <div class="execution-inline">
-          <h3>路况、天气与体力预案</h3>
+          <h3>旅途安心提示</h3>
           <div class="rules-grid">
             <div class="rule">
-              <strong>道路变红</strong>
-              <p>导航预计到达晚于18:00，晚餐改在酒店附近并保持驾驶截止时间。顺濞段发生事故时，不自行钻国道小路。</p>
+              <strong>遇到拥堵</strong>
+              <p>晚餐改在酒店附近；顺濞段发生事故时继续沿导航主路行驶。</p>
             </div>
             <div class="rule">
-              <strong>雨势变大</strong>
-              <p>中雨以上火山改为城区活动；热海只走短线；湿地栈道明显积水则改为温泉或酒店休整。</p>
+              <strong>遇到雨天</strong>
+              <p>火山改为城区活动，热海缩短步道，湿地积水时改为温泉休息。</p>
             </div>
             <div class="rule">
-              <strong>长辈状态下降</strong>
-              <p>出现头晕、胸闷、膝痛或睡眠不足，当日只保留吃饭与休息。温泉不能替代医疗判断。</p>
+              <strong>体力不足</strong>
+              <p>减少步行与泡汤时间，就近用餐休息，必要时及时就医。</p>
             </div>
           </div>
         </div>
@@ -3257,7 +3735,7 @@
 
     <section class="section" id="safety" hidden>
       <div class="section-head">
-        <div class="section-index">08 / 执行规则</div>
+        <div class="section-index">08 / 旅行提示</div>
         <div>
           <h2>路况、天气与体力预案</h2>
           <p class="section-summary">以下情况出现时，直接切换到对应安排，不临时增加新的跨城路线。</p>
@@ -3282,7 +3760,7 @@
 
     <section class="section" id="sources">
       <div class="section-head">
-        <div class="section-index">05 / 信息依据</div>
+        <div class="section-index">07 / 信息依据</div>
         <div>
           <h2>已核对的政策与数据</h2>
           <p class="section-summary">路线里程为公开导航数据的规划值；天气与国庆管制会变化，已在页面内标明复核节点。</p>
@@ -3302,10 +3780,13 @@
           <li><a href="https://tengchong.gov.cn/info/1732/34978.htm">腾冲市政府：司莫拉佤族村与热海区位信息</a></li>
           <li><a href="https://www.tcdscy.com/">东山草原景区官网：草甸规模与开放信息</a></li>
           <li><a href="https://www.tengchong.gov.cn/info/9617/5890463.htm">腾冲市政府：下绮罗小菜街早市与本地早餐</a></li>
+          <li><a href="https://www.tengchong.gov.cn/info/1015/5607053.htm">腾冲市政府：界头中坪5公里高黎贡山荒野路线</a></li>
+          <li><a href="http://yn.people.com.cn/n2/2026/0609/c372456-41604887.html">人民网：中坪规范化徒步线路与当地向导机制</a></li>
           <li><a href="https://m.yunnan.cn/system/2026/09/18/034154248.shtml">云南网：腾冲土锅子、大薄片、大救驾等地方菜</a></li>
           <li><a href="https://m.yunnan.cn/system/2026/07/24/034094584.shtml">云南网：芒市塔景、美食城与夜间游线</a></li>
           <li><a href="https://wap.weather.com.cn/mweather15d/101290201.shtml">中国天气网：大理15天预报</a></li>
           <li><a href="https://cnr.weather.com.cn/mweather15d/101290506.shtml">中国天气网：腾冲15天预报</a></li>
+          <li><a href="https://m.weather.com.cn/mweather15d/101291508.shtml">中国天气网：芒市15天预报</a></li>
           <li><a href="http://cha.zuzuche.com/lu/tengchong/2664.html">公开导航参考：腾冲—大理约340公里</a></li>
           <li><a href="http://cha.zuzuche.com/lu/dehongdaizujingpozu/2664.html">公开导航参考：芒市—大理约322公里</a></li>
           <li><a href="https://m.chinawutong.com/tools/tengchong_mangshi.html">公开导航参考：腾冲—芒市约140公里</a></li>
@@ -3316,9 +3797,7 @@
 
         <div class="method-note">
           <strong>制图说明：</strong>
-          线路图为离线示意图，以主要城市的相对方位和行程流向为表达重点，不是按比例道路地图。
-          它不调用外部地图瓦片，手机离线打开仍可查看；小红书仅用于体验与动线交叉参考，里程仍以公开导航规划值表达。
-          实时导航、事故、封路和景区临时管制必须以出发当天官方信息为准。
+          线路图为离线示意，以主要城市的相对方位和行程流向为重点；实时道路信息以出发当天导航和官方交通公告为准。
         </div>
       </div>
     </section>
@@ -3329,34 +3808,273 @@
   </footer>
 
   <script>
+    const generatedImageUrl = (prompt) => (
+      `https://copilot-cn.bytedance.net/api/ide/v1/text_to_image?prompt=${encodeURIComponent(prompt)}&image_size=landscape_16_9`
+    );
+
+    const dayGalleryData = {
+      "2026-09-30": [
+        {
+          prompt: "Photorealistic travel photograph of a quiet stone street in Dali Ancient Town Yunnan in soft early morning light, traditional Bai architecture, natural colors, no text, no crowd, wide editorial composition",
+          alt: "大理古城清晨街巷",
+          caption: "大理古城 · 清晨街巷"
+        },
+        {
+          prompt: "Photorealistic travel photograph of the Erhai Lake ecological corridor at sunset near Longkan Dali Yunnan, calm water, Cangshan mountain, autumn trees, natural colors, no text, wide editorial composition",
+          alt: "龙龛洱海生态廊道日落",
+          caption: "龙龛码头 · 洱海日落"
+        }
+      ],
+      "2026-10-01": [
+        {
+          prompt: "Photorealistic travel photograph of a traditional indigo tie dye courtyard in Zhoucheng village Dali Yunnan, blue fabric hanging in sunlight, Bai architecture, no text, no staged people, wide composition",
+          alt: "周城扎染院落",
+          caption: "周城 · 扎染院落"
+        },
+        {
+          prompt: "Photorealistic travel photograph of Haishe Park lakeshore near Xizhou Dali Yunnan, old willow trees beside clear Erhai Lake with Cangshan in distance, autumn daylight, no text, wide composition",
+          alt: "喜洲海舌公园湖岸",
+          caption: "海舌公园 · 洱海西岸"
+        }
+      ],
+      "2026-10-02": [
+        {
+          prompt: "Photorealistic travel photograph of the Longjiang suspension bridge crossing a deep green valley near Tengchong Yunnan, clear daylight, detailed bridge structure, natural colors, no text, wide composition",
+          alt: "龙江大桥横跨山谷",
+          caption: "龙江大桥 · 高黎贡山谷"
+        },
+        {
+          prompt: "Photorealistic travel photograph of the road approaching Tengchong through the lush Gaoligong Mountains in western Yunnan, layered green ridges and clear highway, daylight, no text, wide editorial composition",
+          alt: "高黎贡山进腾冲公路",
+          caption: "高黎贡山 · 进腾冲"
+        }
+      ],
+      "2026-10-03": [
+        {
+          prompt: "Photorealistic travel photograph of a volcanic crater and green grass slopes at Tengchong Volcano Park Yunnan, clear autumn daylight, visible geological terrain, no text, no crowd, wide composition",
+          alt: "腾冲火山地质公园",
+          caption: "火山公园 · 火山锥"
+        },
+        {
+          prompt: "Photorealistic travel photograph of Beihai Wetland in Tengchong Yunnan, golden green floating meadows, clear water and distant mountains, soft afternoon light, no text, wide composition",
+          alt: "腾冲北海湿地",
+          caption: "北海湿地 · 水草洲"
+        }
+      ],
+      "2026-10-04": [
+        {
+          prompt: "Photorealistic documentary travel photograph of a local morning produce market in Qiluo Tengchong Yunnan, colorful fresh vegetables and simple stalls, warm natural light, no readable signs, wide composition",
+          alt: "腾冲下绮罗早市",
+          caption: "下绮罗 · 清晨烟火"
+        },
+        {
+          prompt: "Photorealistic travel photograph of traditional wooden houses and terraced fields in Simola Wa village near Tengchong Yunnan, warm afternoon light, natural colors, no text, wide composition",
+          alt: "司莫拉佤族村",
+          caption: "司莫拉 · 山间村落"
+        }
+      ],
+      "2026-10-05": [
+        {
+          prompt: "Photorealistic travel photograph of a tall waterfall deep in Gaoligong Mountain forest near Zhongping village Tengchong Yunnan, moss covered rocks and clear stream, soft daylight, no text, wide editorial composition",
+          alt: "高黎贡山中坪大瀑布",
+          caption: "中坪大瀑布 · 雨林深处"
+        },
+        {
+          prompt: "Photorealistic travel photograph of an ancient wooden covered bridge beside a clear mountain stream in Gaoligong Mountain near Tengchong Yunnan, dense subtropical forest, natural daylight, no text, wide composition",
+          alt: "高黎贡山野猪箐古桥",
+          caption: "野猪箐古桥 · 山林溪谷"
+        }
+      ],
+      "2026-10-06-mangshi": [
+        {
+          prompt: "Photorealistic travel photograph of Menghuan Silver Pagoda in Mangshi Yunnan surrounded by tropical greenery under clear daylight, detailed white pagoda, no text, no crowd, wide composition",
+          alt: "芒市勐焕银塔",
+          caption: "勐焕银塔 · 热带晴光"
+        },
+        {
+          prompt: "Photorealistic travel photograph of a lively evening food market in Mangshi Yunnan with Dai cuisine stalls, warm lantern light, tropical plants, no readable signs, natural documentary style, wide composition",
+          alt: "芒市傣味夜市",
+          caption: "芒市夜市 · 傣味烟火"
+        }
+      ],
+      "2026-10-06-slow": [
+        {
+          prompt: "Photorealistic travel photograph of Laifengshan Forest Park overlooking Tengchong Yunnan, lush trees and quiet mountain paths after rain, soft daylight, no text, wide composition",
+          alt: "腾冲来凤山森林公园",
+          caption: "来凤山 · 城中森林"
+        },
+        {
+          prompt: "Photorealistic travel photograph of a quiet natural hot spring courtyard in Tengchong Yunnan surrounded by bamboo and volcanic stone, soft daylight, no people, no text, wide composition",
+          alt: "腾冲温泉庭院",
+          caption: "腾冲温泉 · 松弛午后"
+        }
+      ],
+      "2026-10-07-mangshi": [
+        {
+          prompt: "Photorealistic travel photograph of the mountain expressway near Longling Yunnan passing through green valleys, clear safe roadway in daylight, no text, wide composition",
+          alt: "龙陵山谷高速",
+          caption: "龙陵 · 山谷公路"
+        },
+        {
+          prompt: "Photorealistic travel photograph of Erhai Lake and Cangshan mountain at dusk near Dali airport district Yunnan, calm blue water and warm final light, no text, wide composition",
+          alt: "大理洱海傍晚",
+          caption: "回到大理 · 洱海暮色"
+        }
+      ],
+      "2026-10-07-slow": [
+        {
+          prompt: "Photorealistic travel photograph of the Longjiang bridge rest viewpoint in western Yunnan with dramatic green valley and distant mountains, clear daylight, no text, wide composition",
+          alt: "龙江大桥观景台",
+          caption: "龙江大桥 · 返程短停"
+        },
+        {
+          prompt: "Photorealistic travel photograph of a scenic mountain highway near Baoshan Yunnan with layered ridges and open sky, safe clear road in daylight, no text, wide composition",
+          alt: "保山山间公路",
+          caption: "保山 · 山间归途"
+        }
+      ],
+      "2026-10-08": [
+        {
+          prompt: "Photorealistic travel photograph of pale morning light over Erhai Lake near Dali Yunnan with Cangshan mountain reflected on calm water, natural colors, no text, wide composition",
+          alt: "洱海清晨与苍山",
+          caption: "洱海清晨 · 告别大理"
+        },
+        {
+          prompt: "Photorealistic travel photograph of Dali airport terminal with Cangshan mountain visible beyond under clear morning sky, calm travel atmosphere, no logos, no text, wide composition",
+          alt: "大理机场与苍山",
+          caption: "大理机场 · 平稳返程"
+        }
+      ]
+    };
+
+    const routeOverview = document.querySelector(".route-overview");
+    const routeLayout = document.querySelector(".route-layout");
+    if (routeOverview && routeLayout) routeLayout.before(routeOverview);
+
+    document.querySelectorAll(".day-body").forEach((body) => {
+      const figure = body.querySelector(".day-media");
+      const firstImage = figure?.querySelector(":scope > img");
+      const firstCaption = figure?.querySelector(":scope > figcaption");
+      const date = body.closest(".day-card")?.querySelector(".day-date time")?.getAttribute("datetime");
+      if (!figure || !firstImage || !date) return;
+
+      const variant = body.classList.contains("variant-mangshi")
+        ? "mangshi"
+        : body.classList.contains("variant-slow")
+          ? "slow"
+          : "";
+      const extras = dayGalleryData[variant ? `${date}-${variant}` : date] || dayGalleryData[date] || [];
+      const track = document.createElement("div");
+      track.className = "day-media-track";
+
+      const firstSlide = document.createElement("div");
+      firstSlide.className = "day-media-slide";
+      firstSlide.append(firstImage);
+      if (firstCaption) firstSlide.append(firstCaption);
+      track.append(firstSlide);
+
+      extras.forEach((item) => {
+        const slide = document.createElement("div");
+        slide.className = "day-media-slide";
+        const image = document.createElement("img");
+        image.src = generatedImageUrl(item.prompt);
+        image.alt = item.alt;
+        image.loading = "lazy";
+        image.decoding = "async";
+        const caption = document.createElement("figcaption");
+        caption.textContent = item.caption;
+        slide.append(image, caption);
+        track.append(slide);
+      });
+
+      figure.append(track);
+      const slides = [...track.children];
+      if (slides.length < 2) return;
+
+      const previous = document.createElement("button");
+      previous.className = "day-media-nav day-media-prev";
+      previous.type = "button";
+      previous.textContent = "‹";
+      previous.title = "上一张";
+      previous.setAttribute("aria-label", `${date}上一张照片`);
+
+      const next = document.createElement("button");
+      next.className = "day-media-nav day-media-next";
+      next.type = "button";
+      next.textContent = "›";
+      next.title = "下一张";
+      next.setAttribute("aria-label", `${date}下一张照片`);
+
+      const dots = document.createElement("div");
+      dots.className = "day-media-dots";
+      const setSlide = (index) => {
+        track.scrollLeft = index * track.clientWidth;
+        dotButtons.forEach((dot, dotIndex) => {
+          dot.setAttribute("aria-current", String(dotIndex === index));
+        });
+      };
+      const dotButtons = slides.map((_, index) => {
+        const dot = document.createElement("button");
+        dot.className = "day-media-dot";
+        dot.type = "button";
+        dot.title = `第${index + 1}张`;
+        dot.setAttribute("aria-label", `${date}第${index + 1}张照片`);
+        dot.setAttribute("aria-current", String(index === 0));
+        dot.addEventListener("click", () => setSlide(index));
+        dots.append(dot);
+        return dot;
+      });
+
+      const goTo = (step) => {
+        const current = Math.round(track.scrollLeft / track.clientWidth);
+        const nextIndex = (current + step + slides.length) % slides.length;
+        setSlide(nextIndex);
+      };
+
+      previous.addEventListener("click", () => goTo(-1));
+      next.addEventListener("click", () => goTo(1));
+      let frame = 0;
+      track.addEventListener("scroll", () => {
+        cancelAnimationFrame(frame);
+        frame = requestAnimationFrame(() => {
+          const current = Math.round(track.scrollLeft / track.clientWidth);
+          dotButtons.forEach((dot, index) => {
+            dot.setAttribute("aria-current", String(index === current));
+          });
+        });
+      }, { passive: true });
+
+      figure.append(previous, next, dots);
+    });
+
     const routeData = {
       slow: {
-        distance: "约900 km",
-        hours: "17–20 h",
-        moves: "2 次",
+        distance: "约980 km",
+        hours: "19–22 h",
+        moves: "3 地",
         movesNote: "大理 → 腾冲 → 大理机场",
-        status: "天气缓冲更多 · 约900公里 · 腾冲5晚",
+        status: "高黎贡慢游 · 约980公里 · 腾冲5晚",
         tengchongNights: "5晚",
         mapTengchongStay: "10.02–10.07 · 5晚",
-        budgetLabel: "仅腾冲5晚备选｜不含机票",
-        budgetHeading: "4人落地后预算：约1.70–2.88万元",
-        budgetTotal: "¥16,950–28,750",
-        budgetTarget: "更现实的舒适目标值：约21,500–25,000元。",
-        budgetPerPerson: "约 ¥4,240–7,190"
+        budgetLabel: "腾冲深度线｜不含机票",
+        budgetHeading: "4人落地后预算：约1.79–3.00万元",
+        budgetTotal: "¥17,850–30,000",
+        budgetTarget: "舒适预算约22,500–26,500元。",
+        budgetPerPerson: "约 ¥4,460–7,500"
       },
       mangshi: {
-        distance: "约1,030 km",
-        hours: "18–22 h",
-        moves: "3 次",
+        distance: "约1,110 km",
+        hours: "20–24 h",
+        moves: "4 地",
         movesNote: "大理 → 腾冲 → 芒市 → 大理机场",
-        status: "自然与傣味兼顾 · 约1,030公里 · 芒市1晚",
+        status: "高黎贡轻徒步 · 约1,110公里 · 芒市1晚",
         tengchongNights: "4晚",
         mapTengchongStay: "10.02–10.06 · 4晚",
-        budgetLabel: "推荐腾冲 + 芒市版｜不含机票",
-        budgetHeading: "4人落地后预算：约1.73–2.95万元",
-        budgetTotal: "¥17,250–29,450",
-        budgetTarget: "更现实的舒适目标值：约22,000–25,500元。",
-        budgetPerPerson: "约 ¥4,310–7,360"
+        budgetLabel: "腾冲 + 芒市线｜不含机票",
+        budgetHeading: "4人落地后预算：约1.82–3.07万元",
+        budgetTotal: "¥18,150–30,700",
+        budgetTarget: "舒适预算约23,000–27,000元。",
+        budgetPerPerson: "约 ¥4,540–7,680"
       }
     };
 
@@ -3402,6 +4120,152 @@
         savedChecks[checkbox.dataset.check] = checkbox.checked;
         localStorage.setItem("west-yunnan-trip-checks", JSON.stringify(savedChecks));
       });
+    });
+
+    const memoryInput = document.getElementById("memory-input");
+    const memoryAdd = document.getElementById("memory-add");
+    const memoryDay = document.getElementById("memory-day");
+    const memoryGallery = document.getElementById("memory-gallery");
+    const memoryEmpty = document.getElementById("memory-empty");
+    const memoryCount = document.getElementById("memory-count");
+    let memoryObjectUrls = [];
+
+    const memoryDb = new Promise((resolve, reject) => {
+      if (!("indexedDB" in window)) {
+        reject(new Error("IndexedDB unavailable"));
+        return;
+      }
+
+      const request = indexedDB.open("west-yunnan-trip-memory", 1);
+      request.onupgradeneeded = () => {
+        request.result.createObjectStore("photos", { keyPath: "id" });
+      };
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+
+    async function prepareMemoryPhoto(file) {
+      if (!file.type.startsWith("image/")) return null;
+
+      try {
+        const bitmap = await createImageBitmap(file);
+        const scale = Math.min(1, 2000 / Math.max(bitmap.width, bitmap.height));
+        const canvas = document.createElement("canvas");
+        canvas.width = Math.round(bitmap.width * scale);
+        canvas.height = Math.round(bitmap.height * scale);
+        canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+        bitmap.close();
+
+        return await new Promise((resolve) => {
+          canvas.toBlob((blob) => resolve(blob || file), "image/jpeg", .86);
+        });
+      } catch {
+        return file;
+      }
+    }
+
+    async function readMemoryPhotos() {
+      const db = await memoryDb;
+      return new Promise((resolve, reject) => {
+        const request = db.transaction("photos", "readonly").objectStore("photos").getAll();
+        request.onsuccess = () => resolve(request.result.sort((a, b) => a.createdAt - b.createdAt));
+        request.onerror = () => reject(request.error);
+      });
+    }
+
+    async function deleteMemoryPhoto(id) {
+      const db = await memoryDb;
+      return new Promise((resolve, reject) => {
+        const transaction = db.transaction("photos", "readwrite");
+        transaction.objectStore("photos").delete(id);
+        transaction.oncomplete = resolve;
+        transaction.onerror = () => reject(transaction.error);
+      });
+    }
+
+    async function renderMemoryPhotos() {
+      const photos = await readMemoryPhotos();
+      memoryObjectUrls.forEach((url) => URL.revokeObjectURL(url));
+      memoryObjectUrls = [];
+      memoryGallery.replaceChildren();
+
+      photos.forEach((photo) => {
+        const figure = document.createElement("figure");
+        figure.className = "memory-photo";
+
+        const image = document.createElement("img");
+        const objectUrl = URL.createObjectURL(photo.blob);
+        memoryObjectUrls.push(objectUrl);
+        image.src = objectUrl;
+        image.alt = `${photo.day} ${photo.place}旅行照片`;
+
+        const caption = document.createElement("figcaption");
+        caption.textContent = `${photo.day} · ${photo.place}`;
+
+        const remove = document.createElement("button");
+        remove.className = "memory-remove";
+        remove.type = "button";
+        remove.textContent = "×";
+        remove.title = "删除照片";
+        remove.setAttribute("aria-label", `删除${photo.day}${photo.place}照片`);
+        remove.addEventListener("click", async () => {
+          await deleteMemoryPhoto(photo.id);
+          await renderMemoryPhotos();
+        });
+
+        figure.append(image, caption, remove);
+        memoryGallery.append(figure);
+      });
+
+      memoryEmpty.hidden = photos.length > 0;
+      memoryCount.textContent = `${photos.length}张照片 · 保存在本机`;
+    }
+
+    memoryAdd.addEventListener("click", () => memoryInput.click());
+    memoryInput.addEventListener("change", async () => {
+      const files = [...memoryInput.files];
+      if (!files.length) return;
+
+      memoryAdd.disabled = true;
+      memoryAdd.textContent = "处理中…";
+
+      try {
+        const [day, place] = memoryDay.value.split("|");
+        const prepared = [];
+        for (const file of files) {
+          const blob = await prepareMemoryPhoto(file);
+          if (blob) {
+            prepared.push({
+              id: `${Date.now()}-${crypto.randomUUID?.() || Math.random().toString(36).slice(2)}`,
+              day,
+              place,
+              blob,
+              createdAt: Date.now() + prepared.length
+            });
+          }
+        }
+
+        const db = await memoryDb;
+        await new Promise((resolve, reject) => {
+          const transaction = db.transaction("photos", "readwrite");
+          const store = transaction.objectStore("photos");
+          prepared.forEach((photo) => store.put(photo));
+          transaction.oncomplete = resolve;
+          transaction.onerror = () => reject(transaction.error);
+        });
+        await renderMemoryPhotos();
+      } catch {
+        memoryCount.textContent = "保存失败，请检查浏览器存储空间";
+      } finally {
+        memoryInput.value = "";
+        memoryAdd.disabled = false;
+        memoryAdd.textContent = "添加照片";
+      }
+    });
+
+    renderMemoryPhotos().catch(() => {
+      memoryAdd.disabled = true;
+      memoryCount.textContent = "当前浏览器不支持本地照片";
     });
   </script>
 </body>
