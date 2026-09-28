@@ -840,6 +840,15 @@
       gap: 16px;
     }
 
+    .itinerary-note {
+      margin: -10px 0 22px;
+      padding: 11px 14px;
+      color: #284a5f;
+      background: var(--soft-blue);
+      border-left: 3px solid var(--blue);
+      font-size: 12px;
+    }
+
     .day-card {
       display: grid;
       grid-template-columns: 160px minmax(0, 1fr);
@@ -2142,7 +2151,7 @@
           <h1>滇西自然<br>自驾路书</h1>
           <p class="hero-lead">
             4人同行，含60岁长辈。9月30日一早抵达大理，落地当天即开始游览，10月2日开始自驾。
-            从苍山洱海到腾冲火山湿地，在高黎贡山雨林轻徒步后南下芒市，慢慢走进滇西南的热带风物。
+            从苍山洱海到腾冲火山湿地，在高黎贡山雨林徒步后南下芒市，慢慢走进滇西南的热带风物。
           </p>
         </div>
 
@@ -2229,20 +2238,20 @@
         </div>
       </div>
 
-      <div class="weather-strip" aria-label="天气预报摘要">
+      <div class="weather-strip" aria-label="2026年9月28日核对的行程天气区间">
         <div class="weather-item">
           <strong>大理</strong>
-          <div class="temp">15–25°C</div>
-          <small>09.30–10.02</small>
+          <div class="temp">10–25°C</div>
+          <small>09.30–10.02 / 10.07–08</small>
         </div>
         <div class="weather-item">
           <strong>腾冲</strong>
-          <div class="temp">14–25°C</div>
+          <div class="temp">13–25°C</div>
           <small>10.02–10.06</small>
         </div>
         <div class="weather-item">
           <strong>芒市</strong>
-          <div class="temp">17–33°C</div>
+          <div class="temp">18–31°C</div>
           <small>10.06–10.07</small>
         </div>
       </div>
@@ -2271,7 +2280,7 @@
             <button type="button" data-route-choice="mangshi" aria-pressed="true">腾冲 + 芒市</button>
             <button type="button" data-route-choice="slow" aria-pressed="false">腾冲深度线</button>
           </div>
-          <div class="route-status" id="route-status">高黎贡轻徒步 · 约1,110公里 · 芒市1晚</div>
+          <div class="route-status" id="route-status">高黎贡向导徒步 · 约1,110公里 · 芒市1晚</div>
         </div>
 
         <div class="route-layout">
@@ -2421,11 +2430,11 @@
                 <text class="map-node-alt" x="548" y="577" fill="rgba(255,255,255,.46)" font-size="10">热带植物 · 傣味街巷</text>
               </g>
 
-              <g aria-label="界头高黎贡山轻徒步">
+              <g aria-label="界头高黎贡山向导徒步">
                 <path d="M250 190 C218 160 186 128 148 104" fill="none" stroke="#72b89e" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 6"/>
                 <circle cx="148" cy="104" r="7" fill="#72b89e"/>
                 <text x="62" y="89" fill="#fff" font-size="12" font-weight="700">界头 · 高黎贡</text>
-                <text x="62" y="108" fill="rgba(255,255,255,.58)" font-size="10">10.05 · 中坪5 km轻徒步</text>
+                <text x="62" y="108" fill="rgba(255,255,255,.58)" font-size="10">10.05 · 中坪5 km向导徒步</text>
               </g>
 
               <g transform="translate(38 330)" aria-label="腾冲本地三条游览线">
@@ -2465,7 +2474,7 @@
                 <text x="16" y="52" fill="#f0bc5a" font-size="11" font-weight="700">09.30</text>
                 <text x="66" y="52" fill="rgba(255,255,255,.72)" font-size="11">古城 → 三塔倒影 → 龙龛/才村</text>
                 <text x="16" y="79" fill="#f0bc5a" font-size="11" font-weight="700">10.01</text>
-                <text x="66" y="79" fill="rgba(255,255,255,.72)" font-size="10">周城 8 → 喜洲 2 → 稻田 4 → 海舌</text>
+                <text x="66" y="79" fill="rgba(255,255,255,.72)" font-size="10">周城 8 → 喜洲 2 → 稻田 4 → 海舌/西岸</text>
                 <text x="16" y="105" fill="rgba(255,255,255,.46)" font-size="10">海舌未约到：改走喜洲洱海西岸</text>
               </g>
             </svg>
@@ -2474,7 +2483,7 @@
               <div class="route-mobile-local">
                 <strong>09.30–10.01｜大理景点</strong>
                 <span>首日：机场 30 → 古城 4 → 三塔 15 → 龙龛/才村 15 → 古城</span>
-                <span>次日：古城 32 → 周城 8 → 喜洲 2 → 稻田 4 → 海舌 24 → 古城</span>
+                <span>次日：古城 32 → 周城 8 → 喜洲 2 → 稻田 4 → 海舌/西岸 24 → 古城</span>
               </div>
               <div class="route-mobile-leg">
                 <time datetime="2026-10-02">10.02</time>
@@ -2488,7 +2497,7 @@
                 <strong>10.03–10.05｜腾冲三条线</strong>
                 <span>北线：城区 25 → 火山 20 → 黑鱼河 10 → 湿地 13 → 城区</span>
                 <span>南线：城区 4 → 早市 14 → 热海 9 → 司莫拉 15 → 城区</span>
-                <span>徒步：城区 60 → 界头中坪 · 5 km轻徒步 → 城区 60</span>
+                <span>徒步：城区 60 → 界头中坪 · 5 km向导徒步 → 城区 60</span>
               </div>
               <div class="route-mobile-leg variant-mangshi">
                 <time datetime="2026-10-06">10.06</time>
@@ -2547,7 +2556,7 @@
             </div>
             <div class="route-overview-item">
               <time datetime="2026-10-01">10.01</time>
-              <div><strong>大理田园线</strong><span>周城 · 喜洲 · 稻田 · 海舌</span></div>
+              <div><strong>大理田园线</strong><span>周城 · 喜洲 · 稻田 · 海舌/西岸</span></div>
             </div>
             <div class="route-overview-item">
               <time datetime="2026-10-02">10.02</time>
@@ -2563,7 +2572,7 @@
             </div>
             <div class="route-overview-item">
               <time datetime="2026-10-05">10.05</time>
-              <div><strong>高黎贡徒步</strong><span>界头中坪 · 5 km雨林与瀑布</span></div>
+              <div><strong>高黎贡徒步</strong><span>中坪规范线 · 5 km · 视天气开放</span></div>
             </div>
             <div class="route-overview-item">
               <time datetime="2026-10-06">10.06</time>
@@ -2594,7 +2603,7 @@
           <div>
             <strong>杭瑞高速顺濞段路况提示</strong>
             <p>
-              目前为临时双向单幅通行。10月2日和10月7日出发前查看实时导航与“大理交警”路况，
+              8月28日官方公告显示该段恢复临时双向单幅通行。10月2日和10月7日出发前查看实时导航与“大理交警”路况，
               如遇长距离拥堵，抵达后就近入住用餐。
             </p>
           </div>
@@ -2608,6 +2617,10 @@
         <div>
           <h2>逐日时间安排</h2>
         </div>
+      </div>
+
+      <div class="itinerary-note">
+        腾冲10月3日至5日可按天气互换；高黎贡山只在运营方确认开放且无雷雨、强降雨时出发。
       </div>
 
       <div class="timeline">
@@ -2699,7 +2712,7 @@
               <figcaption>喜洲稻田 · 十月田野</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>风吹稻田｜周城、喜洲与海舌</h3>
+              <h3>风吹稻田｜周城、喜洲与洱海西岸</h3>
               <span>当天不开车 / 建议包车</span>
             </div>
             <dl class="schedule">
@@ -2725,11 +2738,11 @@
               </div>
               <div class="schedule-row">
                 <dt>15:00–17:10</dt>
-                <dd><strong>稻田 → 海舌生态公园</strong><span class="segment-distance">约4 km</span><span>预约成功进入海舌；没有名额就走夫妻树—桃源码头一带的洱海西岸。</span></dd>
+                <dd><strong>稻田 → 海舌生态公园 / 洱海西岸</strong><span class="segment-distance">约4 km</span><span>仅在官方渠道预约成功后进入海舌；没有名额就走夫妻树—桃源码头一带。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>17:45–19:15</dt>
-                <dd><strong>海舌 → 大理古城</strong><span class="segment-distance">约24 km</span><span>晚餐后复核10月2日取车网点、驾驶人证件与门店营业时间。</span></dd>
+                <dd><strong>海舌 / 洱海西岸 → 大理古城</strong><span class="segment-distance">约24 km</span><span>晚餐后复核10月2日取车网点、驾驶人证件与门店营业时间。</span></dd>
               </div>
             </dl>
             <aside class="day-guide" aria-label="10月1日补充信息">
@@ -2741,7 +2754,7 @@
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
                 <strong>包车约70–80 km · 累计约2小时</strong>
-                <p>古城—周城—喜洲—海舌—古城，由北向南返回；古镇车辆停外围。</p>
+                <p>古城—周城—喜洲—海舌/西岸—古城，由北向南返回；古镇车辆停外围。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">吃什么</span>
@@ -2869,7 +2882,7 @@
               </div>
               <div class="schedule-row">
                 <dt>14:00–16:20</dt>
-                <dd><strong>黑鱼河 → 北海湿地</strong><span class="segment-distance">约10 km</span><span>走湿地栈道与观景区，16:30前离开。</span></dd>
+                <dd><strong>黑鱼河 → 北海湿地</strong><span class="segment-distance">约10 km</span><span>走湿地栈道与观景区；60岁长辈不参加草排体验。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>17:00–18:00</dt>
@@ -2901,6 +2914,7 @@
             <div class="day-foot">
               <span><strong>驾驶：</strong>约68 km / 约2h</span>
               <span><strong>步行：</strong>约5–7 km，可缩短火山段</span>
+              <span><strong>草排：</strong>景区规定60岁及以上不参加</span>
               <span><strong>当日预算：</strong>约1750–3100元</span>
               <span class="rain-plan"><strong>中雨：</strong>取消火山攀爬，只留湿地短线或改10月6日补位</span>
             </div>
@@ -2991,21 +3005,21 @@
               <figcaption>高黎贡山 · 中坪雨林</figcaption>
             </figure>
             <div class="day-heading">
-              <h3>走进雨林｜高黎贡山 5 km 轻徒步</h3>
-              <span>界头中坪 · 正规向导带队</span>
+              <h3>走进雨林｜高黎贡山中坪 5 km 徒步</h3>
+              <span>规范线路 · 当地向导带队</span>
             </div>
             <dl class="schedule">
               <div class="schedule-row">
                 <dt>08:00–09:30</dt>
-                <dd><strong>腾冲城区 → 界头镇中坪村</strong><span class="segment-distance">约55–65 km</span><span>使用含接送、进山手续与户外保险的小团。</span></dd>
+                <dd><strong>腾冲城区 → 界头镇中坪村</strong><span class="segment-distance">约55–65 km</span><span>选择已完成线路审批的经营主体，含当地向导、接送与户外保险。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>09:30–10:00</dt>
-                <dd><strong>中坪村集合与热身</strong><span>领取登山杖，听向导说明路况；长辈先确认膝盖与呼吸状态。</span></dd>
+                <dd><strong>中坪村集合与热身</strong><span>听向导说明路况；长辈当天状态不佳时留在村内休息，由同行人陪同。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>10:00–13:00</dt>
-                <dd><strong>中坪大瀑布 5 km 轻徒步</strong><span>沿森林、溪流和土路前行，全程约3小时；雨后路滑时缩短路线。</span></dd>
+                <dd><strong>中坪大瀑布 5 km 徒步</strong><span>沿森林、溪流和土路前行，全程约3小时；不临时升级10/15公里线路。</span></dd>
               </div>
               <div class="schedule-row">
                 <dt>13:00–14:30</dt>
@@ -3023,18 +3037,18 @@
             <aside class="day-guide" aria-label="10月5日补充信息">
               <div class="day-guide-block">
                 <span class="day-guide-label">景点看点</span>
-                <strong>原始森林、溪流与中坪大瀑布</strong>
-                <p>5公里开放线路串联大河谷、森林、瀑布与野猪箐古桥。</p>
+                <strong>山林、溪流与中坪大瀑布</strong>
+                <p>中坪5公里规范线路串联大河谷、森林、瀑布与野猪箐古桥。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">车程停车</span>
                 <strong>往返约110–130 km · 接送约2–3小时</strong>
-                <p>跟随正规向导进入开放线路，不自行进山或离队。</p>
+                <p>跟随当地向导进入核准线路，不自行进山或离队。</p>
               </div>
               <div class="day-guide-block">
-                <span class="day-guide-label">装备</span>
-                <strong>防滑徒步鞋、速干衣、登山杖</strong>
-                <p>另带轻便雨衣、防蚊液、饮水和一套替换袜。</p>
+                <span class="day-guide-label">预约核对</span>
+                <strong>中坪村李家寨 · 5 km规范线路</strong>
+                <p>书面确认线路审批、爬升涉水、当地向导、保险与返程时间。</p>
               </div>
               <div class="day-guide-block">
                 <span class="day-guide-label">住哪里</span>
@@ -3043,10 +3057,11 @@
               </div>
             </aside>
             <div class="day-foot">
-              <span><strong>徒步：</strong>约5 km / 约3h</span>
-              <span><strong>向导：</strong>含进山手续与户外保险</span>
+              <span><strong>徒步：</strong>约5 km / 约3h，泥泞会增加难度</span>
+              <span><strong>装备：</strong>防滑鞋、登山杖、雨衣与替换袜</span>
+              <span><strong>生态：</strong>不采菌、不离队、不在山林用火</span>
               <span><strong>当日预算：</strong>约2200–3800元</span>
-              <span class="rain-plan"><strong>大雨：</strong>改为和顺古镇与叠水河短线</span>
+              <span class="rain-plan"><strong>出发条件：</strong>运营方确认开放且无雷雨、强降雨；否则改为和顺与叠水河</span>
             </div>
           </div>
         </article>
@@ -3688,12 +3703,12 @@
           </label>
           <label class="check-item">
             <input type="checkbox" data-check="gaoligong">
-            <span><strong>确认高黎贡山徒步小团</strong><span>界头中坪5公里线，含正规向导、接送、进山手续与户外保险。</span></span>
+            <span><strong>确认高黎贡山徒步小团</strong><span>书面确认中坪李家寨5公里规范线、线路审批、当地向导、接送与保险；不升级长线。</span></span>
             <time>提前预约</time>
           </label>
           <label class="check-item">
             <input type="checkbox" data-check="xizhou">
-            <span><strong>确认喜洲包车与海舌预约</strong><span>9月30日晚确认包车接送；计划进入海舌时同步核对官方预约入口。</span></span>
+            <span><strong>确认喜洲包车与海舌预约</strong><span>9月30日晚确认包车；只认官方预约入口，未约到就走夫妻树—桃源码头西岸。</span></span>
             <time>提前1天</time>
           </label>
           <label class="check-item">
@@ -3763,18 +3778,18 @@
         <div class="section-index">07 / 信息依据</div>
         <div>
           <h2>已核对的政策与数据</h2>
-          <p class="section-summary">路线里程为公开导航数据的规划值；天气与国庆管制会变化，已在页面内标明复核节点。</p>
+          <p class="section-summary">截至2026年9月28日核对；天气、道路和景区状态仍以出发当天官方信息为准。</p>
         </div>
       </div>
 
       <div class="sources">
         <ol>
           <li><a href="https://www.dali.gov.cn/dlzrmzf/c101530/pc/content/2093335744229724160/content_2093335744229724160.html">大理州政府：杭瑞高速顺濞段恢复双向单幅通行</a></li>
-          <li><a href="http://m.toutiao.com/group/7689694116006937151/">新华社信息：2026国庆高速免费10月1日0时至7日24时</a></li>
+          <li><a href="http://www3.xinhuanet.com/20260924/c66b5a58f458494899252a81db68c166/c.html">新华社：2026国庆高速免费10月1日0时至7日24时</a></li>
           <li><a href="https://www.dali.gov.cn/dlzrmzf/c101724/pc/content/2087739880912244736/content_2087739880912244736.html">大理州文旅局：喜洲、周城与洱海西岸推荐线路</a></li>
           <li><a href="https://www.dali.gov.cn/dlzrmzf/c101724/pc/content/1968887530844688384/content_1968887530844688384.html">大理州政府：崇圣寺三塔与倒影公园信息</a></li>
           <li><a href="https://www.tchsgz.com/details/FBDu3yMWs.html">和顺古镇：2026年4月起核心区实行车辆准入</a></li>
-          <li><a href="http://www.chinaspa.cn/news_1/193.html">热海景区：步道、长辈及温泉安全提示</a></li>
+          <li><a href="http://www.chinaspa.cn/TourNotes/1.html">火山热海景区官方：开放时间与游览须知</a></li>
           <li><a href="https://www.tengchong.gov.cn/info/1732/15051.htm">腾冲市政府：北海湿地景区介绍</a></li>
           <li><a href="https://www.tengchong.gov.cn/info/9431/5818793.htm">腾冲市政府：曲石镇、柱状节理与黑鱼河区位</a></li>
           <li><a href="https://tengchong.gov.cn/info/1732/34978.htm">腾冲市政府：司莫拉佤族村与热海区位信息</a></li>
@@ -3786,25 +3801,30 @@
           <li><a href="https://m.yunnan.cn/system/2026/07/24/034094584.shtml">云南网：芒市塔景、美食城与夜间游线</a></li>
           <li><a href="https://wap.weather.com.cn/mweather15d/101290201.shtml">中国天气网：大理15天预报</a></li>
           <li><a href="https://cnr.weather.com.cn/mweather15d/101290506.shtml">中国天气网：腾冲15天预报</a></li>
-          <li><a href="https://m.weather.com.cn/mweather15d/101291508.shtml">中国天气网：芒市15天预报</a></li>
+          <li><a href="https://cnr.weather.com.cn/mweather15d/101291508.shtml">中国天气网：芒市15天预报</a></li>
+          <li><a href="https://www.tengchong.gov.cn/info/10553/5856443.htm">腾冲市政府：旅游徒步行业联合审批审核办法</a></li>
+          <li><a href="https://www.tengchong.gov.cn/info/16031/5914233.htm">云南省文旅厅：2026国庆安全出游提示</a></li>
+          <li><a href="http://www.beihaiwetland.com/about/show-21-0.html">北海湿地官方：开放时间与60岁以上草排限制</a></li>
+          <li><a href="https://jkq.dali.gov.cn/dljjkfq/c107883/pc/content/2059899495230001152/content_2059899495230001152.html">大理机场：国内航班值机截止时间提示</a></li>
           <li><a href="http://cha.zuzuche.com/lu/tengchong/2664.html">公开导航参考：腾冲—大理约340公里</a></li>
           <li><a href="http://cha.zuzuche.com/lu/dehongdaizujingpozu/2664.html">公开导航参考：芒市—大理约322公里</a></li>
           <li><a href="https://m.chinawutong.com/tools/tengchong_mangshi.html">公开导航参考：腾冲—芒市约140公里</a></li>
-          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%96%9C%E6%B4%B2%E6%B5%B7%E8%88%8C%E5%85%AC%E5%9B%AD&amp;source=web_search_result_notes&amp;type=51">小红书公开笔记：喜洲古镇、稻田与海舌体验顺序</a></li>
-          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%85%BE%E5%86%B2%20%E4%B8%89%E5%A4%A9%20%E8%87%AA%E7%84%B6%20%E8%B7%AF%E7%BA%BF&amp;source=web_search_result_notes&amp;type=51">小红书公开笔记：腾冲三日动线与体力反馈</a></li>
-          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%8A%92%E5%B8%82%20%E4%B8%80%E6%97%A5%E6%B8%B8%20%E8%B7%AF%E7%BA%BF&amp;source=web_search_result_notes&amp;type=51">小红书公开笔记：芒市金银塔与市区游线</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E5%96%9C%E6%B4%B2%20%E5%91%A8%E5%9F%8E%20%E6%B5%B7%E8%88%8C%20%E4%B8%80%E6%97%A5%E6%B8%B8&amp;type=51">小红书热门游记：喜洲、周城与海舌一日动线</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E9%AB%98%E9%BB%8E%E8%B4%A1%E5%B1%B1%20%E5%BE%92%E6%AD%A5%20%E8%85%BE%E5%86%B2%205%E5%85%AC%E9%87%8C%20%E8%80%81%E4%BA%BA&amp;type=51">小红书热门游记：高黎贡山5公里线路与长辈体感</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%85%BE%E5%86%B2%20%E8%8A%92%E5%B8%82%20%E8%80%81%E5%B9%BC%E5%8F%8B%E5%A5%BD&amp;type=51">小红书热门游记：腾冲芒市老幼同行反馈</a></li>
+          <li><a href="https://www.xiaohongshu.com/search_result?keyword=%E8%8A%92%E5%B8%82%20%E4%B8%80%E6%97%A5%E6%B8%B8%20%E9%87%91%E5%A1%94%20%E9%93%B6%E5%A1%94%20%E5%A4%9C%E5%B8%82&amp;type=51">小红书热门游记：芒市金银塔与夜市游线</a></li>
         </ol>
 
         <div class="method-note">
           <strong>制图说明：</strong>
-          线路图为离线示意，以主要城市的相对方位和行程流向为重点；实时道路信息以出发当天导航和官方交通公告为准。
+          线路图为离线示意，以主要城市的相对方位和行程流向为重点；游记用于核对节奏与体感，开放、预约和安全要求以官方渠道为准。
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    行程版本：2026-09-26 ｜ 适用条件：4人、含60岁长辈、不开夜车、国庆自驾 ｜ 预算不含往返云南机票
+    行程版本：2026-09-28 ｜ 适用条件：4人、含60岁长辈、不开夜车、国庆自驾 ｜ 预算不含往返云南机票
   </footer>
 
   <script>
@@ -4067,7 +4087,7 @@
         hours: "20–24 h",
         moves: "4 地",
         movesNote: "大理 → 腾冲 → 芒市 → 大理机场",
-        status: "高黎贡轻徒步 · 约1,110公里 · 芒市1晚",
+        status: "高黎贡向导徒步 · 约1,110公里 · 芒市1晚",
         tengchongNights: "4晚",
         mapTengchongStay: "10.02–10.06 · 4晚",
         budgetLabel: "腾冲 + 芒市线｜不含机票",
